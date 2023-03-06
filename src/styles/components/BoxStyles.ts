@@ -1,21 +1,28 @@
 import { ComponentStyleConfig } from "@chakra-ui/react";
 
-const Box: ComponentStyleConfig = {
+
+// Box cannot accept variables!
+
+
+export const BoxStyles: ComponentStyleConfig = {
   // style object for base or default style
-  baseStyle: {},
+  baseStyle: {
+    color:'Fred'
+  },
   // styles for different sizes ("sm", "md", "lg")
   sizes: {},
   // styles for different visual variants ("outline", "solid")
   variants: {
-    section: {
-        bg:'green',
+    Section: {
+      bg: "green",
+      color:'red',
       p: "10vw 15vw",
       w: "100vw",
       maxW: "100%",
       h: "100%",
     },
 
-    sectionContent: {
+    SectionContent: {
       gap: "5vw",
       minW: "300px",
       minH: "240px",
@@ -23,7 +30,7 @@ const Box: ComponentStyleConfig = {
       h: "20vw",
     },
 
-    footer: {
+    Footer: {
       w: "100vw",
       minW: "300px",
       maxW: "100%",
@@ -33,7 +40,7 @@ const Box: ComponentStyleConfig = {
       p: "5vw 10vw",
     },
 
-    footerContainer: {
+    FooterContainer: {
       w: "240px",
       h: "200px",
       gap: "1.25em",
@@ -51,5 +58,3 @@ const Box: ComponentStyleConfig = {
     colorScheme: "",
   },
 };
-
-export default Box;

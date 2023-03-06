@@ -1,23 +1,29 @@
 import { ComponentStyleConfig } from "@chakra-ui/react";
 
-const Text: ComponentStyleConfig = {
+export const HeadingStyles: ComponentStyleConfig = {
   // style object for base or default style
   baseStyle: {
-    fontFamily: "fonts.body",
-    color: "colors.primary",
-
+    fontFamily: "'Open Sans', 'sans-serif'",
+    fontWeight: 700,
   },
   // styles for different sizes ("sm", "md", "lg")
   sizes: {},
   // styles for different visual variants ("outline", "solid")
-  variants: {},
+  variants: {
+    SectionHeading: {
+      fontSize: "36px", //2.25em
+      // mb: "0.5em",
+    },
+
+    BodyHeading: {
+      fontSize: "24px", //1.5em
+    },
+  },
 
   // default values for 'size', 'variant' and 'colorScheme'
   defaultProps: {
     size: "",
-    variant: "",
+    variant: "solid",
     colorScheme: "",
   },
 };
-
-export default Text;

@@ -1,15 +1,36 @@
 import { extendTheme } from "@chakra-ui/react";
 
 import "@fontsource/open-sans";
-import "@fontsource/open-sans/400";
-import "@fontsource/open-sans/700";
+import "@fontsource/open-sans/400.css";
+import "@fontsource/open-sans/700.css";
 
-import Link from "./Link";
-import Heading from "./Heading";
-import Text from "./Text";
-import Box from "./Box";
+import { HeadingStyles as Heading } from "./components/HeadingStyles";
+import { LinkStyles as Link } from "./components/LinkStyles";
+import { TextStyles as Text } from "./components/TextStyles";
+import { BoxStyles as Box } from "./components/BoxStyles";
+import { ImageStyles as Image } from "./components/ImageStyles";
 
-const theme = extendTheme({
+export const theme = extendTheme({
+  styles: {
+    global: {
+      "*": {
+        margin: 0,
+        padding: 0,
+        color: "inherit",
+        boxSizing: "border-box",
+        textDecoration: "none",
+        // border: "1px solid red"
+      },
+
+      a: {
+        textDecoration: "none",
+        _hover: {
+          textDecoration: "none",
+        },
+      },
+    },
+  },
+
   colors: {
     primary: "#CA5F00",
     background: "#FFF1E4",
@@ -65,7 +86,6 @@ const theme = extendTheme({
     Heading,
     Text,
     Box,
+    Image,
   },
 });
-
-export default theme;

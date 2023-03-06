@@ -1,24 +1,17 @@
-import { useState } from "react";
-import {
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Button,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  Icon,
-} from "@chakra-ui/react";
-import { useTheme } from "@chakra-ui/react";
-
+import React from "react";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import {Routes, Route} from 'react-router-dom'
 function App() {
-  const { colors, fonts } = useTheme();
   return (
-    <Box variant='section' theme={useTheme} >
-      <h2>App</h2>
-    </Box>
+    <>
+
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+
+    </>
   );
 }
 
