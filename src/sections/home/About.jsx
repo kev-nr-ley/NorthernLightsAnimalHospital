@@ -25,9 +25,18 @@ export default function About(props) {
 
   function renderStaff(staff) {
     return staff.map((member, index) => (
-      <Box maxW='320px' bjectFit='contain' key={index}>
+      <Box maxW='320px' bjectFit='contain' key={index}
+      
+        border='1px solid #E2E8F0'
+        boxShadow='0px 4px 4px rgba(0, 0, 0, 0.25)'
+        borderRadius='30px'
+        padding='24px'
+        bg={colors.background}
+      >
         <Image w='100%' src={member.image} />
-        <Heading variant='bodyHeading' mt='2'>
+        <Heading variant='bodyHeading' mt='2'
+        
+        >
           {member.name}
         </Heading>
       </Box>
@@ -39,11 +48,31 @@ export default function About(props) {
       w='100vw'
       maxW='100%'
       position='relative'
-      bg={colors.background}
+      // bg={colors.background}
+      bg='white'
       p={["5vw 5vw", "5vw 5vw", "5vw 10vw", "5vw 15vw"]}
       minW='320px'
       {...props}>
-      <Flex flexDirection={"column"}>
+
+        {/* bg oval */}
+      {/* <Box
+        position='absolute'
+        top='50%'
+        left='0'
+        transform={"translateY(-50%)"}
+        w='95%'
+        h='90%'
+        bg='red'
+        borderTopRightRadius='9999'
+        borderBottomRightRadius='9999'
+        opacity='0.1'
+        zIndex='1'>
+        oh hello
+      </Box> */}
+
+
+
+      <Flex flexDirection={"column"} position='relative'>
         <Box minW='300px'>
           <Heading
             variant='SectionHeading'
