@@ -23,8 +23,9 @@ export default function Testimonials(props) {
       header='What our clients say about us'
       linkText='Read More Testimonials'
       linkTo='/testimonials'
-      bg='primary'
+      bg='primaryOpacity95'
       color='light'
+      // h='100%'
       {...props}>
       {renderTestimonials()}
     </SectionFlexContainer>

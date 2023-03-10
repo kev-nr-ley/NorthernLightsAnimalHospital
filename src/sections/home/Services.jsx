@@ -1,6 +1,5 @@
-import { Link, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 
-import { useTheme } from "@chakra-ui/react";
 import SectionFlexContainer from "@components/SectionFlexContainer";
 import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 export default function Services(props) {

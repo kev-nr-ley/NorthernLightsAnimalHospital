@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "@sections/dental/DentalHero";
+import DentalHero from "@sections/dental/DentalHero";
 import FAQ from "@sections/dental/FAQ";
 import BeforeAppointment from "@sections/dental/BeforeAppointment";
 import AfterAppointment from "@sections/dental/AfterAppointment";
@@ -16,8 +16,8 @@ export default function Dental(props) {
       <Parallax
         bgImage={"/images/dental-1.png"}
         strength={300}
-        bgImageStyle={{ width: "100%", height: "100%", objectFit: "cover" }}>
-        <Hero />
+        bgImageStyle={{ width: "100%", height: "90vh", objectFit: "cover" }}>
+        <DentalHero h='80vh' />
       </Parallax>
 
       <FAQ />

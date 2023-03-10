@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "@sections/health/HealthHero";
+import HealthHero from "@sections/health/HealthHero";
 import Care from "@sections/health/Care";
 import Parasite from "@sections/health/Parasite";
 
@@ -14,11 +14,11 @@ export default function Health(props) {
       <Parallax
         bgImage={"/images/health-1.png"}
         strength={300}
-        bgImageStyle={{ width: "100%", height: "100%", objectFit: "cover" }}>
-        <Hero />
+        bgImageStyle={{ width: "100%", height: "90vh", objectFit: "cover" }}>
+        <HealthHero h='80vh' />
       </Parallax>
-      <Care bg='background' color='dark' />
 
+      <Care bg='background' color='dark' />
       <Parasite bg='primary' color='light' />
     </Page>
   );

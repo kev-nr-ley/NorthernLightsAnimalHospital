@@ -13,8 +13,7 @@ export default function SectionFlexContainer(props) {
       maxW='100%'
       position='relative'
       px={["5vw", "5vw", "10vw", "10vw"]} //affects section heading
-      py={["5vw", "5vw", "10vw", "10vw"]}
-      my='10vh'
+      py={["5vw", "5vw", "5vw", "5vw"]}
       {...props}>
       <Heading variant='sectionHeading'>{props.header}</Heading>
       <Text>{props.subText}</Text>

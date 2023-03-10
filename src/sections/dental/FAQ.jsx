@@ -1,11 +1,4 @@
-import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-} from "@chakra-ui/react";
+import { Image, Accordion } from "@chakra-ui/react";
 import AccordionQuestion from "@components/AccordionQuestion";
 import { useTheme } from "@chakra-ui/react";
 import { dentalFAQ } from "@assets/data/dentalFAQ";

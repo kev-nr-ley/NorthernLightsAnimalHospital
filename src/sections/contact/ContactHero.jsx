@@ -4,7 +4,7 @@ import Hours from "@navigation/footer/Hours";
 import Location from "@navigation/footer/Location";
 import SectionFlexContainer from "@components/SectionFlexContainer";
 import { useTheme } from "@chakra-ui/react";
-export default function Hero(props) {
+export default function ContactHero(props) {
   const { colors } = useTheme();
 
   return (

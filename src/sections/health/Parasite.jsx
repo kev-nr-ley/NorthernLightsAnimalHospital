@@ -1,4 +1,4 @@
-import { Flex, Box, Heading, Text, Image, Grid, Link } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 
 import SectionFlexContainer from "@components/SectionFlexContainer";
 import { useTheme } from "@chakra-ui/react";
@@ -8,7 +8,7 @@ export default function Parasite(props) {
     <SectionFlexContainer
       header='Parasite Protection'
       linkText='Contact Us'
-      to='/contact'
+      linkTo='/contact'
       bg='primary'
       color='light'
       {...props}>

@@ -1,65 +1,29 @@
-import { Flex, Box, Heading, Text, Link, Image, Grid } from "@chakra-ui/react";
+import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { AiOutlineArrowRight } from "react-icons/ai";
-import ChakraLinkArrow from "@components/ChakraLinkArrow";
+import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function Visit(props) {
-  const { colors } = useTheme();
-
-  const staff = [
-    {
-      name: "Dr. Charles West",
-      title: "dr",
-      image: "/images/charles-west.png",
-    },
-    {
-      name: "Dr. Amanda McMillan",
-      title: "dr",
-      image: "/images/amanda-mcmillan.png",
-    },
-
-    {
-      name: "Dr. Ellen Lagore",
-      title: "dr",
-      image: "/images/ellen-lagore.png",
-    },
-  ];
-
   return (
-    <Flex
-      flexDirection={["column", "column", "row", "row"]}
-      minW='300px'
-      gap='5vw'
-      w='100vw'
-      maxW='100%'
-      position='relative'
-      bg={colors.primary}
-      color={colors.light}
-      p={["5vw 5vw", "5vw 5vw", "5vw 5vw", "5vw 5vw"]}
-      justifyContent={"center"}
+    <SectionFlexContainer
+      header='Schedule a visit'
+      subheader='The Original Spay Clinic'
+      linkText='Request An Appointment'
+      linkTo='/contact'
       {...props}>
       <Flex flexDirection='column' justifyContent={"center"}>
-        <Heading variant='SectionHeading' fontSize={["28px", "28px,", "36px"]}>
-          Schedule a visit.
-        </Heading>
-        <Heading mt='4'>The Original Spay Clinic</Heading>
+        <Heading variant='bodyHeading'>The Original Spay Clinic</Heading>
         <Text>
           10575 111 St. NW <br />
           Edmonton, Alberta <br />
           T5H 3E8
         </Text>
 
-        <Heading mt='2'>Phone</Heading>
+        <Heading>Phone</Heading>
         <Text>780-426-4221</Text>
         <Heading>Hours</Heading>
-        <Text mt='2'>
+        <Text>
           Monday-Friday: 7am-6pm <br />
           Closed weekends
         </Text>
-
-        <Link variant='LightOutline' mt='4'>
-          Request An Appointment
-        </Link>
       </Flex>
 
       <Box>
@@ -73,6 +37,6 @@ export default function Visit(props) {
           maxW='500px'
         />
       </Box>
-    </Flex>
+    </SectionFlexContainer>
   );
 }

@@ -1,10 +1,9 @@
 import React from "react";
-import Hero from "@sections/home/HomeHero";
+import HomeHero from "@sections/home/HomeHero";
 import Services from "@sections/home/Services";
 import About from "@sections/home/About";
 import Visit from "@sections/home/Visit";
 import { Parallax } from "react-parallax";
-import { Box } from "@chakra-ui/react";
 import Page from "@components/Page";
 export default function Home(props) {
   return (
@@ -15,15 +14,15 @@ export default function Home(props) {
         bgImageStyle={{
           width: "100vw",
           maxW: "100%",
-          height: "100%",
+          height: "100vh",
           objectFit: "cover",
         }}>
-        <Hero />
+        <HomeHero h='100vh' />
       </Parallax>
 
       <Services bg='background' color='dark' />
-      <About />
-      <Visit />
+      <About bg='light' color='dark'/>
+      <Visit bg='primary' color='light' />
     </Page>
   );
 }

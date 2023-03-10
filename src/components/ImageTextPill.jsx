@@ -1,6 +1,6 @@
 import { Flex, Heading, Image, Box } from "@chakra-ui/react";
 
-export default function Considerations(props) {
+export default function ImageTextPill(props) {
   return (
     <Flex
       justifyContent={"center"}
@@ -10,12 +10,12 @@ export default function Considerations(props) {
       margin='12'
       borderRadius='50px'
       w='80vw'
-      px='2vw'
-      py='5vh'
+      px='12'
+      py='4'
       position='relative'
+      boxShadow='0px 4px 13px 0px #00000025'
       {...props}>
       {/* Section heading */}
-
       <Box>
         <Heading
           mt='6'
@@ -30,7 +30,6 @@ export default function Considerations(props) {
             w={["200px"]}
             h={["200px"]}
             mx='4'
-            my='2'
             borderRadius='16px'
             alignSelf='flex-start'
             overflow='visible'

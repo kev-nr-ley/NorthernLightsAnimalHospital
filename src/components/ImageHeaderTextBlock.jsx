@@ -25,6 +25,24 @@ export default function ImageHeaderTextBlock(props) {
         />
       ) : null}
 
+      {props.bigText ? (
+        <Heading
+          w='80px' //for circle
+          h='80px' //for circle
+          borderRadius='100%'
+          color={props.headerColor}
+          bg={props.headerBg}
+          display='flex'
+          justifySelf='flex-start'
+          alignSelf='flex-start'
+          justifyContent='center'
+          alignItems='center'
+          whiteSpace={"nowrap"}
+          variant='sectionHeading'>
+          {props.bigText}
+        </Heading>
+      ) : null}
+
       {props.headerText ? (
         <Heading
           w='80px' //for circle

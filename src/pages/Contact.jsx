@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "@sections/contact/Hero";
+import ContactHero from "@sections/contact/ContactHero";
 import ContactForm from "@sections/contact/ContactForm";
 import { Parallax } from "react-parallax";
 import Page from "@components/Page";
@@ -13,9 +13,10 @@ export default function Contact(props) {
         strength={300}
         bgImageStyle={{
           objectFit: "cover",
+          h: "100vh",
         }}>
-        <Hero bg='primary' color='light' />
-        <ContactForm  bg='yellow' color='dark' />
+        <ContactHero bg='primary' color='light' />
+        <ContactForm bg='yellow' color='dark' />
       </Parallax>
     </Page>
   );

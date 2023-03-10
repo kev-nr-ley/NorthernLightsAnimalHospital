@@ -1,30 +1,26 @@
 import { Flex, Text, Link, Accordion } from "@chakra-ui/react";
 import AccordionQuestion from "@components/AccordionQuestion";
-
-import { useTheme } from "@chakra-ui/react";
 import ImageTextPill from "@components/ImageTextPill";
 export default function Considerations(props) {
-  const { colors } = useTheme();
-
   return (
     <Flex
-      flexDirection={"column"}
+      //use same props as in SectionFlexContainer
+      flexDirection='column'
+      alignItems={["flex-start"]}
       w='100vw'
+      minW='320px'
+      maxW='100%'
       position='relative'
-      overflow={"hidden"}
       h='100%'
-      justifyContent={"center"}
-      alignItems={"center"}
-      bg='background'
-      gap='5vh'
-      px='15vw'
-      py='10vh'
+      px={["5vw", "5vw", "10vw", "10vw"]} //affects section heading
       {...props}>
+      {/* <Heading variant='sectionHeading'>Considerations</Heading> */}
       <ImageTextPill
         bg='light'
-        title='Annual Health Exams'
-        image='/images/pet-family-color.png'>
-        <Text mt='4'>
+        color='dark'
+        heading='Annual Health Exams'
+        src='/images/pet-family-color.png'>
+        <Text>
           During your pet’s first physical exam your veterinarian will discuss
           strategies with you to help keep your animal as healthy as possible
           and up to date on vaccinations. The importance of routine annual
@@ -38,10 +34,11 @@ export default function Considerations(props) {
 
       <ImageTextPill
         bg='light'
-        title='Vaccinations'
-        image='/images/medicine-color.png'>
+        color='dark'
+        heading='Vaccinations'
+        src='/images/medicine-color.png'>
         <Flex flexDirection={"column"}>
-          <Text mt='4'>
+          <Text>
             Younger pets are at a much higher risk for certain diseases,
             therefore following your advised vaccination protocol is of the
             utmost importance. Kittens and puppies will need several vaccination
@@ -56,7 +53,7 @@ export default function Considerations(props) {
             <AccordionQuestion
               borderRadius='60px'
               question='Available Vaccinations for Dogs'>
-              <Text>
+              <Text listStylePosition={"inside"}>
                 Certain vaccine protocols may be recommended depending on your
                 dog’s type of lifestyle; factors that will be considered is
                 whether your dog frequents dog parks, groomers, day cares or
@@ -77,14 +74,19 @@ export default function Considerations(props) {
                 <li>Bordetella (Kennel Cough)</li>
               </Text>
 
-              <Link variant='DarkOutline' alignSelf='flex-start'>
+              <Link
+                variant='DarkOutline'
+                position='absolute'
+                bottom='2'
+                right='12'>
                 Book an Appointment
               </Link>
             </AccordionQuestion>
 
             <AccordionQuestion
               borderRadius='60px'
-              question='Available Vaccinations for Cats'>
+              question='Available Vaccinations for Cats'
+              listStylePosition={"inside"}>
               <Text>
                 Vaccination protocols for your cat can change dramatically
                 depending on their style of living. Aspects of your cat’s
@@ -105,7 +107,11 @@ export default function Considerations(props) {
                 <li>Feline Leukemia</li>
               </Text>
 
-              <Link variant='DarkOutline' alignSelf='flex-start'>
+              <Link
+                variant='DarkOutline'
+                position='absolute'
+                bottom='2'
+                right='12'>
                 Book an Appointment
               </Link>
             </AccordionQuestion>

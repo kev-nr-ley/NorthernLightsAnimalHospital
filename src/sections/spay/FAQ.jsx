@@ -1,4 +1,4 @@
-import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import {
   Accordion,
   AccordionItem,
@@ -11,8 +11,6 @@ import { useTheme } from "@chakra-ui/react";
 import { FAQ } from "@assets/data/FAQ";
 import SectionFlexContainer from "../../components/SectionFlexContainer";
 export default function Faq(props) {
-  const { colors } = useTheme();
-
   const renderFaq = () => {
     return FAQ.map((item, index) => {
       return (
@@ -20,7 +18,6 @@ export default function Faq(props) {
           key={index}
           question={item.question}
           answer={item.answer}
-
         />
       );
     });
@@ -39,8 +36,7 @@ export default function Faq(props) {
         maxW='800px'
         display='flex'
         flexDirection='column'
-        gap='2'
-        >
+        gap='2'>
         {renderFaq()}
       </Accordion>
     </SectionFlexContainer>

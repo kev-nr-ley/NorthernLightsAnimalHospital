@@ -31,4 +31,4 @@ const staff = [
   },
 ];
 
-export { staff };
+export default staff;

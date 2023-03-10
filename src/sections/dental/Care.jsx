@@ -1,6 +1,5 @@
-import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 
-import SectionFlexContainer from "@components/SectionFlexContainer";
 import ImageTextPill from "@components/ImageTextPill";
 export default function Considerations(props) {
   return (

@@ -1,12 +1,9 @@
-import { useTheme } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function Considerations(props) {
   return (
-    <SectionFlexContainer
-      header='Considerations'
-    >
+    <SectionFlexContainer header='Considerations' {...props}>
       <ImageHeaderTextBlock
         src='/images/tooth-outline.svg'
         heading='Extractions'

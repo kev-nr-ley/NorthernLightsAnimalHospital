@@ -1,26 +1,18 @@
-import { Flex, Box, Heading, Text, Image, Grid } from "@chakra-ui/react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-} from "@chakra-ui/react";
+import { Text, Accordion } from "@chakra-ui/react";
 
 import { useTheme } from "@chakra-ui/react";
-import StaffCard from "@components/StaffCard";
-import { staff } from "@assets/data/staff";
 import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 import AccordionQuestion from "@components/AccordionQuestion";
-import SectionFlexContainer from "../../components/SectionFlexContainer";
+import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function AfterAppointment(props) {
-  const { colors } = useTheme();
 
   return (
-    <SectionFlexContainer
-      header='After Your Appointment'
-      {...props}>
-      <ImageHeaderTextBlock bigText='1' heading='Before'>
+    <SectionFlexContainer header='After Your Appointment' {...props}>
+      <ImageHeaderTextBlock
+        bigText='1'
+        headerColor='light'
+        headerBg='dark'
+        heading='Before'>
         <Text>
           Our staff will be happy to discuss the following information with you
           at the time of booking and will remind you once more with a
@@ -34,7 +26,11 @@ export default function AfterAppointment(props) {
           during your animal’s routine procedure.
         </Text>
       </ImageHeaderTextBlock>
-      <ImageHeaderTextBlock bigText='2' heading='Day of'>
+      <ImageHeaderTextBlock
+        bigText='2'
+        headerColor='light'
+        headerBg='dark'
+        heading='Day of'>
         <Text>
           Your pet will have a “day stay” at the clinic and must be dropped off
           at The Spay Clinic between 7:00AM – 8:00AM. For your pet’s comfort and
@@ -44,7 +40,11 @@ export default function AfterAppointment(props) {
           discharged between 5:00PM – 6:00PM Monday through Friday.
         </Text>
       </ImageHeaderTextBlock>
-      <ImageHeaderTextBlock bigText='3' heading='Aftercare'>
+      <ImageHeaderTextBlock
+        bigText='3'
+        headerColor='light'
+        headerBg='dark'
+        heading='Aftercare'>
         <Text>
           Our staff will discuss the post-operative care and management that
           your pet will require following their dental procedure. You will also
