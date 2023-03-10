@@ -8,14 +8,19 @@ import {
 } from "@chakra-ui/react";
 export default function AccordionQuestion(props) {
   return (
-    <AccordionItem border='1px solid black' bg='transparent' {...props}>
+    <AccordionItem  mt='1'
+     border='2px solid black' 
+     h='fit-content'
+   {...props}>
       <AccordionButton>
         <Box flex='1' textAlign='left'>
           <Heading variant='bodyHeading'>{props.question}</Heading>
         </Box>
         <AccordionIcon fontSize={"2rem"} />
       </AccordionButton>
-      <AccordionPanel pb={4}>{props.answer}</AccordionPanel>
+      <AccordionPanel>
+        {props.answer ? props.answer : props.children}
+      </AccordionPanel>
     </AccordionItem>
   );
 }

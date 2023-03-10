@@ -9,6 +9,7 @@ import { LinkStyles as Link } from "./components/LinkStyles";
 import { TextStyles as Text } from "./components/TextStyles";
 import { BoxStyles as Box } from "./components/BoxStyles";
 import { ImageStyles as Image } from "./components/ImageStyles";
+import {InputStyles as Input} from "./components/InputStyles";
 
 export const theme = extendTheme({
   styles: {
@@ -89,5 +90,6 @@ export const theme = extendTheme({
     Text,
     Box,
     Image,
+    Input
   },
 });

@@ -11,21 +11,15 @@ export default function Health(props) {
   const { colors } = useTheme();
   return (
     <Page {...props}>
-        poop pop 
-
-        <h1>helloo</h1>
-        
       <Parallax
         bgImage={"/images/health-1.png"}
         strength={300}
         bgImageStyle={{ width: "100%", height: "100%", objectFit: "cover" }}>
         <Hero />
       </Parallax>
+      <Care bg='background' color='dark' />
 
-      <FAQ />
       <Parasite bg='primary' color='light' />
-      {/* <Considerations /> */}
-      <Care bg='primary' color='dark' />
     </Page>
   );
 }

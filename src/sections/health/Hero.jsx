@@ -1,4 +1,6 @@
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+import React from "react";
+
+
 import { Flex, Box, Heading, Text, Link, Image } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
 export default function Hero(props) {

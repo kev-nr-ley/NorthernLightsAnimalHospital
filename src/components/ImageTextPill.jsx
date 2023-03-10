@@ -1,42 +1,34 @@
-import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
+import { Flex, Heading, Image } from "@chakra-ui/react";
 
-import { useTheme } from "@chakra-ui/react";
 export default function Considerations(props) {
-  const { colors } = useTheme();
-
   return (
     <Flex
-      flexDirection={["column", "column", "row-reverse"]}
-      alignItems='center'
-      justifyContent='center'
-      bg='background'
+      flexDirection='column'
+      alignItems={["flex-start", "flex-start"]}
       borderRadius='60px'
       overflow='hidden'
-      h='fit-content'
-      py='2vw'
-      px='2vw'
       position='relative'
+      h='fit-content'
+      py={["5vw", "4vw", "3vw", "2vw"]}
+      px={["5vw", "4vw", "3vw", "2vw"]}
+      boxShadow='0px 4px 13px rgba(0,0,0,0.25)'
       {...props}>
+      <Heading variant='bodyHeading'>{props.title}</Heading>
+
       <Flex
-        minW='10vw'
-        w={["100%", "100%", "50%"]}
-        flexShrink='3'
-        h={["20vh", "20vh", "100%"]}
-        justifyContent={"flex-end"}>
+        flexDirection={["column", "column", "column", "row"]}
+        alignItems={"center"}>
         <Image
           src={props.image}
-          style={{ aspectRatio: "2/2.5" }}
-          maxH='100%'
-          borderRadius='50px'
-          objectFit={"fill"}
+          w={["200px", "200px", "300px"]}
+          h='100%'
+          borderRadius='60px'
+          objectFit={"cover"}
+          float={["none", "right"]}
+          px={["0", "4"]}
         />
-      </Flex>
-      <Box w='80%' h='fit-content' px='2rem' py='4rem'>
-        <Heading variant='bodyHeading' fontSize={["28px", "28px,", "36px"]}>
-          {props.title}
-        </Heading>
         {props.children}
-      </Box>
+      </Flex>
     </Flex>
   );
 }

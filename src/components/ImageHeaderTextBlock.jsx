@@ -2,13 +2,19 @@ import React from "react";
 
 import { Box, Image, Text, Heading, Flex, VStack } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
+import useFitText from "use-fit-text";
 export default function ImageHeaderTextBlock(props) {
+  // const { fontSize, ref } = useFitText({
+  //   minFontSize: "16px",
+  //   maxFontSize: "24px",
+  // });
   const { colors } = useTheme();
   return (
     <Flex
       justifyContent={"center"}
-      alignItems='center'
+      alignItems={["center", "center"]}
       flexDirection='column'
+      h='100%'
       w='360px'
       position='relative'
       {...props}>
@@ -45,8 +51,7 @@ export default function ImageHeaderTextBlock(props) {
         {props.heading}
       </Heading>
 
-      <Text>{props.text ? props.text : props.children}</Text>
-      <Box mt='8'>{props.children}</Box>
+      <Box>{props.text ? props.text : props.children}</Box>
     </Flex>
   );
 }

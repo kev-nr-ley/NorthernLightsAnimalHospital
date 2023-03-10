@@ -1,11 +1,11 @@
 import React from "react";
 import { Flex, Box, Text, Image, Link as ChakraLink } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
-import { FaInstagram, FaFacebook } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import { Route, Routes, Link } from "react-router-dom";
-import MobileNav from "./navbar/MobileNav";
-import DesktopNav from "./navbar/DesktopNav";
+
+import FacebookLink from "@components/FacebookLink";
+import InstagramLink from "@components/InstagramLink";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 export default function Navbar(props) {
   const { colors, fonts } = useTheme();
@@ -13,7 +13,7 @@ export default function Navbar(props) {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
-    window.innerWidth < 700 ? setIsMobile(true) : setIsMobile(false);
+    window.innerWidth < 600 ? setIsMobile(true) : setIsMobile(false);
   };
 
   useEffect(() => {
@@ -22,5 +22,5 @@ export default function Navbar(props) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return <>{isMobile ? <MobileNav {...props} /> : <DesktopNav {...props} />}</>;
+  return <Flex>mobile</Flex>;
 }

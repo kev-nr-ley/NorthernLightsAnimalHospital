@@ -39,12 +39,7 @@ export default function Considerations(props) {
       px='15vw'
       py='10vh'
       {...props}>
-      <ImageTextPill
-        title='Brushing'
-        image='/images/toothbrush.png'
-     
-        
-        >
+      <ImageTextPill title='Brushing' image='/images/toothbrush.png'>
         <Text mt='4'>
           You can start brushing your animal’s teeth at anytime but beginning
           this at a younger age usually makes it easier to make it a regular
@@ -70,8 +65,7 @@ export default function Considerations(props) {
 
       <ImageTextPill
         title='Dental Formluated Diets'
-        image='/images/realdogbowl.png'
-        >
+        image='/images/realdogbowl.png'>
         <Text mt='4'>
           Dental formulated diet are also available through your local
           veterinarian clinic. Dental diet work on two different principles. The
@@ -81,11 +75,17 @@ export default function Considerations(props) {
           contain enzyme to help decrease and prevent plaque and tartar build
           up.
         </Text>
+
+        <Text mt='4'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nulla,
+          in quasi molestias ab debitis? Sint deleniti reprehenderit ratione
+          laborum ut aspernatur inventore nemo, quaerat perferendis cupiditate,
+          sapiente hic explicabo expedita provident temporibus sequi repudiandae
+          quis quisquam? Quis nulla sapiente dolor, impedit non sit nemo
+          architecto veritatis quos numquam excepturi?
+        </Text>
       </ImageTextPill>
-      <ImageTextPill
-        title='Dental Treats'
-        image='/images/dogbone.png'
-        >
+      <ImageTextPill title='Dental Treats' image='/images/dogbone.png'>
         <Text mt='4'>
           There are several dental treats available, so trying one or two to see
           what your pet likes is beneficial. Read the labels of the dental
