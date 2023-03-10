@@ -12,22 +12,24 @@ export default function SectionFlexContainer(props) {
       minW='320px'
       maxW='100%'
       position='relative'
-      px={["5vw"]}
+      px={["5vw", "5vw", "10vw", "10vw"]} //affects section heading
       py={["5vw", "5vw", "10vw", "10vw"]}
+      my='10vh'
       {...props}>
       <Heading variant='sectionHeading'>{props.header}</Heading>
-      <Text>
-        Please complete the following form to request an appointment. Please
-        also note that availability will vary depending on your request. Your
-        appointment will be confirmed by phone by a member of our staff.
-      </Text>
+      <Text>{props.subText}</Text>
       <Flex
         mt='8'
-        flexDirection={["column", "column", "column", "row"]}
+        flexDirection={
+          !props.flipHorizontal
+            ? ["column", "column", "column", "row"]
+            : ["column", "column", "column", "row-reverse"]
+        }
         h='100%'
         w='100%'
         alignItems={["center", "center", "center", "flex-start"]}
         justifyContent={["center", "center", "center", "space-evenly"]}
+        px={["0vw", "0vw", "5vw", "5vw"]} //affects section content
         position='relative'
         listStylePosition={"inside"}
         gap={["10vw", "8vw", "5vw", "5vw"]}>
@@ -37,9 +39,10 @@ export default function SectionFlexContainer(props) {
       {props.linkText && props.linkTo && (
         <Link
           mt='8'
-          variant='LightOutline'
-          to={props.linkTo}
-          alignSelf='center'>
+          // alignSelf='flex-end'
+          alignSelf='center'
+          variant={props.linkVariant ? props.linkVariant : "LightOutline"}
+          to={props.linkTo}>
           {props.linkText}
         </Link>
       )}

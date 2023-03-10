@@ -4,6 +4,9 @@ export const TextStyles: ComponentStyleConfig = {
   // style object for base or default style
   baseStyle: {
     fontFamily: "fonts.body",
+    mt:'8',
+    fontSize:'1rem',
+    lineHeight:'1.5rem',
     // color: "colors.primary",
     // mb: "0.5em",
     // fontSize: "16px",

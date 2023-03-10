@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "@sections/about/Hero";
+import AboutHero from "@sections/about/AboutHero";
 import Meet from "@sections/about/Meet";
 import Bouncy from "@sections/about/Bouncy";
 import Testimonials from "@sections/about/Testimonials";
@@ -13,10 +13,10 @@ export default function About(props) {
         bgImage={"/images/about-1.png"}
         strength={300}
         bgImageStyle={{ width: "100%", height: "100%", objectFit: "cover" }}>
-        <Hero />
+        <AboutHero />
       </Parallax>
 
-      <Meet />
+      <Meet bg='background' color='dark' />
 
       <Parallax
         bgImage={"/images/about-2.png"}
@@ -25,7 +25,7 @@ export default function About(props) {
         <Testimonials />
       </Parallax>
 
-      <Bouncy />
+      {/* <Bouncy /> */}
     </Page>
   );
 }

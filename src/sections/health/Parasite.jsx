@@ -4,7 +4,6 @@ import SectionFlexContainer from "@components/SectionFlexContainer";
 import { useTheme } from "@chakra-ui/react";
 import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 export default function Parasite(props) {
-
   return (
     <SectionFlexContainer
       header='Parasite Protection'
@@ -12,9 +11,7 @@ export default function Parasite(props) {
       to='/contact'
       bg='primary'
       color='light'
-      {...props}
-      >
-        
+      {...props}>
       <ImageHeaderTextBlock src='/images/deworming.svg' heading='Deworming'>
         <Text>
           Parasites are organisms that feed on or within animals. Fleas, ticks
@@ -34,7 +31,7 @@ export default function Parasite(props) {
 
       <ImageHeaderTextBlock
         src='/images/external-parasite.svg'
-        heading='External Parasites'>
+        heading='External'>
         <Box>
           Recognizing external parasites is not always as easy as visualizing
           the parasite. Sometimes they are too small to be catch of glimpse of,
@@ -51,7 +48,7 @@ export default function Parasite(props) {
 
       <ImageHeaderTextBlock
         src='/images/internal-parasite.svg'
-        heading='Internal Parasites'>
+        heading='Internal'>
         <Box>
           Unfortunately, internal parasites can only be noticed in two ways,
           either through clinical signs or by seeing your animal’s feces having

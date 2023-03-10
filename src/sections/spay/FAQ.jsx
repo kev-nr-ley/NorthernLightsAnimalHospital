@@ -9,7 +9,7 @@ import {
 import AccordionQuestion from "@components/AccordionQuestion";
 import { useTheme } from "@chakra-ui/react";
 import { FAQ } from "@assets/data/FAQ";
-
+import SectionFlexContainer from "../../components/SectionFlexContainer";
 export default function Faq(props) {
   const { colors } = useTheme();
 
@@ -20,37 +20,29 @@ export default function Faq(props) {
           key={index}
           question={item.question}
           answer={item.answer}
+
         />
       );
     });
   };
 
   return (
-    <Box
-      w='100vw'
-      maxW='100%'
-      position='relative'
-      p={["5vw 5vw", "5vw 5vw", "5vw 10vw", "5vw 15vw"]}
-      minW='320px'
-      bg='background'
+    <SectionFlexContainer
+      header='Frequently Asked Questions'
+      flipHorizontal
       {...props}>
-      <Flex flexDirection={"column"} position='relative'>
-        <Heading variant='SectionHeading' fontSize={["28px", "28px,", "36px"]}>
-          FAQS
-        </Heading>
+      <Image w={["100vw", "100vw", "800px"]} src='/images/spay-1.png' />
 
-        <Flex
-          mt='8'
-          flexDirection={["column-reverse", "column-reverse", "row"]}
-          justifyContent={["center", "center", "space-between"]}
-          alignItems={["center", "center", "flex-start"]}
-          gap='2vh'
-          position='relative'>
-          <Accordion allowToggle w='100%'  display='flex' flexDirection='column' px='2' gap='2'>{renderFaq()}</Accordion>
-
-          <Image w={["100vw", "100vw", "800px"]} src='/images/spay-1.png' />
-        </Flex>
-      </Flex>
-    </Box>
+      <Accordion
+        allowToggle
+        w='100%'
+        maxW='800px'
+        display='flex'
+        flexDirection='column'
+        gap='2'
+        >
+        {renderFaq()}
+      </Accordion>
+    </SectionFlexContainer>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "@sections/health/Hero";
+import Hero from "@sections/health/HealthHero";
 import Care from "@sections/health/Care";
 import Parasite from "@sections/health/Parasite";
 

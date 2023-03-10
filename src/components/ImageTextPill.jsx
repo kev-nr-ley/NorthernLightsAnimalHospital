@@ -1,34 +1,51 @@
-import { Flex, Heading, Image } from "@chakra-ui/react";
+import { Flex, Heading, Image, Box } from "@chakra-ui/react";
 
 export default function Considerations(props) {
   return (
     <Flex
-      flexDirection='column'
-      alignItems={["flex-start", "flex-start"]}
-      borderRadius='60px'
-      overflow='hidden'
+      justifyContent={"center"}
+      alignItems={["center", "center"]}
+      flexDirection='row'
+      h='100%'
+      margin='12'
+      borderRadius='50px'
+      w='80vw'
+      px='2vw'
+      py='5vh'
       position='relative'
-      h='fit-content'
-      py={["5vw", "4vw", "3vw", "2vw"]}
-      px={["5vw", "4vw", "3vw", "2vw"]}
-      boxShadow='0px 4px 13px rgba(0,0,0,0.25)'
       {...props}>
-      <Heading variant='bodyHeading'>{props.title}</Heading>
+      {/* Section heading */}
 
-      <Flex
-        flexDirection={["column", "column", "column", "row"]}
-        alignItems={"center"}>
-        <Image
-          src={props.image}
-          w={["200px", "200px", "300px"]}
-          h='100%'
-          borderRadius='60px'
-          objectFit={"cover"}
-          float={["none", "right"]}
-          px={["0", "4"]}
-        />
+      <Box>
+        <Heading
+          mt='6'
+          w='100%'
+          borderBottomColor={props.color}
+          variant='bodyHeading'>
+          {props.heading}
+        </Heading>
+        {props.src ? (
+          <Image
+            src={props.src}
+            w={["200px"]}
+            h={["200px"]}
+            mx='4'
+            my='2'
+            borderRadius='16px'
+            alignSelf='flex-start'
+            overflow='visible'
+            objectFit='contain'
+            float='right'
+          />
+        ) : null}
         {props.children}
-      </Flex>
+      </Box>
+
+      {/* {props.linkText ? (
+        <Link mt='4' to={props.linkTo} variant={props.linkVariant}>
+          {props.linkText}
+        </Link>
+      ) : null} */}
     </Flex>
   );
 }

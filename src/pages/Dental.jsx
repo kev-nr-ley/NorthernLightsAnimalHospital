@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "@sections/dental/Hero";
+import Hero from "@sections/dental/DentalHero";
 import FAQ from "@sections/dental/FAQ";
 import BeforeAppointment from "@sections/dental/BeforeAppointment";
 import AfterAppointment from "@sections/dental/AfterAppointment";
@@ -24,7 +24,7 @@ export default function Dental(props) {
       <BeforeAppointment bg='primary' color='light' />
       <Considerations />
       <AfterAppointment bg='light' color='dark' />
-      <Care bg='primary' color='dark' />
+      <Care bg='primary' color='light' />
 
     </Page>
   );

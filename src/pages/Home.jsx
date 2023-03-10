@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "@sections/home/Hero";
+import Hero from "@sections/home/HomeHero";
 import Services from "@sections/home/Services";
 import About from "@sections/home/About";
 import Visit from "@sections/home/Visit";
@@ -21,7 +21,7 @@ export default function Home(props) {
         <Hero />
       </Parallax>
 
-      <Services />
+      <Services bg='background' color='dark' />
       <About />
       <Visit />
     </Page>

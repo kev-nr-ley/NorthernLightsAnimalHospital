@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "@sections/spay/Hero";
+import Hero from "@sections/spay/SpayHero";
 import Faq from "@sections/spay/FAQ";
 import BeforeAppointment from "@sections/spay/BeforeAppointment";
 import AfterAppointment from "@sections/spay/AfterAppointment";
@@ -18,7 +18,7 @@ export default function Spay(props) {
         <Hero />
       </Parallax>
 
-      <Faq />
+      <Faq bg='background' color='dark' />
       <BeforeAppointment bg='primary' color='light' />
       <AfterAppointment bg='light' color='dark' />
     </Page>

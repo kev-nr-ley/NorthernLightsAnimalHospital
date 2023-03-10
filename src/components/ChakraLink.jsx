@@ -1,20 +1,20 @@
 import React from "react";
+import { Text, Link as NewLink } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-import { Link as NewLink } from "@chakra-ui/react";
-import { useTheme } from "@chakra-ui/react";
-
-export default function ChakraLinkArrow(props) {
+function ChakraLink(props, children) {
   return (
     <NewLink
-      display='flex'
-      alignItems='center'
-      variant={"LightOutline"}
-      fontSize='1rem'
-      gap='1rem'
-      fontWeight='800'
-      to={props.to}
+      as={Link}
+      variant={props.variant}
+      to={props.to || "/"}
+      name={props.name}
+      onClick={props.onClick || null}
+      aria-label={`link to ${children} page`}
       {...props}>
-      {props.text}
+      <Text>{props.name}</Text>
     </NewLink>
   );
 }
+
+export default ChakraLink;

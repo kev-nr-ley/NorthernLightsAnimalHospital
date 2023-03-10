@@ -47,7 +47,15 @@ export default function StaffCard(props) {
       </Box>
       <Box px={["2vw"]} pb='2vh' mt='8'>
         <Heading variant='bodyHeading'>{props.name}</Heading>
-        <Text mt='4'>{props.description}</Text>
+        <Box mt='4'>
+          {props.description.map((item, index) => {
+            return (
+              <Text mt='4' key={index}>
+                {item}
+              </Text>
+            );
+          })}
+        </Box>
       </Box>
     </Box>
   );

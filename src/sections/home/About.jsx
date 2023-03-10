@@ -1,6 +1,7 @@
 import { Flex, Box, Heading, Text, Link, Image, Grid } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function About(props) {
   const { colors } = useTheme();
 
@@ -41,66 +42,26 @@ export default function About(props) {
       </Box>
     ));
   }
+  const greeting = () => {
+    return (
+      <Box>
+        Meet your care team.
+        <Text as='span' color={colors.primary} ml='4' fontSize='48px'>
+          ❤
+        </Text>
+      </Box>
+    );
+  };
 
   return (
-    <Box
-      w='100vw'
-      maxW='100%'
-      position='relative'
-      bg={colors.background}
-      p={["5vw 5vw", "5vw 5vw", "5vw 10vw", "5vw 15vw"]}
-      minW='320px'
-      {...props}>
-      {/* bg oval */}
-      {/* <Box
-        position='absolute'
-        top='50%'
-        left='0'
-        transform={"translateY(-50%)"}
-        w='95%'
-        h='90%'
-        bg='red'
-        borderTopRightRadius='9999'
-        borderBottomRightRadius='9999'
-        opacity='0.1'
-        zIndex='1'>
-        oh hello
-      </Box> */}
-
-      <Flex flexDirection={"column"} position='relative'>
-        <Box minW='300px'>
-          <Heading
-            variant='SectionHeading'
-            fontSize={["28px", "28px,", "36px"]}>
-            Meet your care team.
-            <Text as='span' color={colors.primary} fontSize='48px'>
-              ❤
-            </Text>
-          </Heading>
-
-          <Text>
-            We are a group of highly trained, experienced animal lovers who are
-            devoted to giving our patients the best care possible.
-          </Text>
-        </Box>
-
-        <Flex
-          mt='8'
-          flexWrap='wrap'
-          justifyContent={["center", "center", "center", "space-between"]}
-          alignItems='center'
-          gap='5vh'>
-          {renderStaff(staff)}
-        </Flex>
-
-        <Link
-          variant='DarkOutline'
-          justifySelf={"flex-start"}
-          alignSelf={["flex-start", "flex-start", "flex-end"]}
-          mt='5vh'>
-          Learn More
-        </Link>
-      </Flex>
-    </Box>
+    <SectionFlexContainer
+      header={greeting()}
+      subText='We are a group of highly trained, experienced animal lovers who are devoted to giving our patients the best care possible.'
+      {...props}
+      linkText='Meet Our Team'
+      linkTo='/about'
+      linkVariant='DarkOutline'>
+      {renderStaff(staff)}
+    </SectionFlexContainer>
   );
 }

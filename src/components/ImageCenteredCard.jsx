@@ -52,6 +52,12 @@ export default function ImageCenteredCard(props) {
 
       <Text>{props.text}</Text>
       <Box mt='8'>{props.children}</Box>
+
+      {props.linkText ? (
+        <Link to={props.linkTo} variant={props.linkVariant}>
+          {props.linkText}
+        </Link>
+      ) : null}
     </Flex>
   );
 }
