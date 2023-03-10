@@ -2,7 +2,6 @@ import React from "react";
 
 import { Box, Image, Text, Heading, Flex, VStack } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
-import CrossProcessExports from "electron";
 export default function ImageHeaderTextBlock(props) {
   const { colors } = useTheme();
   return (
