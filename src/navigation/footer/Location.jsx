@@ -8,8 +8,10 @@ export default function Location(props) {
       <HiLocationMarker fontSize='2rem' />
       <Box>
         <Text variant='bold'>The Original Spay Clinic</Text>
-        <Text>10575 111 St NW</Text>
-        <Text>Edmonton, Alberta T5H 3E8</Text>
+        <Text>
+          10575 111 St NW <br />
+          Edmonton, Alberta T5H 3E8
+        </Text>
 
         <Link as={Box} mt='2' variant='solid'>
           Open Maps

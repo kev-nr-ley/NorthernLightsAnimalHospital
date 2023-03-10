@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-      <Navbar bg='light' />
+      <Navbar bg='#222' color='light' />
       <PageRoutes />
-      <Footer bg='light' />
+      <Footer bg='#222' color='light' />
     </>
   );
 }

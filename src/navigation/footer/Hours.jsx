@@ -7,8 +7,10 @@ export default function Hours(props) {
       <TimeIcon fontSize='2rem' />
       <Box>
         <Text variant='bold'>Hours</Text>
-        <Text>Monday-Friday: 7am-6pm</Text>
-        <Text>Closed Weekends</Text>
+        <Text>
+          Monday-Friday: 7am-6pm <br />
+          Closed Weekends
+        </Text>
       </Box>
     </Flex>
   );

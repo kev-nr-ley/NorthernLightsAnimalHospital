@@ -4,10 +4,8 @@ import Faq from "@sections/spay/FAQ";
 import BeforeAppointment from "@sections/spay/BeforeAppointment";
 import AfterAppointment from "@sections/spay/AfterAppointment";
 import { Parallax } from "react-parallax";
-import { useTheme } from "@chakra-ui/react";
 import Page from "@components/Page";
 export default function Spay(props) {
-  const { colors } = useTheme();
   return (
     <Page {...props}>
       <Parallax

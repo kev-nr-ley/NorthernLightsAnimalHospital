@@ -69,12 +69,12 @@ export default function About(props) {
 
   return (
     <SectionFlexContainer
-      header={greeting()}
-      subText='We are a group of highly trained, experienced animal lovers who are devoted to giving our patients the best care possible.'
+      headertext={greeting()}
+      subtext='We are a group of highly trained, experienced animal lovers who are devoted to giving our patients the best care possible.'
       {...props}
-      linkText='Meet Our Team'
-      linkTo='/about'
-      linkVariant='DarkOutline'
+      linktext='Meet Our Team'
+      linkto='/about'
+      linkvariant='DarkOutline'
       {...props}>
       {renderStaff(staff)}
     </SectionFlexContainer>

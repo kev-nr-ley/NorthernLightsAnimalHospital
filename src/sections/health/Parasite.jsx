@@ -6,9 +6,9 @@ import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 export default function Parasite(props) {
   return (
     <SectionFlexContainer
-      header='Parasite Protection'
-      linkText='Contact Us'
-      linkTo='/contact'
+      headertext='Parasite Protection'
+      linktext='Contact Us'
+      linkto='/contact'
       bg='primary'
       color='light'
       {...props}>

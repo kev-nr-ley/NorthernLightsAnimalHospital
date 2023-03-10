@@ -4,11 +4,12 @@ export default function SiteNavigation(props) {
   return (
     <Flex flexDirection={"column"} {...props}>
       <Text variant='bold'>Site Navigation</Text>
-      <Text>Home</Text>
-      <Text>About</Text>
-      <Text>Spay and Neuter</Text>
-      <Text>Other Services</Text>
-      <Text>Contact Us</Text>
+      <Link to='/'>Home</Link>
+      <Link to='/about'>About</Link>
+      <Link to='/spay'>Spay & Neuter</Link>
+      <Link to='/dental'>Dental</Link>
+      <Link to='/health'>Other Services</Link>
+      <Link to='/contact'>Contact Us</Link>
     </Flex>
   );
 }

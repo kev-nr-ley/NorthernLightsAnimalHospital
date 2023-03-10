@@ -4,10 +4,9 @@ import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function Visit(props) {
   return (
     <SectionFlexContainer
-      header='Schedule a visit'
-      subheader='The Original Spay Clinic'
-      linkText='Request An Appointment'
-      linkTo='/contact'
+      headertext='Schedule a visit'
+      linktext='Request An Appointment'
+      linkto='/contact'
       {...props}>
       <Flex flexDirection='column' justifyContent={"center"}>
         <Heading variant='bodyHeading'>The Original Spay Clinic</Heading>

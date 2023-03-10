@@ -8,9 +8,8 @@ export default function AboutHero(props) {
   return (
     <HeroContainer
       heading='Our mission'
-      
       linktext='Video Introduction'
-      linkto='/'
+      linkto='/contact'
       {...props}>
       <Text>
         The Original Spay Clinic has been providing affordable priced spays and

@@ -1,18 +1,15 @@
 import { Text, Accordion } from "@chakra-ui/react";
-
-import { useTheme } from "@chakra-ui/react";
 import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 import AccordionQuestion from "@components/AccordionQuestion";
 import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function AfterAppointment(props) {
-
   return (
-    <SectionFlexContainer header='After Your Appointment' {...props}>
+    <SectionFlexContainer headertext='After Your Appointment' {...props}>
       <ImageHeaderTextBlock
-        bigText='1'
-        headerColor='light'
-        headerBg='dark'
-        heading='Before'>
+        headercircle='1'
+        headercolor='light'
+        headerbg='dark'
+        headertext='Before the procedure'>
         <Text>
           Our staff will be happy to discuss the following information with you
           at the time of booking and will remind you once more with a
@@ -27,10 +24,10 @@ export default function AfterAppointment(props) {
         </Text>
       </ImageHeaderTextBlock>
       <ImageHeaderTextBlock
-        bigText='2'
-        headerColor='light'
-        headerBg='dark'
-        heading='Day of'>
+        headercircle='2'
+        headercolor='light'
+        headerbg='dark'
+        headertext='Day of the procedure'>
         <Text>
           Your pet will have a “day stay” at the clinic and must be dropped off
           at The Spay Clinic between 7:00AM – 8:00AM. For your pet’s comfort and
@@ -41,10 +38,10 @@ export default function AfterAppointment(props) {
         </Text>
       </ImageHeaderTextBlock>
       <ImageHeaderTextBlock
-        bigText='3'
-        headerColor='light'
-        headerBg='dark'
-        heading='Aftercare'>
+        headercircle='3'
+        headercolor='light'
+        headerbg='dark'
+        headertext='After the procedure'>
         <Text>
           Our staff will discuss the post-operative care and management that
           your pet will require following their dental procedure. You will also
@@ -62,7 +59,7 @@ export default function AfterAppointment(props) {
           />
 
           <AccordionQuestion
-            question='Dental Post-op Care'
+            question='Cats Post-op Care'
             answer='Cats are to be properly feared, and not merely tolerated. They are not our friends or our equals. They are our superiors. They are the aristocracy. They are the ruling class. They are the bourgeoisie. They are the 1%.'
             fontSize='16px'
             mt='4'

@@ -3,12 +3,10 @@ import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function Considerations(props) {
   return (
-    <SectionFlexContainer header='Considerations' {...props}>
+    <SectionFlexContainer headertext='Considerations' {...props}>
       <ImageHeaderTextBlock
         src='/images/tooth-outline.svg'
-        heading='Extractions'
-        imageWidth='80px'
-        imageHeight='80px'>
+        headertext='Extractions'>
         <Text>
           Dental extractions may also be discussed with you if certain teeth are
           noted to be in an undesirable condition. Extractions are practiced
@@ -21,9 +19,7 @@ export default function Considerations(props) {
       </ImageHeaderTextBlock>
       <ImageHeaderTextBlock
         src='/images/pill-outline.svg'
-        heading='Antibiotics'
-        imageWidth='80px'
-        imageHeight='80px'>
+        headertext='Antibiotics'>
         <Text>
           During your consultation, pre-procedural antibiotics will be discussed
           with you. Most animals are recommended to be placed on antibiotics a
@@ -31,11 +27,7 @@ export default function Considerations(props) {
           control any infection that may be present within your pet’s mouth.
         </Text>
       </ImageHeaderTextBlock>
-      <ImageHeaderTextBlock
-        src='/images/bowl-outline.svg'
-        heading='Fasting'
-        imageWidth='80px'
-        imageHeight='80px'>
+      <ImageHeaderTextBlock src='/images/bowl-outline.svg' headertext='Fasting'>
         <Text>
           Once you book an appointment for your pet to have a dental procedure
           performed it is important to remember the fasting instructions the

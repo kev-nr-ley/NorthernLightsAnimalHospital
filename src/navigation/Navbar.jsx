@@ -6,7 +6,6 @@ import { useTheme } from "@chakra-ui/react";
 export default function Navbar(props) {
   const [isMobile, setIsMobile] = useState(false);
   const { colors } = useTheme();
-
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 1079) {
@@ -23,12 +22,12 @@ export default function Navbar(props) {
   return (
     <>
       {isMobile ? (
-        <MobileNav />
+        <MobileNav bg='primary' {...props} />
       ) : (
         <DesktopNav
           className='desktop-nav'
           as='nav'
-          bg='black'
+          bg={colors.primary}
           color='white'
           flexDirection='row'
           justifyContent='space-between'
@@ -40,6 +39,7 @@ export default function Navbar(props) {
           position='sticky'
           top='0'
           zIndex='11'
+          {...props}
         />
       )}
     </>

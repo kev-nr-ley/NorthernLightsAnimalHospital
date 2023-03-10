@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Box, Image, Heading, Flex, Link } from "@chakra-ui/react";
-import { useTheme } from "@chakra-ui/react";
 export default function ImageHeaderTextBlock(props) {
   return (
     <Flex
@@ -17,21 +16,21 @@ export default function ImageHeaderTextBlock(props) {
       {props.src ? (
         <Image
           src={props.src}
-          w={["140px"]}
-          h={["140px"]}
+          w={["75px"]}
+          h={["75px"]}
           alignSelf='flex-start'
           overflow='visible'
           objectFit='contain'
         />
       ) : null}
 
-      {props.bigText ? (
+      {props.headercircle ? (
         <Heading
           w='80px' //for circle
           h='80px' //for circle
           borderRadius='100%'
-          color={props.headerColor}
-          bg={props.headerBg}
+          color={props.headercolor}
+          bg={props.headerbg}
           display='flex'
           justifySelf='flex-start'
           alignSelf='flex-start'
@@ -39,25 +38,7 @@ export default function ImageHeaderTextBlock(props) {
           alignItems='center'
           whiteSpace={"nowrap"}
           variant='sectionHeading'>
-          {props.bigText}
-        </Heading>
-      ) : null}
-
-      {props.headerText ? (
-        <Heading
-          w='80px' //for circle
-          h='80px' //for circle
-          borderRadius='100%'
-          color={props.headerColor}
-          bg={props.headerBg}
-          display='flex'
-          justifySelf='flex-start'
-          alignSelf='flex-start'
-          justifyContent='center'
-          alignItems='center'
-          whiteSpace={"nowrap"}
-          variant='sectionHeading'>
-          {props.headerText}
+          {props.headercircle}
         </Heading>
       ) : null}
 
@@ -66,14 +47,14 @@ export default function ImageHeaderTextBlock(props) {
         mt='6'
         w='100%'
         borderBottomColor={props.color}
-        variant='sectionHeading'>
-        {props.heading}
+        variant='bodyHeading'>
+        {props.headertext}
       </Heading>
 
       <Box>{props.children}</Box>
-      {props.linkText ? (
-        <Link mt='4' to={props.linkTo} variant={props.linkVariant}>
-          {props.linkText}
+      {props.linktext ? (
+        <Link mt='4' to={props.linkto} variant={props.linkvariant}>
+          {props.linktext}
         </Link>
       ) : null}
     </Flex>

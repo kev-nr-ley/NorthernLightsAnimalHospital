@@ -4,24 +4,23 @@ import ImageTextPill from "@components/ImageTextPill";
 export default function Considerations(props) {
   return (
     <Flex
-      //use same props as in SectionFlexContainer
       flexDirection='column'
-      alignItems={["flex-start"]}
-      w='100vw'
+      alignItems={["center"]}
+      justifyContent='center'
       minW='320px'
       maxW='100%'
       position='relative'
+      h='100%'
       px={["5vw", "5vw", "10vw", "10vw"]} //affects section heading
-      py={["5vw", "5vw", "10vw", "10vw"]}
-      my='10vh'
       {...props}>
-      <Heading variant='sectionHeading'>Considerations</Heading>
+      {/* <Heading variant='sectionHeading'>Considerations</Heading> */}
       <ImageTextPill
         heading='Brushing'
         src='/images/toothbrush.png'
         bg='light'
         color='dark'
-        FullWidth>
+        // fullwidth
+      >
         <Text>
           You can start brushing your animal’s teeth at anytime but beginning
           this at a younger age usually makes it easier to make it a regular

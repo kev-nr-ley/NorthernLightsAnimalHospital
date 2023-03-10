@@ -1,14 +1,12 @@
 import userTestimonials from "@assets/data/userTestimonials";
 import UserTestimonial from "@components/UserTestimonial";
 import SectionFlexContainer from "@components/SectionFlexContainer";
-import { useTheme } from "@chakra-ui/react";
-export default function Testimonials(props) {
-  const { colors } = useTheme();
 
+export default function Testimonials(props) {
   const renderTestimonials = () => {
-    return userTestimonials.map((testimonial) => (
+    return userTestimonials.map((testimonial, index) => (
       <UserTestimonial
-        key={testimonial.id}
+        key={index}
         rating={testimonial.rating}
         review={testimonial.review}
         name={testimonial.name}
@@ -21,8 +19,8 @@ export default function Testimonials(props) {
   return (
     <SectionFlexContainer
       header='What our clients say about us'
-      linkText='Read More Testimonials'
-      linkTo='/testimonials'
+      linktext='Read More Testimonials'
+      linkto='/contact'
       bg='primaryOpacity95'
       color='light'
       // h='100%'

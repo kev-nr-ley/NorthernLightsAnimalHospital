@@ -5,11 +5,11 @@ import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function BeforeAppointment(props) {
   return (
     <SectionFlexContainer
-      header='Before booking your appointment'
-      linkText='Book Now'
-      linkTo='/contact'
+      headertext='Before booking your appointment'
+      linktext='Book Now'
+      linkto='/contact'
       {...props}>
-      <ImageHeaderTextBlock src='/images/clipboard.png' heading='Health'>
+      <ImageHeaderTextBlock src='/images/clipboard.png' headertext='Health'>
         <Text>
           Please notify the staff at The Spay Clinic during admission of any new
           or ongoing concerns that you may have about your pet’s health. All
@@ -21,7 +21,7 @@ export default function BeforeAppointment(props) {
 
       <ImageHeaderTextBlock
         src='/images/vaccination.png'
-        heading='Vaccinations'>
+        headertext='Vaccinations'>
         <Text>
           Although vaccinations are not mandatory for their day stay, we here at
           The Spay Clinic highly recommend that your pet’s vaccination status be
@@ -33,7 +33,7 @@ export default function BeforeAppointment(props) {
       </ImageHeaderTextBlock>
       <ImageHeaderTextBlock
         src='/images/dogtracking.png'
-        heading='Identification'>
+        headertext='Identification'>
         <Text>
           Forms of identification are important to consider during this elective
           procedure as there is always a possibility of your pet becoming lost.

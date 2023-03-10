@@ -8,9 +8,11 @@ export default function Contact(props) {
     <Flex w='100%' gap='8' {...props}>
       <PhoneIcon fontSize='2rem' />
       <Box>
-        <Text variant='bold'>Contact</Text>
-        <Text>Phone: 780-426-4221</Text>
-        <Text>Fax: 780-428-5721</Text>
+        <Text variant='bold'>Contact </Text>
+        <Text>
+          Phone: 780-426-4221 <br /> 
+          Fax: 780-428-5721
+        </Text>
         <Flex gap='1' fontSize='32px'>
           <InstagramLink />
           <FacebookLink />

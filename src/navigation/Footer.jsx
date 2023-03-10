@@ -13,15 +13,15 @@ export default function Footer(props) {
       maxW='100%'
       justifyContent='space-evenly'
       py='8'
-      px='5vw'
+      px='4'
       gap='2'
       alignItems={"flex-start"}
       {...props}>
-      <Logo w='320px' />
-      <Hours gap='2' w='320px' />
-      <Contact gap='2' w='320px' />
-      <Location gap='2' w='320px' />
-      <SiteNavigation gap='1' w='320px' />
+      <Logo w='300px' />
+      <Hours gap='2' w='300px' />
+      <Contact gap='2' w='300px' />
+      <Location gap='2' w='300px' />
+      <SiteNavigation gap='1' w='300px' />
     </Flex>
   );
 }

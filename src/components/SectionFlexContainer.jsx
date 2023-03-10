@@ -1,9 +1,7 @@
-import { Flex, Box, Heading, Text, Image, Grid, Link } from "@chakra-ui/react";
+import { Flex, Heading, Text, Link } from "@chakra-ui/react";
 
 import { useTheme } from "@chakra-ui/react";
 export default function SectionFlexContainer(props) {
-  const { colors } = useTheme();
-
   return (
     <Flex
       flexDirection='column'
@@ -15,12 +13,12 @@ export default function SectionFlexContainer(props) {
       px={["5vw", "5vw", "10vw", "10vw"]} //affects section heading
       py={["5vw", "5vw", "5vw", "5vw"]}
       {...props}>
-      <Heading variant='sectionHeading'>{props.header}</Heading>
-      <Text>{props.subText}</Text>
+      <Heading variant='sectionHeading'>{props.headertext}</Heading>
+      <Text>{props.subtext}</Text>
       <Flex
         mt='8'
         flexDirection={
-          !props.flipHorizontal
+          !props.fliphorizontal
             ? ["column", "column", "column", "row"]
             : ["column", "column", "column", "row-reverse"]
         }
@@ -35,14 +33,14 @@ export default function SectionFlexContainer(props) {
         {props.children}
       </Flex>
 
-      {props.linkText && props.linkTo && (
+      {props.linktext && props.linkto && (
         <Link
           mt='8'
           // alignSelf='flex-end'
           alignSelf='center'
-          variant={props.linkVariant ? props.linkVariant : "LightOutline"}
-          to={props.linkTo}>
-          {props.linkText}
+          variant={props.linkvariant ? props.linkvariant : "LightOutline"}
+          to={props.linkto}>
+          {props.linktext}
         </Link>
       )}
     </Flex>

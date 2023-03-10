@@ -38,7 +38,7 @@ export default function MobileNav(props) {
       position='fixed'
       top='0'
       right='0'
-      zIndex='99999999999'
+      zIndex='11'
       alignItems='center'
       color={colors.light}
       bg={isMenuOpen ? "gray.700" : colors.backgroundDark50}

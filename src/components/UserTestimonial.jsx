@@ -10,6 +10,7 @@ export default function UserTestimonial(props) {
     for (let i = 0; i < rating; i++) {
       stars.push(<AiFillStar />);
     }
+
     return (
       <Center
         as={HStack}
@@ -21,11 +22,11 @@ export default function UserTestimonial(props) {
     );
   };
 
+  
   return (
     <Flex flexDirection='column' justifyContent={"space-between"} {...props}>
       <Box>
         {makeStars(props.rating)}
-
         <Center as={Text} my='2rem' fontSize='16px'>
           {props.review}
         </Center>

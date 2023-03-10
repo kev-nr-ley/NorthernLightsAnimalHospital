@@ -7,8 +7,7 @@ export const LinkStyles: ComponentStyleConfig = {
     whiteSpace: "nowrap",
     textDecoration: "none",
     w: "fit-content",
-    px: "8",
-    py: "2",
+
 
     _hover: {
       textDecoration: "none",
@@ -21,8 +20,10 @@ export const LinkStyles: ComponentStyleConfig = {
   variants: {
     DarkOutline: {
       color: "dark",
+      px: "8",
+      py: "2",
       textTransform: "uppercase",
-      border: "4px solid #292A29",
+      // border: "4px solid #292A29",
       fontWeight: "700",
       bg: "transparent",
       _hover: {
@@ -34,6 +35,8 @@ export const LinkStyles: ComponentStyleConfig = {
 
     LightOutline: {
       color: "light",
+      px: "8",
+      py: "2",
       textTransform: "uppercase",
       border: "4px solid #f8f8f8",
       bg: "transparent",

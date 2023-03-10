@@ -1,13 +1,6 @@
-import { Image } from "@chakra-ui/react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-} from "@chakra-ui/react";
+import { Image, Accordion } from "@chakra-ui/react";
+import {} from "@chakra-ui/react";
 import AccordionQuestion from "@components/AccordionQuestion";
-import { useTheme } from "@chakra-ui/react";
 import { FAQ } from "@assets/data/FAQ";
 import SectionFlexContainer from "../../components/SectionFlexContainer";
 export default function Faq(props) {
@@ -25,8 +18,8 @@ export default function Faq(props) {
 
   return (
     <SectionFlexContainer
-      header='Frequently Asked Questions'
-      flipHorizontal
+      headertext='Frequently Asked Questions'
+      fliphorizontal='true'
       {...props}>
       <Image w={["100vw", "100vw", "800px"]} src='/images/spay-1.png' />
 

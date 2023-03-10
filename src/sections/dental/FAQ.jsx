@@ -1,12 +1,9 @@
 import { Image, Accordion } from "@chakra-ui/react";
 import AccordionQuestion from "@components/AccordionQuestion";
-import { useTheme } from "@chakra-ui/react";
 import { dentalFAQ } from "@assets/data/dentalFAQ";
 import SectionFlexContainer from "@components/SectionFlexContainer";
 
 export default function Faq(props) {
-  const { colors } = useTheme();
-
   const renderFaq = () => {
     return dentalFAQ.map((item, index) => {
       return (
@@ -21,8 +18,8 @@ export default function Faq(props) {
 
   return (
     <SectionFlexContainer
-      header='Frequently Asked Questions'
-      flipHorizontal
+      headertext='Frequently Asked Questions'
+      fliphorizontal='true'
       {...props}>
       <Image w={["100vw", "100vw", "800px"]} src='/images/spay-1.png' />
       <Accordion

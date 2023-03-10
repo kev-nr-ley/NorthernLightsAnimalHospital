@@ -1,16 +1,5 @@
-import {
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Link,
-  Image,
-  Center,
-} from "@chakra-ui/react";
-import { useTheme } from "@chakra-ui/react";
+import { Flex, Box, Heading, Link } from "@chakra-ui/react";
 export default function HeroContainer(props) {
-  const { colors } = useTheme();
-
   return (
     <Flex
       // For the background image
@@ -30,7 +19,7 @@ export default function HeroContainer(props) {
         justifyContent='center'
         w={["100vw", "100vw", "60vw"]}
         h={["auto", "auto", "auto"]}
-        pl={["5vw", "5vw", "15vw"]}
+        pl={["2vw", "2vw", "15vw"]}
         pr='2vw'
         py='2vh'
         position={["absolute", "absolute", "relative"]}

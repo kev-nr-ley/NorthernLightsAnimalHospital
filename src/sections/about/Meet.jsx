@@ -53,8 +53,10 @@ export default function Meet(props) {
 
   return (
     <SectionFlexContainer
-      header={greeting()}
-      subText='We are a group of highly trained, experienced animal lovers who are devoted to giving our patients the best care possible.'
+      headertext={greeting()}
+      linktext='Meet the team'
+      linkto='/about'
+      // subText='We are a group of highly trained, experienced animal lovers who are devoted to giving our patients the best care possible.'
       {...props}>
       <StaffCard
         image={staff[0].image}

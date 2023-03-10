@@ -1,11 +1,10 @@
 import { Text } from "@chakra-ui/react";
-
 import SectionFlexContainer from "@components/SectionFlexContainer";
 import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 export default function BeforeAppointment(props) {
   return (
-    <SectionFlexContainer header='Before Your Appointment' {...props}>
-      <ImageHeaderTextBlock src='/images/heart-outline.svg' heading='Health'>
+    <SectionFlexContainer headertext='Before Your Appointment' {...props}>
+      <ImageHeaderTextBlock src='/images/heart-outline.svg' headertext='Health'>
         <Text>
           Please notify the staff at The Spay Clinic during admission of any new
           or ongoing concerns that you may have about your pet’s health. All
@@ -16,7 +15,7 @@ export default function BeforeAppointment(props) {
       </ImageHeaderTextBlock>
       <ImageHeaderTextBlock
         src='/images/syringe-outline.svg'
-        heading='Vaccinations'>
+        headertext='Vaccinations'>
         <Text>
           Although vaccinations are not mandatory for their day stay, we here at
           The Spay Clinic highly recommend that your pet’s vaccination status be

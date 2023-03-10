@@ -6,14 +6,14 @@ export default function Considerations(props) {
     <Flex
       //use same props as in SectionFlexContainer
       flexDirection='column'
-      alignItems={["flex-start"]}
-      w='100vw'
+      alignItems={["center"]}
+      justifyContent='center'
       minW='320px'
       maxW='100%'
       position='relative'
       h='100%'
       px={["5vw", "5vw", "10vw", "10vw"]} //affects section heading
-      {...props}>
+      >
       {/* <Heading variant='sectionHeading'>Considerations</Heading> */}
       <ImageTextPill
         bg='light'

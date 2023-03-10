@@ -1,26 +1,6 @@
 import React from "react";
-import {
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Link,
-  Image,
-  Grid,
-  Select,
-  AspectRatio,
-} from "@chakra-ui/react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-} from "@chakra-ui/react";
-
+import { Box, Heading, Text, Image } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
-
 export default function StaffCard(props) {
   const { colors } = useTheme();
 

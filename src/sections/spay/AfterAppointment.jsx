@@ -5,12 +5,12 @@ import SectionFlexContainer from "@components/SectionFlexContainer";
 import AccordionQuestion from "@components/AccordionQuestion";
 export default function AfterAppointment(props) {
   return (
-    <SectionFlexContainer header='After Your Appointment' {...props}>
+    <SectionFlexContainer headertext='After Your Appointment' {...props}>
       <ImageHeaderTextBlock
-        headerText='1'
-        headerBg='dark'
-        headerColor='light'
-        heading='Before'>
+      headercircle='1'
+        headerbg='dark'
+        headercolor='light'
+        headertext='Before the Procedure'>
         <Text>
           Our staff will be happy to discuss the following information with you
           at the time of booking and will remind you once more with a
@@ -28,10 +28,10 @@ export default function AfterAppointment(props) {
         </Text>
       </ImageHeaderTextBlock>
       <ImageHeaderTextBlock
-        headerText='2'
-        headerBg='dark'
-        headerColor='light'
-        heading='Day of Surgery'>
+        headercircle='2'
+        headerbg='dark'
+        headercolor='light'
+        headertext='Day of the Procedure'>
         <Text>
           Your pet will have a “day stay” at the clinic and must be dropped off
           at The Spay Clinic between 7:00AM – 8:00AM. For your pet’s comfort and
@@ -54,10 +54,10 @@ export default function AfterAppointment(props) {
       </ImageHeaderTextBlock>
 
       <ImageHeaderTextBlock
-        headerText='3'
-        headerBg='dark'
-        headerColor='light'
-        heading='Aftercare'>
+        headercircle='3'
+        headerbg='dark'
+        headercolor='light'
+        headertext='After the Procedure'>
         <Text>
           Our staff will discuss the post-operative care and management that
           your pet will require following their elective surgery. You will also
