@@ -25,18 +25,17 @@ export default function About(props) {
 
   function renderStaff(staff) {
     return staff.map((member, index) => (
-      <Box maxW='320px' bjectFit='contain' key={index}
-      
+      <Box
+        maxW='320px'
+        objectFit='contain'
+        key={index}
         border='1px solid #E2E8F0'
         boxShadow='0px 4px 4px rgba(0, 0, 0, 0.25)'
         borderRadius='30px'
         padding='24px'
-        bg={colors.background}
-      >
+        bg={colors.light}>
         <Image w='100%' src={member.image} />
-        <Heading variant='bodyHeading' mt='2'
-        
-        >
+        <Heading variant='bodyHeading' mt='2'>
           {member.name}
         </Heading>
       </Box>
@@ -48,13 +47,11 @@ export default function About(props) {
       w='100vw'
       maxW='100%'
       position='relative'
-      // bg={colors.background}
-      bg='white'
+      bg={colors.background}
       p={["5vw 5vw", "5vw 5vw", "5vw 10vw", "5vw 15vw"]}
       minW='320px'
       {...props}>
-
-        {/* bg oval */}
+      {/* bg oval */}
       {/* <Box
         position='absolute'
         top='50%'
@@ -69,8 +66,6 @@ export default function About(props) {
         zIndex='1'>
         oh hello
       </Box> */}
-
-
 
       <Flex flexDirection={"column"} position='relative'>
         <Box minW='300px'>
@@ -103,7 +98,7 @@ export default function About(props) {
           justifySelf={"flex-start"}
           alignSelf={["flex-start", "flex-start", "flex-end"]}
           mt='5vh'>
-          Learn More <ArrowForwardIcon fontSize='32px' />
+          Learn More
         </Link>
       </Flex>
     </Box>

@@ -1,6 +1,8 @@
 import { Flex, Box, Heading, Text, Link, Image, Grid } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import ChakraLinkArrow from "@components/ChakraLinkArrow";
 export default function Visit(props) {
   const { colors } = useTheme();
 
@@ -55,21 +57,21 @@ export default function Visit(props) {
           Closed weekends
         </Text>
 
-        <Link variant='LightOutline' mt='8'>
-          Request An Appointment <ArrowForwardIcon fontSize='32px' />
+        <Link variant='LightOutline' mt='4'>
+          Request An Appointment
         </Link>
       </Flex>
 
       <Box>
         <Image
-          src='/public/images/map.png'
+          src='/images/map.png'
           w='100%'
           h='100%'
           minW='320px'
           minH='320px'
-        maxH='500px'
-        maxW='500px'
-          ></Image>
+          maxH='500px'
+          maxW='500px'
+        />
       </Box>
     </Flex>
   );

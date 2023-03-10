@@ -1,6 +1,7 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Flex, Box, Heading, Text, Link } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
+import ChakraLinkArrow from "@components/ChakraLinkArrow";
 export default function Hero(props) {
   const { colors } = useTheme();
 
@@ -11,29 +12,23 @@ export default function Hero(props) {
       maxW='100%'
       position='relative'
       h='100vh'
-      // minH='75vh'
-      bg={colors.primary}
-      bgImage='url(/images/hero-bg.png)'
-      bgSize={["100vw auto", "cover"]}
-      bgPosition={["top", "center"]}
-      bgRepeat={"no-repeat"}
       {...props}>
       <Flex
         flexDirection={"column"}
         w={["100vw", "100vw", "80vw", "60vw"]}
-        justifyContent={"flex-start"}
-        alignItems={"flex-start"}
-        p={["5vw 15vw", "5vw 15vw", "24px 5vw 24px 15vw"]}
         color={colors.light}
         bg={colors.primary}
         position={["absolute"]}
-        top={["auto", "auto", "50%"]}
+        top={["auto", "auto", "70%"]}
         bottom={["0", "0", "auto"]}
         left={["0%"]}
+        px={["5vw", "5vw", "10vw", "10vw"]}
+        py='12'
+        gap='4'
         transform={[
           "translate(0%, -30%)",
           "translate(0%, 0%)",
-          "translate(0%, -50%)",
+          "translate(0%, -100%)",
         ]}>
         <Heading variant='SectionHeading' fontSize={["28px", "28px,", "36px"]}>
           Welcome to The Original Spay Clinic.
@@ -46,13 +41,7 @@ export default function Hero(props) {
           were our own pet, and give them the same loving attention and care.
         </Text>
 
-        <Link
-          variant='LightOutline'
-          alignSelf={["flex-start", "flex-start", "flex-start"]}
-          mt='4'
-          fontSize='16px'>
-          Learn More <ArrowForwardIcon fontSize='32px' />
-        </Link>
+          <Link variant={'LightOutline'}>Video Introduction</Link>
       </Flex>
     </Box>
   );

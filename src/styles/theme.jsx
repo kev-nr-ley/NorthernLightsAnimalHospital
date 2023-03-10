@@ -19,7 +19,6 @@ export const theme = extendTheme({
         color: "inherit",
         boxSizing: "border-box",
         textDecoration: "none",
-        // border: "1px solid red"
       },
 
       a: {
@@ -32,7 +31,10 @@ export const theme = extendTheme({
   },
 
   colors: {
-    primary: "#CA5F00",
+    primary: "#8A4000",
+    primaryOpacity90: "#8A400090",
+    primaryOpacity95: "rgba(138, 64, 0, 0.95)",
+    star : "#FFD700",
     background: "#FFF1E4",
     light: "#F8F8F8",
     dark: "#292A29",

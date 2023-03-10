@@ -22,18 +22,5 @@ export default function Navbar(props) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const navLinks = [
-    { name: "About", to: "#" },
-    { name: "Spay & Neuter", to: "#" },
-    { name: "Dental Care", to: "#" },
-    { name: "Contact Us", to: "#" },
-  ];
-
-  const socialLinks = [
-    { name: "Instagram", to: "#", icon: <FaInstagram fontSize='32px' /> },
-    { name: "Facebook", to: "#", icon: <FaFacebook fontSize='32px' /> },
-  ];
-
-
-  return <>{isMobile ? <MobileNav  navLinks={navLinks}  {...props} /> : <DesktopNav navLinks={navLinks}  {...props} />}</>;
+  return <>{isMobile ? <MobileNav {...props} /> : <DesktopNav {...props} />}</>;
 }

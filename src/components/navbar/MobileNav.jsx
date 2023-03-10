@@ -4,6 +4,8 @@ import { useTheme } from "@chakra-ui/react";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { Route, Routes, Link } from "react-router-dom";
+import FacebookLink from "@components/FacebookLink";
+import InstagramLink from "@components/InstagramLink";
 
 export default function Navbar(props) {
   const { colors, fonts } = useTheme();
@@ -21,24 +23,13 @@ export default function Navbar(props) {
   }, []);
 
   const navLinks = [
-    { name: "About", to: "#" },
-    { name: "Spay & Neuter", to: "#" },
+    { name: "About", to: "/About" },
+    { name: "Spay & Neuter", to: "/spay" },
     { name: "Dental Care", to: "#" },
     { name: "Contact Us", to: "#" },
   ];
 
-  const socialLinks = [
-    { name: "Instagram", to: "#", icon: <FaInstagram fontSize='32px' /> },
-    { name: "Facebook", to: "#", icon: <FaFacebook fontSize='32px' /> },
-  ];
 
-  const renderSocialLinks = () => {
-    return socialLinks.map((link, index) => {
-      <IconLink to={link.to} key={index}>
-        {link.icon}
-      </IconLink>;
-    });
-  };
 
   return (
     <Flex
@@ -49,7 +40,6 @@ export default function Navbar(props) {
       minH='100vh'
       position='fixed'
       top='0'
-      right='0'
       bg={colors.background}
       zIndex='9'
       alignItems='center'
@@ -58,18 +48,17 @@ export default function Navbar(props) {
       <Image src='/public/images/Logo.png'></Image>
 
       <Flex flexDirection={"column"} gap='4' flexWrap='nowrap' h='100%'>
-        {props.navLinks.map((link) => (
-          <ChakraLink as={Link} variant='Default' to={link.to}>
+        {navLinks.map((link, index) => (
+          <ChakraLink as={Link} key={index} variant='Default' to={link.to}>
             {link.name}
           </ChakraLink>
         ))}
       </Flex>
 
       <Flex gap='4' flexWrap='nowrap' h='100%'>
-        <FaInstagram fontSize='32px' />
-        <FaFacebook fontSize='32px' />
+        <InstagramLink />
+        <FacebookLink />
       </Flex>
     </Flex>
   );
 }
- 
