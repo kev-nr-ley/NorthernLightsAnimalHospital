@@ -9,7 +9,7 @@ export default function Home(props) {
   return (
     <Page {...props}>
       <Parallax
-        bgImage={"/images/hero-bg.png"}
+        bgImage={"/images/hero-bg.webp"}
         strength={300}
         bgImageStyle={{
           width: "100vw",

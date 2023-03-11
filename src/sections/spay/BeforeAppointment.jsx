@@ -9,7 +9,7 @@ export default function BeforeAppointment(props) {
       linktext='Book Now'
       linkto='/contact'
       {...props}>
-      <ImageHeaderTextBlock src='/images/clipboard.png' headertext='Health'>
+      <ImageHeaderTextBlock src='/images/clipboard.webp' headertext='Health'>
         <Text>
           Please notify the staff at The Spay Clinic during admission of any new
           or ongoing concerns that you may have about your pet’s health. All
@@ -20,7 +20,7 @@ export default function BeforeAppointment(props) {
       </ImageHeaderTextBlock>
 
       <ImageHeaderTextBlock
-        src='/images/vaccination.png'
+        src='/images/vaccination.webp'
         headertext='Vaccinations'>
         <Text>
           Although vaccinations are not mandatory for their day stay, we here at
@@ -32,7 +32,7 @@ export default function BeforeAppointment(props) {
         </Text>
       </ImageHeaderTextBlock>
       <ImageHeaderTextBlock
-        src='/images/dogtracking.png'
+        src='/images/dogtracking.webp'
         headertext='Identification'>
         <Text>
           Forms of identification are important to consider during this elective

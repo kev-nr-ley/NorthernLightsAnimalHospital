@@ -14,7 +14,7 @@ export default function Dental(props) {
   return (
     <Page {...props}>
       <Parallax
-        bgImage={"/images/dental-1.png"}
+        bgImage={"/images/dental-1.webp"}
         strength={300}
         bgImageStyle={{ width: "100%", height: "90vh", objectFit: "cover" }}>
         <DentalHero h='80vh' />

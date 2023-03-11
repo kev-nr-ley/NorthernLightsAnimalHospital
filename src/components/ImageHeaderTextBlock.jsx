@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Box, Image, Heading, Flex, Link } from "@chakra-ui/react";
+import ChakraImage from "./ChakraImage";
 export default function ImageHeaderTextBlock(props) {
   return (
     <Flex
@@ -14,7 +15,7 @@ export default function ImageHeaderTextBlock(props) {
       position='relative'
       {...props}>
       {props.src ? (
-        <Image
+        <ChakraImage
           src={props.src}
           w={["75px"]}
           h={["75px"]}

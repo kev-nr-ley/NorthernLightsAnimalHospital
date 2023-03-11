@@ -16,7 +16,7 @@ export default function Considerations(props) {
       {/* <Heading variant='sectionHeading'>Considerations</Heading> */}
       <ImageTextPill
         heading='Brushing'
-        src='/images/toothbrush.png'
+        src='/images/toothbrush.webp'
         bg='light'
         color='dark'
         // fullwidth
@@ -46,7 +46,7 @@ export default function Considerations(props) {
 
       <ImageTextPill
         heading='Dental Formluated Diets'
-        src='/images/realdogbowl.png'
+        src='/images/realdogbowl.webp'
         color='dark'
         bg='light'>
         <Text>
@@ -70,7 +70,7 @@ export default function Considerations(props) {
       </ImageTextPill>
       <ImageTextPill
         heading='Dental Treats'
-        src='/images/dogbone.png'
+        src='/images/dogbone.webp'
         color='dark'
         bg='light'>
         <Text>

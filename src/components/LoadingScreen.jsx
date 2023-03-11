@@ -45,7 +45,7 @@ export default function LoadingScreen() {
             w='20vw'
             minW='300px'
             h='auto'
-            src='/images/dogbrush.png'
+            src='/images/dogbrush.webp'
             alt='loading'
             position='relative'
             top={"-20vh"}

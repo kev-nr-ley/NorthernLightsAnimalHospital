@@ -6,7 +6,7 @@ export default function Services(props) {
   return (
     <SectionFlexContainer headertext='Our services' {...props}>
       <ImageHeaderTextBlock
-        src='/images/clipboard.png'
+        src='/images/clipboard.webp'
         headertext='Spaying and Neutering'
         linktext='Learn More'
         linkto='/spay'
@@ -21,7 +21,7 @@ export default function Services(props) {
       </ImageHeaderTextBlock>
 
       <ImageHeaderTextBlock
-        src='/images/dogbrush.png'
+        src='/images/dogbrush.webp'
         headertext='Dental Care'
         linktext='Learn More'
         linkto='/dental'
@@ -37,7 +37,7 @@ export default function Services(props) {
       </ImageHeaderTextBlock>
 
       <ImageHeaderTextBlock
-        src='/images/dogcat.png'
+        src='/images/dogcat.webp'
         headertext='Other Services'
         linktext='Learn More'
         linkto='/health'

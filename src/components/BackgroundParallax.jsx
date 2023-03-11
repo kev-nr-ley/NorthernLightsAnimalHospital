@@ -5,7 +5,7 @@ export default function BackgroundParallax(props) {
   return (
     <div>
       <Parallax
-        bgImage='/images/about-2.png'
+        bgImage='/images/about-2.webp'
         strength={500}
         {...props}></Parallax>
         <h2>HELLOOOO</h2>

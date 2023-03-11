@@ -12,7 +12,7 @@ export default function Health(props) {
   return (
     <Page {...props}>
       <Parallax
-        bgImage={"/images/health-1.png"}
+        bgImage={"/images/health-1.webp"}
         strength={300}
         bgImageStyle={{ width: "100%", height: "90vh", objectFit: "cover" }}>
         <HealthHero h='80vh' />

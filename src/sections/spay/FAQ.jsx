@@ -21,7 +21,7 @@ export default function Faq(props) {
       headertext='Frequently Asked Questions'
       fliphorizontal='true'
       {...props}>
-      <Image w={["100vw", "100vw", "800px"]} src='/images/spay-1.png' />
+      <Image w={["100vw", "100vw", "800px"]} src='/images/spay-1.webp' />
 
       <Accordion
         allowToggle

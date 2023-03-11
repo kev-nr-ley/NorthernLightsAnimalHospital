@@ -9,7 +9,7 @@ export default function Spay(props) {
   return (
     <Page {...props}>
       <Parallax
-        bgImage={"/images/spay-hero-bg.png"}
+        bgImage={"/images/spay-hero-bg.webp"}
         strength={300}
         bgImageStyle={{ width: "100%", height: "90vh", objectFit: "cover" }}>
         <SpayHero h='80vh' />

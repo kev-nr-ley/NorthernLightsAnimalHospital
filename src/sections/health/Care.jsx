@@ -19,7 +19,7 @@ export default function Considerations(props) {
         bg='light'
         color='dark'
         heading='Annual Health Exams'
-        src='/images/pet-family-color.png'>
+        src='/images/pet-family-color.webp'>
         <Text>
           During your pet’s first physical exam your veterinarian will discuss
           strategies with you to help keep your animal as healthy as possible
@@ -36,7 +36,7 @@ export default function Considerations(props) {
         bg='light'
         color='dark'
         heading='Vaccinations'
-        src='/images/medicine-color.png'>
+        src='/images/medicine-color.webp'>
         <Flex flexDirection={"column"}>
           <Text>
             Younger pets are at a much higher risk for certain diseases,

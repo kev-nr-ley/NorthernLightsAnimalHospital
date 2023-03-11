@@ -27,7 +27,7 @@ export default function Visit(props) {
 
       <Box>
         <Image
-          src='/images/map.png'
+          src='/images/map.webp'
           w='100%'
           h='100%'
           minW='320px'
