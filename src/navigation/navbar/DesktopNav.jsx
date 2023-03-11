@@ -27,7 +27,7 @@ export default function DesktopNav(props) {
 
   const [scrollDown, setScrollDown] = useState(false);
   const [scrollUp, setScrollUp] = useState(false);
- const [shrinkNavbar, setShrinkNavbar] = useState(false);
+  const [shrinkNavbar, setShrinkNavbar] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrollDown(window.scrollY > 0);
@@ -40,8 +40,6 @@ export default function DesktopNav(props) {
     });
   }, []);
 
-
-
   return (
     <Flex
       className='desktop-nav'
@@ -52,12 +50,10 @@ export default function DesktopNav(props) {
       w='100vw'
       maxW='100%'
       // h='80px'
-      bg={scrollDown ? "light" : scrollUp ? "primary" : "light"}      
+      bg={scrollDown ? "light" : scrollUp ? "primary" : "light"}
       color={colors.dark}
-
       h={scrollDown ? "40px" : scrollUp ? "80px" : "80px"}
       transition='all 0.2s ease-in-out'
-
       position='sticky'
       top='0'
       zIndex='11'

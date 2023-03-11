@@ -12,7 +12,11 @@ export default function Parasite(props) {
       bg='primary'
       color='light'
       {...props}>
-      <ImageHeaderTextBlock src='/images/deworming.svg' heading='Deworming'>
+      <ImageHeaderTextBlock
+        src='/images/deworming.svg'
+        headertext='Deworming'
+        imagewidth='140px'
+        imageheight='140px'>
         <Text>
           Parasites are organisms that feed on or within animals. Fleas, ticks
           and lice are the most well known offenders, but there are many other
@@ -31,12 +35,17 @@ export default function Parasite(props) {
 
       <ImageHeaderTextBlock
         src='/images/external-parasite.svg'
-        heading='External'>
+        headertext='External'
+        imagewidth='140px'
+        imageheight='140px'>
         <Box>
-          Recognizing external parasites is not always as easy as visualizing
-          the parasite. Sometimes they are too small to be catch of glimpse of,
-          this is when your animal can give you clues that sometimes just isn’t
-          right. Clinical signs may include:
+          <Text>
+            Recognizing external parasites is not always as easy as visualizing
+            the parasite. Sometimes they are too small to be catch of glimpse
+            of, this is when your animal can give you clues that sometimes just
+            isn’t right. Clinical signs may include:
+          </Text>
+
           <ul>
             <li> Constant itching, chewing and licking</li>
             <li> Patchy hair loss </li>
@@ -48,11 +57,15 @@ export default function Parasite(props) {
 
       <ImageHeaderTextBlock
         src='/images/internal-parasite.svg'
-        heading='Internal'>
+        headertext='Internal'
+        imagewidth='140px'
+        imageheight='140px'>
         <Box>
-          Unfortunately, internal parasites can only be noticed in two ways,
-          either through clinical signs or by seeing your animal’s feces having
-          unwanted wiggling guests within. Clinical signs may include:
+          <Text>
+            Unfortunately, internal parasites can only be noticed in two ways,
+            either through clinical signs or by seeing your animal’s feces
+            having unwanted wiggling guests within. Clinical signs may include:
+          </Text>
           <ul>
             <li>A pot-bellied appearance</li>
             <li>Vomiting, diarrhea or rapid weight loss </li>

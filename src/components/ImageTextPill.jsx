@@ -1,5 +1,6 @@
 import { Flex, Heading, Image, Box } from "@chakra-ui/react";
 
+import ChakraImage from "@components/ChakraImage";
 export default function ImageTextPill(props) {
   return (
     <Flex
@@ -16,35 +17,32 @@ export default function ImageTextPill(props) {
       boxShadow='0px 4px 13px 0px #00000025'
       {...props}>
       {/* Section heading */}
-      <Box>
+      <Box w='100%' 
+      >
         <Heading
           mt='6'
-          w='100%'
           borderBottomColor={props.color}
           variant='bodyHeading'>
           {props.heading}
         </Heading>
         {props.src ? (
-          <Image
+          <ChakraImage
             src={props.src}
-            w={["200px"]}
-            h={["200px"]}
-            mx='4'
-            borderRadius='16px'
+            w={["140px"]}
+            h={["140px"]}
             alignSelf='flex-start'
             overflow='visible'
             objectFit='contain'
             float='right'
+            borderRadius='50px'
+            m='2'
           />
         ) : null}
+
         {props.children}
       </Box>
 
-      {/* {props.linkText ? (
-        <Link mt='4' to={props.linkTo} variant={props.linkVariant}>
-          {props.linkText}
-        </Link>
-      ) : null} */}
+    
     </Flex>
   );
 }

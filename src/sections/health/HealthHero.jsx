@@ -5,7 +5,7 @@ import HeroContainer from "@components/HeroContainer";
 export default function Hero(props) {
   return (
     <HeroContainer
-      headertext='Health Exams & Vaccinations'
+      heading='Health Exams & Vaccinations'
       linktext='Make an Appointment'
       linkto='/'
       {...props}>

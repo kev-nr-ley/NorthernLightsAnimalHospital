@@ -1,5 +1,6 @@
 import { Box, Heading, Text, Image } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
+import ChakraImage from "@components/ChakraImage";
 import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function About(props) {
   const { colors } = useTheme();
@@ -48,7 +49,15 @@ export default function About(props) {
         borderRadius='30px'
         padding='24px'
         bg={colors.light}>
-        <Image w='100%' src={member.image} />
+     
+        <ChakraImage 
+        src={member.image}
+        alt={member.name}
+        w='100%'
+        h='100%'
+        objectFit='contain'
+        />
+        
         <Heading variant='bodyHeading' mt='2'>
           {member.name}
         </Heading>

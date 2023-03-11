@@ -17,11 +17,11 @@ export default function ImageHeaderTextBlock(props) {
       {props.src ? (
         <ChakraImage
           src={props.src}
-          w={["75px"]}
-          h={["75px"]}
+          w={props.imagewidth || ["100px"]}
+          h={props.imageheight || ["100px"]}
           alignSelf='flex-start'
           overflow='visible'
-          objectFit='contain'
+          objectFit='fill'
         />
       ) : null}
 

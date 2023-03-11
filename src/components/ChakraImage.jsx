@@ -2,10 +2,10 @@ import React from "react";
 import { Image, Box } from "@chakra-ui/react";
 
 export default function ChakraImage(props) {
-  const imagePath = "/images/webp/";
+  const imagePath = "/images/";
   const imageType = ".webp";
   return (
-    <Box w={props.w} h={props.h} bg={props.bg} {...props}>
+    <Box w={props.w} h={props.h} bg={props.bg} overflow='hidden' {...props}>
       <Image
         // src={imagePath + props.src + imageType}
         src={props.src}
@@ -13,6 +13,7 @@ export default function ChakraImage(props) {
         w='100%'
         h='100%'
         objectFit={props.objectFit || "cover"}
+        borderRadius={props.borderRadius || "0px"}
       />
     </Box>
   );

@@ -1,5 +1,6 @@
 import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
+import ChakraImage from "@components/ChakraImage";
 import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function Visit(props) {
   return (
@@ -26,7 +27,7 @@ export default function Visit(props) {
       </Flex>
 
       <Box>
-        <Image
+        <ChakraImage
           src='/images/map.webp'
           w='100%'
           h='100%'
