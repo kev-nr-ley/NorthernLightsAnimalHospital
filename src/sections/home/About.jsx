@@ -47,17 +47,16 @@ export default function About(props) {
         border='1px solid #E2E8F0'
         boxShadow='0px 4px 4px rgba(0, 0, 0, 0.25)'
         borderRadius='30px'
-        padding='24px'
+        padding='8px 24px'
         bg={colors.light}>
-     
-        <ChakraImage 
-        src={member.image}
-        alt={member.name}
-        w='100%'
-        h='100%'
-        objectFit='contain'
+        <ChakraImage
+          src={member.image}
+          alt={member.name}
+          w='100%'
+          h='100%'
+          objectFit='contain'
         />
-        
+
         <Heading variant='bodyHeading' mt='2'>
           {member.name}
         </Heading>
@@ -80,7 +79,8 @@ export default function About(props) {
     <SectionFlexContainer
       headertext={greeting()}
       subtext='We are a group of highly trained, experienced animal lovers who are devoted to giving our patients the best care possible.'
-      {...props}
+      alignheader='left'
+      alignlink='flex-end'
       linktext='Meet Our Team'
       linkto='/about'
       linkvariant='DarkOutline'

@@ -17,16 +17,16 @@ export default function HeroContainer(props) {
         bg='primary'
         alignItems={["flex-start"]}
         justifyContent='center'
-        w={["100vw", "100vw", '85vw', "70vw"]}
+        w={["100vw", "100vw", "70vw", "60vw"]}
         h={["auto", "auto", "auto"]}
         pl={["2vw", "2vw", "15vw"]}
-        pr='2vw'
-        py='2vh'
+        pr='32'
+        py='16'
         position={["absolute", "absolute", "relative"]}
         bottom={["0", "0", "auto"]} //bototm of hero on reveal
       >
         <Heading variant='sectionHeading'>{props.heading}</Heading>
-        <Box>{props.children}</Box>
+        <Box pb='8'>{props.children}</Box>
         <Link mt='4' variant='LightOutline' to={props.linkto}>
           {props.linktext}
         </Link>

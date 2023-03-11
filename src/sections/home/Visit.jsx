@@ -1,41 +1,46 @@
-import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
+import { Flex, Box, Heading, Text, Image, Link } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
+import ChakraLink from "@components/ChakraLink";
 import ChakraImage from "@components/ChakraImage";
+import Hours from "@navigation/footer/Hours";
+import Contact from "@navigation/footer/Contact";
+import Location from "@navigation/footer/Location";
+
 import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function Visit(props) {
   return (
     <SectionFlexContainer
-      headertext='Schedule a visit'
-      linktext='Request An Appointment'
-      linkto='/contact'
-      {...props}>
-      <Flex flexDirection='column' justifyContent={"center"}>
-        <Heading variant='bodyHeading'>The Original Spay Clinic</Heading>
-        <Text>
-          10575 111 St. NW <br />
-          Edmonton, Alberta <br />
-          T5H 3E8
-        </Text>
+      // headertext='Schedule a visit'
 
-        <Heading>Phone</Heading>
-        <Text>780-426-4221</Text>
-        <Heading>Hours</Heading>
-        <Text>
-          Monday-Friday: 7am-6pm <br />
-          Closed weekends
-        </Text>
+      {...props}>
+      <Flex flexDirection='column' justifyContent={"center"} h='100%' gap='2'>
+        <Heading variant='sectionHeading'> Schedule a visit.</Heading>
+
+        <Location />
+        <Hours />
+        <Contact />
+
+        <ChakraLink
+          to='/contact'
+          variant='DarkOutline'
+          alignSelf='flex-start'
+          mt='8'
+          linktext='Request An Appointment'
+        />
       </Flex>
 
       <Box>
-        <ChakraImage
-          src='/images/map.webp'
-          w='100%'
-          h='100%'
-          minW='320px'
-          minH='320px'
-          maxH='500px'
-          maxW='500px'
-        />
+        <Link to='https://goo.gl/maps/pxunArNe2swWTJs46' target='_blank'>
+          <ChakraImage
+            src='/images/map.webp'
+            w='100%'
+            h='100%'
+            minW='320px'
+            minH='320px'
+            maxH='500px'
+            maxW='500px'
+          />
+        </Link>
       </Box>
     </SectionFlexContainer>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import HomeHero from "@sections/home/HomeHero";
 import Services from "@sections/home/Services";
 import About from "@sections/home/About";
+import Testimonials from "@sections/home/Testimonials";
 import Visit from "@sections/home/Visit";
 import { Parallax } from "react-parallax";
 import Page from "@components/Page";
@@ -22,7 +23,8 @@ export default function Home(props) {
 
       <Services bg='background' color='dark' />
       <About bg='light' color='dark'/>
-      <Visit bg='primary' color='light' />
+      <Testimonials bg='primary' color='light' />
+      <Visit bg='background' color='dark' />
     </Page>
   );
 }

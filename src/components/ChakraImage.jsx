@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Box } from "@chakra-ui/react";
+import { Image, Box, Link } from "@chakra-ui/react";
 
 export default function ChakraImage(props) {
   const imagePath = "/images/";

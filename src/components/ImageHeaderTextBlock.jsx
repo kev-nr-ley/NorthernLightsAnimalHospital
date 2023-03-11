@@ -54,7 +54,11 @@ export default function ImageHeaderTextBlock(props) {
 
       <Box>{props.children}</Box>
       {props.linktext ? (
-        <Link mt='4' to={props.linkto} variant={props.linkvariant}>
+        <Link
+          mt='8'
+          to={props.linkto}
+          variant={props.linkvariant}
+          alignSelf={props.alignlink ? props.alignlink : "flex-start"}>
           {props.linktext}
         </Link>
       ) : null}
