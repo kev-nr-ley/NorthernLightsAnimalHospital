@@ -23,7 +23,7 @@ export default function Navbar(props) {
   return (
     <>
       {isMobile ? (
-        <MobileNav bg='primary' {...props} />
+        <MobileNav  {...props} />
       ) : (
         <DesktopNav {...props} />
       )}
