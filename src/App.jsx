@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Navbar bg='#222' color='light' />
+      <Navbar/>
       <PageRoutes />
       <Footer bg='#222' color='light' />
     </>
