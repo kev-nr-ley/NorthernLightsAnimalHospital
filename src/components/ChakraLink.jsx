@@ -12,7 +12,7 @@ function ChakraLink(props, children) {
       onClick={props.onClick || null}
       aria-label={`link to ${props.linktext} page`}
       {...props}>
-      {props.linktext}
+      {props.linktext ? props.linktext : props.children}
     </NewLink>
   );
 }

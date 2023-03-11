@@ -6,6 +6,7 @@ export default function BeforeAppointment(props) {
   return (
     <SectionFlexContainer
       headertext='Before booking your appointment'
+      alignheader='flex-start'
       linktext='Book Now'
       linkto='/contact'
       {...props}>

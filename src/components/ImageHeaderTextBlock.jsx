@@ -9,10 +9,15 @@ export default function ImageHeaderTextBlock(props) {
       alignItems={["center", "center"]}
       flexDirection='column'
       h='100%'
-      w={["100%", "100%", "100%", "auto"]}
-      minW='280px'
+      minW='260px'
+      w={["100%", "100%", "100%", "100%"]}
       maxW='360px'
+      mx={['0', '0', '0', '0']}
       position='relative'
+      // bg='red'
+    flexBasis='1'
+    flexShrink='0.75'
+      
       {...props}>
       {props.src ? (
         <ChakraImage

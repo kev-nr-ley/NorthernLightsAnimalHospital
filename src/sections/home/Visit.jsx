@@ -13,7 +13,11 @@ export default function Visit(props) {
       // headertext='Schedule a visit'
 
       {...props}>
-      <Flex flexDirection='column' justifyContent={"center"} h='100%' gap='2'>
+      <Flex
+        flexDirection='column'
+        justifyContent={"center"}
+        alignItems='center'
+        gap='2'>
         <Heading variant='sectionHeading'> Schedule a visit.</Heading>
 
         <Location />
@@ -42,6 +46,7 @@ export default function Visit(props) {
           />
         </Link>
       </Box>
+      
     </SectionFlexContainer>
   );
 }

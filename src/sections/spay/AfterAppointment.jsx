@@ -1,13 +1,16 @@
-import { Text, Accordion } from "@chakra-ui/react";
+import { Text, Flex } from "@chakra-ui/react";
 import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 import SectionFlexContainer from "@components/SectionFlexContainer";
-
-import AccordionQuestion from "@components/AccordionQuestion";
+import ChakraLink from "@components/ChakraLink";
+import { DownloadIcon } from "@chakra-ui/icons";
 export default function AfterAppointment(props) {
   return (
-    <SectionFlexContainer headertext='After Your Appointment' {...props}>
+    <SectionFlexContainer
+      headertext='After Your Appointment'
+      alignheader='flex-start'
+      {...props}>
       <ImageHeaderTextBlock
-      headercircle='1'
+        headercircle='1'
         headerbg='dark'
         headercolor='light'
         headertext='Before the Procedure'>
@@ -58,7 +61,7 @@ export default function AfterAppointment(props) {
         headerbg='dark'
         headercolor='light'
         headertext='After the Procedure'>
-        <Text>
+        <Text mb='8'>
           Our staff will discuss the post-operative care and management that
           your pet will require following their elective surgery. You will also
           be provided a document outlining what was discussed for your reference
@@ -66,21 +69,24 @@ export default function AfterAppointment(props) {
           download.
         </Text>
 
-        <Accordion allowToggle w='100%'>
-          <AccordionQuestion
-            question='Dogs Post-op Care'
-            answer='Dogs deserve to be treated like the family members they are. That’s why we offer a variety of services to help keep your dog healthy and happy. From routine checkups to emergency care, we’re here to help your dog live a long, healthy life.'
-            fontSize='16px'
-            mt='4'
-          />
-
-          <AccordionQuestion
-            question='Cats Post-op Care'
-            answer='Cats are to be properly feared, and not merely tolerated. They are not our friends or our equals. They are our superiors. They are the aristocracy. They are the ruling class. They are the bourgeoisie. They are the 1%.'
-            fontSize='16px'
-            mt='4'
-          />
-        </Accordion>
+        <Flex flexDirection='column' gap='2'>
+          <ChakraLink
+            href='https://spayclinic.ca/wp-content/uploads/2015/12/Homecare-Dogs.pdf'
+            variant='DarkOutline'
+            isExternal
+            w='100%'>
+            Dog Post-Op Care
+            <DownloadIcon ml='4' fontSize='1.5rem' />
+          </ChakraLink>
+          <ChakraLink
+            href='https://spayclinic.ca/wp-content/uploads/2015/12/Homecare-Cats.pdf'
+            variant='DarkOutline'
+            isExternal
+            w='100%'>
+            Cat Post-Op Care
+            <DownloadIcon ml='4' fontSize='1.5rem' />
+          </ChakraLink>
+        </Flex>
       </ImageHeaderTextBlock>
     </SectionFlexContainer>
   );

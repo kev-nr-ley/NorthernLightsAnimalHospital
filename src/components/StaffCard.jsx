@@ -6,12 +6,11 @@ export default function StaffCard(props) {
 
   return (
     <Box
-      w='clamp(300px, 30vw, 400px)'
+      w='clamp(300px, 100%, 400px)'
       h='100%'
       objectFit='contain'
       boxShadow='0px 8px 8px rgba(0, 0, 0, 0.25)'
       borderRadius='30px'
-      mb='5vh'
       bg={colors.light}
       overflow='hidden'
       position='relative'
@@ -25,7 +24,7 @@ export default function StaffCard(props) {
           src={props.image}
         />
       </Box>
-      <Box px={["2vw"]} pb='2vh' mt='8'>
+      <Box px={["8"]} py='8' mt='4'>
         <Heading variant='bodyHeading'>{props.name}</Heading>
         <Box mt='4'>
           {props.description.map((item, index) => {

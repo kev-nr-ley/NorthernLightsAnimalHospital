@@ -12,13 +12,15 @@ export default function Testimonials(props) {
         name={testimonial.name}
         maxW='360px'
         minW='280px'
+        px={["0", "0", "2", "4"]}
+        my={["2", "2", "4", "8"]}
       />
     ));
   };
 
   return (
     <SectionFlexContainer
-      header='What our clients say about us'
+      headertext='What our clients say about us'
       linktext='Read More Testimonials'
       linkto='/contact'
       bg='primaryOpacity95'

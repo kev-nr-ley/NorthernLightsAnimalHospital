@@ -16,13 +16,13 @@ const routes = [
   { path: "/Contact", name: "Contact", element: <Contact /> },
 ];
 
-export default function PageRoutes() {
+export default function PageRoutes(props) {
   return (
     <>
       <Routes>
         {routes.map((route, index) => (
           console.log(route),
-        <Route key={index} path={route.path} element={route.element} />
+        <Route key={index} path={route.path} element={route.element} isMobile={props.isMobile} />
         ))}
 
       </Routes>

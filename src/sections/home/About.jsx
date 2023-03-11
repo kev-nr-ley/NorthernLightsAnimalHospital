@@ -80,7 +80,7 @@ export default function About(props) {
       headertext={greeting()}
       subtext='We are a group of highly trained, experienced animal lovers who are devoted to giving our patients the best care possible.'
       alignheader='left'
-      alignlink='flex-end'
+      alignlink={['flex-start', 'flex-start', 'flex-end']}
       linktext='Meet Our Team'
       linkto='/about'
       linkvariant='DarkOutline'

@@ -54,9 +54,7 @@ export default function Meet(props) {
   return (
     <SectionFlexContainer
       headertext={greeting()}
-      linktext='Meet the team'
-      linkto='/about'
-      // subText='We are a group of highly trained, experienced animal lovers who are devoted to giving our patients the best care possible.'
+      alignheader='flex-start'
       {...props}>
       <StaffCard
         image={staff[0].image}
@@ -67,13 +65,13 @@ export default function Meet(props) {
         image={staff[1].image}
         name={staff[1].name}
         description={staff[1].description}
-        top='4vh'
+        top={['0', '0', '8vh']}
       />
       <StaffCard
         image={staff[2].image}
         name={staff[2].name}
         description={staff[2].description}
-        top='-2vh'
+        top={['0', '0', '-4vh']}
       />
     </SectionFlexContainer>
   );

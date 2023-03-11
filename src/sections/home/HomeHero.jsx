@@ -4,7 +4,7 @@ export default function HomeHero(props) {
   return (
     <HeroContainer
       heading='Welcome to The Original Spay Clinic.'
-      linktext='Video Introduciton'
+      linktext='Video Introduction'
       linkto='/'
       {...props}>
       <Text>

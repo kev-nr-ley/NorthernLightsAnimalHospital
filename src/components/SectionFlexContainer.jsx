@@ -6,21 +6,24 @@ export default function SectionFlexContainer(props) {
     <Flex
       flexDirection='column'
       alignItems={["flex-start"]}
+      justifyContent='center'
       w='100vw'
       minW='320px'
       maxW='100%'
       position='relative'
-      px={["5vw", "5vw", "15vw", "15vw"]} //affects section heading
-      py={["5vw", "5vw", "5vw", "5vw"]}
+      px={["8", "12", "15vw", "15vw"]} //affects section heading
+      py={["16", "20", "20", "20"]}
       {...props}>
       <Heading
         variant='sectionHeading'
+        // bg='red'
+        w='100%'
         alignSelf={props.alignheader ? props.alignheader : "center"}>
         {props.headertext}
       </Heading>
       <Text mt='2'>{props.subtext}</Text>
       <Flex
-        mt='20'
+        py='10'
         flexDirection={
           !props.fliphorizontal
             ? ["column", "column", "column", "row"]
@@ -33,7 +36,10 @@ export default function SectionFlexContainer(props) {
         // px={["0vw", "0vw", "5vw", "5vw"]} //affects section content
         position='relative'
         listStylePosition={"inside"}
-        gap={["10vw", "8vw", "5vw", "5vw"]}>
+        // gap={["20", "24", "24", "30"]}
+        gap='12'
+        // bg='blue'
+        >
         {props.children}
       </Flex>
 

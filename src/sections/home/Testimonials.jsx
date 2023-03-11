@@ -12,7 +12,8 @@ export default function Testimonials(props) {
         name={testimonial.name}
         maxW='360px'
         minW='280px'
-        my='8'
+        px={["0", "0", "2", "4"]}
+        my={["2", "2", "4", "8"]}
       />
     ));
   };
