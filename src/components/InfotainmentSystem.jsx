@@ -5,14 +5,15 @@ export default function InfotainmentSystem(props) {
     <Flex
       // bg='blue.500'
       flexDirection='column'
-      justifyContent={"center"}
+      justifyContent={"flex-start"}
       w='100%'
+      zIndex='4'
       {...props}>
+      <Flex gap='4' fontSize='24px'>
+        {props.icondisplay ? (
+          <Box fontSize='24px'>{props.icondisplay}</Box>
+        ) : null}
 
-      <Flex alignItems='flex-end' gap='4' mt='8' fontSize='24px'>
-      <Box fontSize='24px'>
-      {props.icondisplay ? props.icon : null}
-      </Box>
         <Heading variant='bodyHeading' mt='0'>
           {props.headertext}
         </Heading>

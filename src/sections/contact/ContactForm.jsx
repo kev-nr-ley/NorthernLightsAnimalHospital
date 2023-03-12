@@ -17,19 +17,19 @@ export default function ContactForm(props) {
       position='relative'
       subtext='Please complete the following form to request an appointment. Please also note that availability will vary depending on your request. Your appointment will be confirmed by phone by a member of our staff.'
       {...props}>
-      <Box
-        bg='background'
-        w='110vw'
-        h='110vw'
+      {/* <Box
+        bg='red'
+        w='100vw'
+        h='100vw'
         position='absolute'
         top='50%'
         left='50%'
         transform='translate(-50%, -50%)'
         borderRadius='100%'
-        zIndex='-1'
+        zIndex='-5'
         // boxShadow='0 8px 8px 4px rgba(0,0,0,1)'
         
-        ></Box>
+        ></Box> */}
 
       <Flex
         as='form'

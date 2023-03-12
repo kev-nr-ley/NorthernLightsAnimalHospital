@@ -24,7 +24,7 @@ function App() {
     <>
       <Navbar />
       <PageRoutes isMobile={isMobile} />
-      <Footer bg='#222' color='light' />
+      <Footer bg='light' color='dark' />
     </>
   );
 }

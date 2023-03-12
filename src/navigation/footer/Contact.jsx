@@ -9,7 +9,7 @@ export default function Contact(props) {
   return (
     <InfotainmentSystem  headertext='Contact' icon={<BellIcon />} {...props}>
       <Text as='span' variant='bold'>
-        Phone:{" "}
+        Phone:
       </Text>
       780-426-4221 <br />
       <Text as='span' variant='bold'>

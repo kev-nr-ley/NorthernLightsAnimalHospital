@@ -17,11 +17,11 @@ export default function Contact(props) {
           zIndex: "3",
           width: "100%",
         }}>
-        <ContactHero  h='80vh' color='light' zIndex='3' />
+        <ContactHero h='80vh' color='light' zIndex='3' />
       </Parallax>
 
       <ContactForm
-        bg={["background", "background", "white", "white"]}
+        bg={["background", "background", "background", "background"]}
         color='dark'
       />
     </Page>
