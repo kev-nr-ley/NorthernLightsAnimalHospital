@@ -31,9 +31,9 @@ export default function Footer(props) {
         src='/images/Logo.webp'
         objectFit='cover'
       /> */}
-      <Hours />
-      <Contact />
-      <Location />
+      <Hours icondisplay='true' />
+      <Contact icondisplay='true'  />
+      <Location icondisplay='true'  />
       <SiteNavigation />
     </Grid>
   );

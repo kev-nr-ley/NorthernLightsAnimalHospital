@@ -17,8 +17,9 @@ export default function ContactHero(props) {
       w={["100vw", "100vw", "50vw", "50vw"]}
       justifychildren='center'
       alignchildren={["flex-start", "flex-start", "flex-end", "flex-end"]}
+
       {...props}>
-      <Heading variant='sectionHeading'>Get in touch</Heading>
+      <Heading variant='sectionHeading' mb='4'>Get in touch</Heading>
       <ContactUs icondisplay={true} />
       <Hours icondisplay={true} />
       <Location icondisplay={true} />

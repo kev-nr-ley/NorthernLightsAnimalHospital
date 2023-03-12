@@ -8,11 +8,14 @@ export default function InfotainmentSystem(props) {
       justifyContent={"flex-start"}
       w='100%'
       zIndex='4'
+      mb='4'
       {...props}>
-      <Flex gap='4' fontSize='24px'>
+      <Flex gap='2' fontSize='24px'>
+
         {props.icondisplay ? (
-          <Box fontSize='24px'>{props.icondisplay}</Box>
+          <Box fontSize='24px'>{props.icon}</Box>
         ) : null}
+        
 
         <Heading variant='bodyHeading' mt='0'>
           {props.headertext}
