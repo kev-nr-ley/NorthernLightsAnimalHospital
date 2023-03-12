@@ -33,10 +33,14 @@ export const theme = extendTheme({
 
   colors: {
     primary: "#8A4000",
-    primaryOpacity90: "#8A400090",
+    primaryOpacity80: "#8A400080",
+    primaryOpacity80: "rgba(138, 64, 0, 0.80)",
+    primaryOpacity90: "rgba(138, 64, 0, 0.90)",
+    primaryOpacity90: "rgba(138, 64, 0, 0.90)",
     primaryOpacity95: "rgba(138, 64, 0, 0.95)",
+    primaryOpacity99: "rgba(138, 64, 0, 0.99)",
     star : "#FFD700",
-    background: "#FFF1E4",
+    background: "#ffe1c6",
     light: "#F8F8F8",
     dark: "#292A29",
   },

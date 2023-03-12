@@ -20,9 +20,9 @@ export default function Dental(props) {
         <DentalHero h='80vh' />
       </Parallax>
 
-      <FAQ />
+      <FAQ bg='background' color='dark' />
       <BeforeAppointment bg='primary' color='light' />
-      <Considerations />
+      <Considerations bg='background' color='dark' />
       <AfterAppointment bg='light' color='dark' />
       <Care bg='primary' color='light' />
 

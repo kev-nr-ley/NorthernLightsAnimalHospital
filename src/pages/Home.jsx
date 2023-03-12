@@ -18,7 +18,7 @@ export default function Home(props) {
           height: "100vh",
           objectFit: "cover",
         }}>
-        <HomeHero h='100vh' />
+        <HomeHero h='80vh' />
       </Parallax>
 
       <Services bg='background' color='dark' />

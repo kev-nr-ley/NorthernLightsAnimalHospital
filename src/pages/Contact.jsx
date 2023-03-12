@@ -9,15 +9,21 @@ export default function Contact(props) {
   return (
     <Page {...props}>
       <Parallax
-        bgImage={"/images/contact-1.webp"}
+        bgImage={"/images/about-1.webp"}
         strength={300}
         bgImageStyle={{
           objectFit: "cover",
-          h: "100vh",
+          h: "90vh",
+          zIndex: "3",
+          width: "100%",
         }}>
-        <ContactHero bg='primary' color='light' />
-        <ContactForm bg='yellow' color='dark' />
+        <ContactHero  h='80vh' color='light' zIndex='3' />
       </Parallax>
+
+      <ContactForm
+        bg={["background", "background", "white", "white"]}
+        color='dark'
+      />
     </Page>
   );
 }

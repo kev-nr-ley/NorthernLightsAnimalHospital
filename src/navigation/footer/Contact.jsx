@@ -1,13 +1,13 @@
 import React from "react";
 import { Box, Text, Flex } from "@chakra-ui/react";
-import { PhoneIcon } from "@chakra-ui/icons";
+import { BellIcon, PhoneIcon } from "@chakra-ui/icons";
 
 import InfotainmentSystem from "@components/InfotainmentSystem";
 import FacebookLink from "@components/FacebookLink";
 import InstagramLink from "@components/InstagramLink";
 export default function Contact(props) {
   return (
-    <InfotainmentSystem  headertext='Contact' {...props}>
+    <InfotainmentSystem  headertext='Contact' icon={<BellIcon />} {...props}>
       <Text as='span' variant='bold'>
         Phone:{" "}
       </Text>

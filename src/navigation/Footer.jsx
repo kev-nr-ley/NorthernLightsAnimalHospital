@@ -8,7 +8,7 @@ import SectionFlexContainer from "@components/SectionFlexContainer";
 
 export default function Footer(props) {
   return (
-    <SectionFlexContainer {...props}>
+    <SectionFlexContainer  zIndex='2' {...props}>
       <Logo />
       <Hours />
       <Contact />

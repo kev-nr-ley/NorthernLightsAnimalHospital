@@ -12,7 +12,7 @@ export default function About(props) {
       <Parallax
         bgImage={"/images/about-1.webp"}
         strength={300}
-        bgImageStyle={{ width: "100vw", height: "90vh", objectFit: "fill" }}
+        bgImageStyle={{ width: "100vw", height: "90vh", objectFit: "cover" }}
         >
         <AboutHero h='80vh'/>
       </Parallax>

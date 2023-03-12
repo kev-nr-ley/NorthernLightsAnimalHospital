@@ -10,32 +10,40 @@ export default function HeroContainer(props) {
       h={["100vh", "100vh", "80vh"]}
       w='100vw'
       position='relative'
+      // {...props}
       {...props}>
       <Flex
         // For the header, text, and link
         flexDirection='column'
-        bg='primary'
-        alignItems={["flex-start"]}
-        justifyContent='center'
-        w={["100vw", "100vw", "70vw", "65vw"]}
-        h={["auto", "auto", "auto"]}
+        bg={["primaryOpacity80", "primaryOpacity80", "primaryOpacity90"]}
+        alignItems={props.alignchildren || ["flex-start"]}
+        justifyContent={
+          props.justifychildren || ["center", "center", "flex-start"]
+        }
+        w={props.w || ["100vw", "100vw", "70vw", "65vw"]}
+        h={["100vh", "100vh", "auto"]}
+        minH='fit-content'
         pl={["8", "12", "15vw"]}
         pr={["8", "12", "20", "24"]}
         py='16'
-        position={["absolute", "absolute", "relative"]}
-        bottom={["0", "0", "auto"]} //bototm of hero on reveal
-      >
+        position={["absolute", "absolute", "relative"]}>
         <Heading variant='sectionHeading'>{props.heading}</Heading>
-        <Box pb='8'>{props.children}</Box>
+        <Box
+        // pb={["2", "4", "8"]}
+        >
+          {props.children}
+        </Box>
 
-        <Link
-          mt='4'
-          variant='LightOutline'
-          to={props.linkto}
-          w={["100%", "auto", "auto"]}
-          textAlign='center'>
-          {props.linktext}
-        </Link>
+        {props.linkktext ? (
+          <Link
+            mt={["2", "4", "8"]}
+            variant='LightOutline'
+            to={props.linkto}
+            w={["100%", "auto", "auto"]}
+            textAlign='center'>
+            {props.linktext}
+          </Link>
+        ) : null}
       </Flex>
     </Flex>
   );

@@ -57,7 +57,7 @@ export default function DesktopNav(props) {
       position='sticky'
       top='0'
       zIndex='11'
-      px='4'
+      px='16'
       {...props}>
       <Logo
         w='200px'

@@ -8,23 +8,21 @@ export default function ImageHeaderTextBlock(props) {
       justifyContent={"center"}
       alignItems={["center", "center"]}
       flexDirection='column'
-      h='100%'
-      minW='260px'
-      w={["100%", "100%", "100%", "100%"]}
-      maxW='360px'
-      mx={['0', '0', '0', '0']}
+      h={props.h || "auto"}
+      minW={props.minW || "260px"}
+      w={props.w || ["100%", "100%", "100%", "100%"]}
+      maxW={props.maxW || "360px"}
+      mx={["0", "0", "0", "0"]}
       position='relative'
-      // bg='red'
-    flexBasis='1'
-    flexShrink='0.75'
-      
+      // flexBasis='1'
+      // flexShrink='0.75'
       {...props}>
       {props.src ? (
         <ChakraImage
           src={props.src}
           w={props.imagewidth || ["100px"]}
           h={props.imageheight || ["100px"]}
-          alignSelf='flex-start'
+          alignSelf={props.alignimage ? props.alignimage : "flex-start"}
           overflow='visible'
           objectFit='fill'
         />
@@ -39,7 +37,7 @@ export default function ImageHeaderTextBlock(props) {
           bg={props.headerbg}
           display='flex'
           justifySelf='flex-start'
-          alignSelf='flex-start'
+          alignSelf={props.alignheader ? props.alignheader : "flex-start"}
           justifyContent='center'
           alignItems='center'
           whiteSpace={"nowrap"}
@@ -52,6 +50,7 @@ export default function ImageHeaderTextBlock(props) {
       <Heading
         mt='6'
         w='100%'
+        textAlign={props.alignheader ? props.alignheader : "flex-start"}
         borderBottomColor={props.color}
         variant='bodyHeading'>
         {props.headertext}

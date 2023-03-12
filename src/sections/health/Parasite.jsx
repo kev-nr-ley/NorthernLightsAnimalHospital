@@ -13,7 +13,7 @@ export default function Parasite(props) {
       color='light'
       {...props}>
       <ImageHeaderTextBlock
-        src='/images/deworming.svg'
+        src='/images/hq/leech-bw.webp'
         headertext='Deworming'
         imagewidth='140px'
         imageheight='140px'>
@@ -34,7 +34,7 @@ export default function Parasite(props) {
       </ImageHeaderTextBlock>
 
       <ImageHeaderTextBlock
-        src='/images/external-parasite.svg'
+        src='/images/hq/dog-vaccine-bw.webp'
         headertext='External'
         imagewidth='140px'
         imageheight='140px'>
@@ -56,7 +56,7 @@ export default function Parasite(props) {
       </ImageHeaderTextBlock>
 
       <ImageHeaderTextBlock
-        src='/images/internal-parasite.svg'
+        src='/images/hq/germs-bw.webp'
         headertext='Internal'
         imagewidth='140px'
         imageheight='140px'>

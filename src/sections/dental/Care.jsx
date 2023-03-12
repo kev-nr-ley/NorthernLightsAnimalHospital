@@ -4,19 +4,22 @@ import ImageTextPill from "@components/ImageTextPill";
 export default function Considerations(props) {
   return (
     <Flex
+      //use same props as in SectionFlexContainer
       flexDirection='column'
-      alignItems={["center"]}
+      alignItems={["flex-start"]}
       justifyContent='center'
+      w='100vw'
       minW='320px'
       maxW='100%'
       position='relative'
-      h='100%'
-      px={["5vw", "5vw", "10vw", "10vw"]} //affects section heading
+      gap='12'
+      px={["8", "12", "15vw", "15vw"]} //affects section heading
+      py={["16", "20", "20", "20"]}
       {...props}>
       {/* <Heading variant='sectionHeading'>Considerations</Heading> */}
       <ImageTextPill
         heading='Brushing'
-        src='/images/toothbrush.webp'
+        src='/images/hq/toothbrush.webp'
         bg='light'
         color='dark'
         // fullwidth
@@ -46,7 +49,7 @@ export default function Considerations(props) {
 
       <ImageTextPill
         heading='Dental Formluated Diets'
-        src='/images/realdogbowl.webp'
+        src='/images/hq/pet-food-bowl-color.webp'
         color='dark'
         bg='light'>
         <Text>
@@ -58,19 +61,10 @@ export default function Considerations(props) {
           contain enzyme to help decrease and prevent plaque and tartar build
           up.
         </Text>
-
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nulla,
-          in quasi molestias ab debitis? Sint deleniti reprehenderit ratione
-          laborum ut aspernatur inventore nemo, quaerat perferendis cupiditate,
-          sapiente hic explicabo expedita provident temporibus sequi repudiandae
-          quis quisquam? Quis nulla sapiente dolor, impedit non sit nemo
-          architecto veritatis quos numquam excepturi?
-        </Text>
       </ImageTextPill>
       <ImageTextPill
         heading='Dental Treats'
-        src='/images/dogbone.webp'
+        src='/images/hq/dog-toothbrush-color.webp'
         color='dark'
         bg='light'>
         <Text>

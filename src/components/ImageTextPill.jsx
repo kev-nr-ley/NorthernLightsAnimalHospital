@@ -4,45 +4,39 @@ import ChakraImage from "@components/ChakraImage";
 export default function ImageTextPill(props) {
   return (
     <Flex
-      justifyContent={"center"}
-      alignItems={["center", "center"]}
-      flexDirection='row'
-      h='100%'
-      margin='12'
+      flexDirection={["column", "column", "column", "row"]}
+      alignItems='flex-start'
+      justifyContent='flex-start'
+      w={props.w || ["100%", "100%", "100%", "100%"]}
+      h='fit-content'
       borderRadius='50px'
-      w='80vw'
-      px='12'
-      py='4'
+      pr={["8", "8", "8", "16"]}
+      pl={["8", "8", "8", "0"]}
+      py={["8", "8", "8", "8"]}
       position='relative'
       boxShadow='0px 4px 13px 0px #00000025'
       {...props}>
+      {props.src ? (
+        <ChakraImage
+          src={props.src}
+          w={["200px", "200px", "200px", "200px"]}
+          h={["200px", "200px", "200px", "200px"]}
+          alignSelf='center'
+          overflow='visible'
+          objectFit='contain'
+          mx={["0", "0", "0", "16"]}
+          my={["8", "8", "8", "0"]}
+        />
+      ) : null}
+
       {/* Section heading */}
-      <Box w='100%' 
-      >
-        <Heading
-          mt='6'
-          borderBottomColor={props.color}
-          variant='bodyHeading'>
+      <Box w='100%'>
+        <Heading borderBottomColor={props.color} variant='bodyHeading'>
           {props.heading}
         </Heading>
-        {props.src ? (
-          <ChakraImage
-            src={props.src}
-            w={["140px"]}
-            h={["140px"]}
-            alignSelf='flex-start'
-            overflow='visible'
-            objectFit='contain'
-            float='right'
-            borderRadius='50px'
-            m='2'
-          />
-        ) : null}
 
         {props.children}
       </Box>
-
-    
     </Flex>
   );
 }

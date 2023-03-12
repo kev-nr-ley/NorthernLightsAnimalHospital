@@ -20,16 +20,22 @@ export default function Faq(props) {
     <SectionFlexContainer
       headertext='Frequently Asked Questions'
       fliphorizontal='true'
+      flexWrap='wrap'
+      alignheader='flex-start'
       {...props}>
-      <Image w={["100vw", "100vw", "800px"]} src='/images/spay-1.webp' />
+      <Image
+        w={["100vw", "100vw", "600px", "500px"]}
+        src='/images/spay-1.webp'
+      />
+
       <Accordion
         allowToggle
         w='100%'
+        minW={["300px", "400px", "400px", "460px"]}
+        maxW='800px'
         display='flex'
         flexDirection='column'
-        px='2'
-        gap='2'
-        maxW='600px'>
+        gap='2'>
         {renderFaq()}
       </Accordion>
     </SectionFlexContainer>

@@ -8,7 +8,7 @@ export default function AboutHero(props) {
   return (
     <HeroContainer
       heading='Our mission'
-      linktext='Video Introduction'
+      linktext='Make an appointment'
       linkto='/contact'
       {...props}>
       <Text>

@@ -1,11 +1,11 @@
 const dentalFAQ = [
     {
-      question: "Why?",
+      question: "Why is dental care vital?",
       answer:
       "Dental care is vital to the overall health of any companion animal. Dental disease can exacerbate many health issues throughout the body as an infection in the mouth can travel through the bloodstream. Some statistics now indicate that maintaining good oral hygiene through regular dental cleanings can improve life expectancy of your pet by as much as 3 years."
     },
     {
-      question: "How common?",
+      question: "How common are issues?",
       answer:
 "Over 70% of companion animals over the age of three years suffer from some form of dental disease, making oral health a very important factor to remember with your pet. Many pet owners are unaware of the high importance of dental care in their pet’s life."    },
     {

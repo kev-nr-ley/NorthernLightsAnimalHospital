@@ -88,8 +88,7 @@ export default function MobileNav(props) {
         _focus={{ border: "2px" }}
         // _active={{ border: "2px" }}
         _focusVisible={{ border: "2px" }}
-        aria-label='Navigation Menu'
-        >
+        aria-label='Navigation Menu'>
         {isOpen ? xSvg : menuSvg}
       </Button>
 
@@ -98,7 +97,9 @@ export default function MobileNav(props) {
         as='nav'
         // justifyContent={'space-between'}
         flexDirection='column'
-        bg='background'
+        // alignItems={"center"}
+        justifyContent={"center"}
+        bg='light'
         color='dark'
         h='100vh'
         w={isOpen ? "80vw" : "0vw"}
@@ -114,7 +115,7 @@ export default function MobileNav(props) {
         px='5vw'
         py='5vh'
         {...props}>
-        <Logo w='300px' transition='all 0.2s ease-in-out' />
+        {/* <Logo w='300px' transition='all 0.2s ease-in-out' /> */}
 
         <Flex
           flexDirection='column'

@@ -1,29 +1,27 @@
 import { Flex, Box, Heading, Text, Link, Image } from "@chakra-ui/react";
+import HeroContainer from "../../components/HeroContainer";
 import ContactUs from "@navigation/footer/Contact";
 import Hours from "@navigation/footer/Hours";
 import Location from "@navigation/footer/Location";
-import SectionFlexContainer from "@components/SectionFlexContainer";
+import SectionFlexContainer from "../../components/SectionFlexContainer";
 import { useTheme } from "@chakra-ui/react";
 export default function ContactHero(props) {
   const { colors } = useTheme();
 
   return (
-    <Flex
-      header='Get In Touch'
-      w='fit-content'
-      h='fit-content'
-      flexDirection='column'
-      alignItems='flex-start'
-      justifyContent={"center"}
-      pl='15vw'
-      pr='5vw'
-      py='5vh'
-      gap='5vw'
+    <HeroContainer
+      // linkto='/contact'
+      // linktext='Contact Us'
+      // w='100px'
+      minH='500px'
+      w={["100vw", "100vw", "50vw", "50vw"]}
+      justifychildren='center'
+      alignchildren={["flex-start", "flex-start", "flex-end", "flex-end"]}
       {...props}>
-      <Heading variant='sectionHeading'>Get In Touch.</Heading>
-      <ContactUs />
-      <Hours />
-      <Location />
-    </Flex>
+      <Heading variant='sectionHeading'>Get in touch</Heading>
+      <ContactUs icondisplay={true} />
+      <Hours icondisplay={true} />
+      <Location icondisplay={true} />
+    </HeroContainer>
   );
 }

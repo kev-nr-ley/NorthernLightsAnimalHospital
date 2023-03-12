@@ -5,8 +5,21 @@ export default function Considerations(props) {
   return (
     <SectionFlexContainer headertext='Considerations' {...props}>
       <ImageHeaderTextBlock
-        src='/images/tooth-outline.svg'
-        headertext='Extractions'>
+        src='/images/hq/tooth.webp'
+        alignimage='center'
+        alignheader='center'
+        imagewidth='77px'
+        imageheight='77px'
+        justifyContent='flex-start'
+        headertext='Extractions'
+        bg='white'
+        h={["auto", "auto", "auto", "740px"]}
+        w={["100%", "100%", "100%", "300px"]}
+        maxW='400px'
+        borderRadius='30px'
+        px={["8", "8", "4"]}
+        py='12'
+        boxShadow='0px 4px 13px 0px rgba(0,0,0,0.25)'>
         <Text>
           Dental extractions may also be discussed with you if certain teeth are
           noted to be in an undesirable condition. Extractions are practiced
@@ -18,8 +31,21 @@ export default function Considerations(props) {
         </Text>
       </ImageHeaderTextBlock>
       <ImageHeaderTextBlock
-        src='/images/pill-outline.svg'
-        headertext='Antibiotics'>
+        src='/images/hq/pill-bw.webp'
+        alignimage='center'
+        alignheader='center'
+        justifyContent='flex-start'
+        headertext='Antibiotics'
+        imagewidth='77px'
+        imageheight='77px'
+        bg='white'
+        h={["auto", "auto", "auto", "740px"]}
+        w={["100%", "100%", "100%", "300px"]}
+        maxW='400px'
+        borderRadius='30px'
+        px={["8", "8", "4"]}
+        py='12'
+        boxShadow='0px 4px 13px 0px rgba(0,0,0,0.25)'>
         <Text>
           During your consultation, pre-procedural antibiotics will be discussed
           with you. Most animals are recommended to be placed on antibiotics a
@@ -27,7 +53,22 @@ export default function Considerations(props) {
           control any infection that may be present within your pet’s mouth.
         </Text>
       </ImageHeaderTextBlock>
-      <ImageHeaderTextBlock src='/images/bowl-outline.svg' headertext='Fasting'>
+      <ImageHeaderTextBlock
+        src='/images/hq/db1.png'
+        alignimage='center'
+        alignheader='center'
+        justifyContent='flex-start'
+        headertext='Fasting'
+        imagewidth='131px'
+        imageheight='77px'
+        bg='white'
+        h={["auto", "auto", "auto", "740px"]}
+        w={["100%", "100%", "100%", "300px"]}
+        maxW='400px'
+        borderRadius='30px'
+        px={["12", "12", "8"]}
+        py='12'
+        boxShadow='0px 4px 13px 0px rgba(0,0,0,0.25)'>
         <Text>
           Once you book an appointment for your pet to have a dental procedure
           performed it is important to remember the fasting instructions the

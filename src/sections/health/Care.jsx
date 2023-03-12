@@ -6,20 +6,22 @@ export default function Considerations(props) {
     <Flex
       //use same props as in SectionFlexContainer
       flexDirection='column'
-      alignItems={["center"]}
+      alignItems={["flex-start"]}
       justifyContent='center'
+      w='100vw'
       minW='320px'
       maxW='100%'
       position='relative'
-      h='100%'
-      px={["5vw", "5vw", "10vw", "10vw"]} //affects section heading
-    >
+      gap='12'
+      px={["8", "12", "15vw", "15vw"]} //affects section heading
+      py={["16", "20", "20", "20"]}
+      {...props}>
       {/* <Heading variant='sectionHeading'>Considerations</Heading> */}
       <ImageTextPill
         bg='light'
         color='dark'
         heading='Annual Health Exams'
-        src='/images/pet-family-color.webp'>
+        src='/images/hq/pet-family-color.webp'>
         <Text>
           During your pet’s first physical exam your veterinarian will discuss
           strategies with you to help keep your animal as healthy as possible
@@ -36,7 +38,7 @@ export default function Considerations(props) {
         bg='light'
         color='dark'
         heading='Vaccinations'
-        src='/images/medicine-color.webp'>
+        src='/images/hq/syringe-color.webp'>
         <Text>
           Younger pets are at a much higher risk for certain diseases, therefore
           following your advised vaccination protocol is of the utmost
@@ -48,9 +50,18 @@ export default function Considerations(props) {
           can be prevented by using vaccinations.
         </Text>
 
-        <Accordion allowToggle>
+        <Accordion allowToggle
+        
+        w='100%'
+        minW={["300px", "400px", "400px", "460px"]}
+        maxW='800px'
+        display='flex'
+        flexDirection='column'
+        my='2'
+        gap='2'
+        >
           <AccordionQuestion
-            borderRadius='60px'
+            // borderRadius='60px'
             question='Available Vaccinations for Dogs'>
             <Text listStylePosition={"inside"}>
               Certain vaccine protocols may be recommended depending on your
@@ -71,18 +82,18 @@ export default function Considerations(props) {
               <li>Coronavirus</li>
               <li>Bordetella (Kennel Cough)</li>
             </Text>
-
+{/* 
             <Link
               variant='DarkOutline'
               position='absolute'
               bottom='2'
               right='12'>
               Book an Appointment
-            </Link>
+            </Link> */}
           </AccordionQuestion>
 
           <AccordionQuestion
-            borderRadius='60px'
+            // borderRadius='60px'
             question='Available Vaccinations for Cats'
             listStylePosition={"inside"}>
             <Text>
@@ -104,13 +115,13 @@ export default function Considerations(props) {
               <li>Feline Leukemia</li>
             </Text>
 
-            <Link
+            {/* <Link
               variant='DarkOutline'
               position='absolute'
               bottom='2'
-              right='12'>
+              right='2'>
               Book an Appointment
-            </Link>
+            </Link> */}
           </AccordionQuestion>
         </Accordion>
       </ImageTextPill>

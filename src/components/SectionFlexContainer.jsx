@@ -5,7 +5,7 @@ export default function SectionFlexContainer(props) {
   return (
     <Flex
       flexDirection='column'
-      alignItems={["flex-start"]}
+      alignItems={props.alignItems || "flex-start"}
       justifyContent='center'
       w='100vw'
       minW='320px'
@@ -31,21 +31,21 @@ export default function SectionFlexContainer(props) {
         }
         h='100%'
         w='100%'
-        alignItems={["center", "center", "center", "flex-start"]}
+        alignItems={ props.alignchildren ||  ["center", "center", "center", "flex-start"]}
         justifyContent={["center", "center", "center", "space-evenly"]}
         // px={["0vw", "0vw", "5vw", "5vw"]} //affects section content
         position='relative'
         listStylePosition={"inside"}
         // gap={["20", "24", "24", "30"]}
-        gap='12'
+        gap='20'
         // bg='blue'
-        >
+      >
         {props.children}
       </Flex>
 
       {props.linktext && props.linkto && (
         <Link
-          mt='12'
+          // mt='12'
           // alignSelf='flex-end'
           alignSelf={props.alignlink ? props.alignlink : "center"}
           variant={props.linkvariant ? props.linkvariant : "LightOutline"}

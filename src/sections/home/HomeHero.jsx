@@ -4,8 +4,8 @@ export default function HomeHero(props) {
   return (
     <HeroContainer
       heading='Welcome to The Original Spay Clinic.'
-      linktext='Video Introduction'
-      linkto='/'
+      linktext='Learn More'
+      linkto='/about'
       {...props}>
       <Text>
         Here at The Original Spay Clinic, we are dedicated to providing the
