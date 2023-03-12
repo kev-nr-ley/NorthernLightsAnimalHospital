@@ -25,7 +25,8 @@ export default function Faq(props) {
       {...props}>
       <Image
         w={["100vw", "100vw", "600px", "500px"]}
-        src='/images/spay-1.webp'
+        src='/images/hq/faq.webp'
+        borderRadius='30px'
       />
 
       <Accordion

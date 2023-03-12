@@ -23,7 +23,7 @@ export default function Faq(props) {
       flexWrap='wrap'
       alignheader='flex-start'
       {...props}>
-      <Image w={["100vw", "100vw", "600px",'500px']} src='/images/spay-1.webp' />
+      <Image w={["100vw", "100vw", "600px",'500px']} borderRadius='30px' src='/images/hq/faq.webp' />
 
       <Accordion
         allowToggle
