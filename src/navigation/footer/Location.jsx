@@ -8,8 +8,7 @@ export default function Location(props) {
       headertext='Visit'
       icon={<HiOutlineLocationMarker />}
       {...props}>
-      10575 111 St NW <br />
-      Edmonton, Alberta T5H 3E8
+      23 Metropolit Lane <br /> Whitehorse, YT Y2T 0X9, Canada
       {props.showlink ? (
         <Link as={Box} my='2' variant='solid'>
           Open Maps

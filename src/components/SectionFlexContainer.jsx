@@ -14,40 +14,49 @@ export default function SectionFlexContainer(props) {
       px={["8", "12", "15vw", "15vw"]} //affects section heading
       py={["16", "20", "20", "20"]}
       {...props}>
-      <Heading
-        variant='sectionHeading'
-        // bg='red'
-        w='100%'
-        alignSelf={props.alignheader ? props.alignheader : "center"}>
-        {props.headertext}
-      </Heading>
-      <Text mt='2'>{props.subtext}</Text>
-      <Flex
-        py='10'
-        flexDirection={
-          !props.fliphorizontal
-            ? ["column", "column", "column", "row"]
-            : ["column", "column", "column", "row-reverse"]
-        }
-        h='100%'
-        w='100%'
-        alignItems={ props.alignchildren ||  ["center", "center", "center", "flex-start"]}
-        justifyContent={["center", "center", "center", "space-evenly"]}
-        // px={["0vw", "0vw", "5vw", "5vw"]} //affects section content
-        position='relative'
-        listStylePosition={"inside"}
-        // gap={["20", "24", "24", "30"]}
-        gap='20'
-        // bg='blue'
-      >
-        {props.children}
-      </Flex>
+      {props.headertext ? (
+        <Heading
+          variant='sectionHeading'
+          // bg='red'
+          w='100%'
+          alignSelf={props.alignheader ? props.alignheader : "center"}>
+          {props.headertext}
+        </Heading>
+      ) : null}
 
-      {props.linktext && props.linkto && (
+      {props.subtext ? <Text mt='2'>{props.subtext}</Text> : null}
+
+      {props.children ? (
+        <Flex
+          py='10'
+          flexDirection={
+            !props.fliphorizontal
+              ? ["column", "column", "column", "row"]
+              : ["column", "column", "column", "row-reverse"]
+          }
+          h='100%'
+          w='100%'
+          flexWrap='wrap'
+          alignItems={
+            props.alignchildren || ["center", "center", "center", "flex-start"]
+          }
+          justifyContent={["center", "center", "center", "space-evenly"]}
+          // px={["0vw", "0vw", "5vw", "5vw"]} //affects section content
+          position='relative'
+          listStylePosition={"inside"}
+          // gap={["20", "24", "24", "30"]}
+          gap='20'
+          // bg='blue'
+        >
+          {props.children}
+        </Flex>
+      ) : null}
+
+      {props.linktext && (
         <Link
           // mt='12'
           // alignSelf='flex-end'
-          alignSelf={props.alignlink ? props.alignlink : "center"}
+          alignSelf={props.alignlink ? props.alignlink : ['center', 'center', 'flex-end' ] }
           variant={props.linkvariant ? props.linkvariant : "LightOutline"}
           to={props.linkto}>
           {props.linktext}

@@ -9,32 +9,18 @@ export default function About(props) {
     {
       name: "Dr. Charles West",
       title: "dr",
-      image: "/images/charles-west.webp",
-      description: [
-        "Dr. West is the owner of the Spay Clinic and the Senior Clinician among two other doctors. He graduated with distinction from the Western College of Veterinary Medicine at the University of Saskatchewan in 1981 and his professional interests include surger and reproductive medicine. He is actively involved with local pet rescue groups and was a participant of the PAL (Prevent Another Litter) Program in 2011, which was a joint program with the ABVMA and the Edmonton Humane Society.",
-        "His personal interests include travel and spending time with his furry family of 3 dogs and 2 cats. ",
-      ],
+      image: "/images/tom.webp",
     },
     {
       name: "Dr. Amanda McMillan",
       title: "dr",
-      image: "/images/amanda-mcmillan.webp",
-      description: [
-        "Dr. Amanda McMillan was born and raised in Winnipeg, Manitoba. She first started working as a Veterinary Assistant in a small animal practice back in 2010 while completing her Bachelor of Science at The University of Winnipeg.",
-        "Once graduating undergrad, she ventured abroad to receive her Doctorate of Veterinary Medicine from the AVMA accredited St. George’s University in Grenada, West Indies. She received diverse experiences with all types of animals including exotics and she was able to complete her final clinical year of Veterinary Medicine at The Western College of Veterinary Medicine. As a recent graduate and Edmonton resident, she is continuing her veterinary career with us here at The Spay Clinic. ",
-        "Dr. Amanda McMillan is excited to meet you and all your furry family members, she is committed to your animal’s health and well-being.",
-      ],
+      image: "/images/amelia.webp",
     },
 
     {
       name: "Dr. Ellen Lagore",
       title: "dr",
-      image: "/images/ellen-lagore.webp",
-      description: [
-        "Dr. Ellen Lagore is the newest member of the team, and she has loved animals for as long as she can remember. Her favourite book growing up was “Which Dog For Me?”, an in-depth guidebook to dog breeds. Sadly her parents never actually let her have a dog, but that never stopped her from dreaming!",
-        "Before finding her passion for veterinary medicine, Ellen earned a degree in Photography from Alberta University of the Arts. Since then she has traveled for school and training to the Caribbean, Saskatchewan, Ecuador, and Nicaragua. She earned her DVM in 2019 from St. Matthew’s University, Cayman Islands.",
-        "Since becoming a member of the team, Ellen has moved to downtown Edmonton with her two precious rescue chihuahuas, Sprinkles, and Beans, and she is so excited to meet you and your animals!",
-      ],
+      image: "/images/samantha.webp",
     },
   ];
 
@@ -44,17 +30,18 @@ export default function About(props) {
         maxW='320px'
         objectFit='contain'
         key={index}
-        border='1px solid #E2E8F0'
         boxShadow='0px 4px 4px rgba(0, 0, 0, 0.25)'
         borderRadius='30px'
-        padding='8px 24px'
+        px='1.5rem'
+        py='1.5rem'
         bg={colors.light}>
         <ChakraImage
           src={member.image}
           alt={member.name}
-          w='100%'
-          h='100%'
-          objectFit='contain'
+          w='200px'
+          h='200px'
+          
+          objectFit='cover'
         />
 
         <Heading variant='bodyHeading' mt='2'>
@@ -80,10 +67,11 @@ export default function About(props) {
       headertext={greeting()}
       subtext='We are a group of highly trained, experienced animal lovers who are devoted to giving our patients the best care possible.'
       alignheader='left'
-      alignlink={['flex-start', 'flex-start', 'flex-end']}
+  
       linktext='Meet Our Team'
       linkto='/about'
       linkvariant='DarkOutline'
+      flexWrap='wrap'
       {...props}>
       {renderStaff(staff)}
     </SectionFlexContainer>

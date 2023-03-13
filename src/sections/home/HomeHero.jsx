@@ -3,12 +3,12 @@ import HeroContainer from "@components/HeroContainer";
 export default function HomeHero(props) {
   return (
     <HeroContainer
-      heading='Welcome to The Original Spay Clinic.'
+      heading='Welcome to Northern Lights Animal Hospital.'
       linktext='Learn More'
       linkto='/about'
       {...props}>
       <Text>
-        Here at The Original Spay Clinic, we are dedicated to providing the
+        Here at Northern Lights Animal Hospital, we are dedicated to providing the
         highest level of veterinary medicine along with friendly, compassionate
         service. We believe in treating every patient as if they were our own
         pet, and give them the same loving attention and care.

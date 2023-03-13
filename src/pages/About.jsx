@@ -10,7 +10,7 @@ export default function About(props) {
   return (
     <Page position='relative' {...props}>
       <Parallax
-        bgImage={"/images/about-1.webp"}
+        bgImage={"/images/hq/about-1.webp"}
         strength={300}
         bgImageStyle={{ width: "100vw", height: "90vh", objectFit: "cover" }}
         >
@@ -20,7 +20,6 @@ export default function About(props) {
       <Meet bg='background' color='dark' />
       <Testimonials bg='primary' color='light' />
 
-      {/* <Bouncy /> */}
     </Page>
   );
 }

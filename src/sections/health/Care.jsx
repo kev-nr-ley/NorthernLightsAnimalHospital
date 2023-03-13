@@ -1,4 +1,11 @@
-import { Flex, Text, Link, Accordion } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Link,
+  Accordion,
+  ListItem,
+  UnorderedList,
+} from "@chakra-ui/react";
 import AccordionQuestion from "@components/AccordionQuestion";
 import ImageTextPill from "@components/ImageTextPill";
 export default function Considerations(props) {
@@ -50,16 +57,15 @@ export default function Considerations(props) {
           can be prevented by using vaccinations.
         </Text>
 
-        <Accordion allowToggle
-        
-        w='100%'
-        minW={["300px", "400px", "400px", "460px"]}
-        maxW='800px'
-        display='flex'
-        flexDirection='column'
-        my='2'
-        gap='2'
-        >
+        <Accordion
+          allowToggle
+          w='100%'
+          minW={["300px", "400px", "400px", "460px"]}
+          maxW='800px'
+          display='flex'
+          flexDirection='column'
+          my='2'
+          gap='2'>
           <AccordionQuestion
             // borderRadius='60px'
             question='Available Vaccinations for Dogs'>
@@ -72,17 +78,21 @@ export default function Considerations(props) {
               veterinarian can help you develop the proper protocol for your
               animal. The following vaccines (DA2PP and Rabies) are considered
               core and are always recommended to be kept up to date:
-              <li>Distemper virus</li>
-              <li>Adenovirus</li>
-              <li>Parainfluenza</li>
-              <li>Parvovirus</li>
-              <li>Rabies</li>
+            </Text>
+
+            <UnorderedList>
+              <ListItem mt='1rem'>Distemper virus</ListItem>
+              <ListItem>Adenovirus</ListItem>
+              <ListItem>Parainfluenza</ListItem>
+              <ListItem>Parvovirus</ListItem>
+              <ListItem>Rabies</ListItem>
               The following vaccines listed below are optional and should be
               discussed with your veterinarian based on your dog’s routine:
-              <li>Coronavirus</li>
-              <li>Bordetella (Kennel Cough)</li>
-            </Text>
-{/* 
+              <ListItem>Coronavirus</ListItem>
+              <ListItem>Bordetella (Kennel Cough)</ListItem>
+            </UnorderedList>
+
+            {/* 
             <Link
               variant='DarkOutline'
               position='absolute'
@@ -105,16 +115,18 @@ export default function Considerations(props) {
               young as 8 weeks old, your veterinarian can help you develop the
               proper protocol for your animal. The following vaccines are
               considered core and are always recommended to be kept up to date:
-              <li>Feline Viral Rhinotracheitis</li>
-              <li>Calicivirus</li>
-              <li>Panleukopenia</li>
-              <li>Rabies</li>
+            </Text>
+
+            <UnorderedList>
+              <ListItem mt='1rem'> Feline Viral Rhinotracheitis</ListItem>
+              <ListItem>Calicivirus</ListItem>
+              <ListItem>Panleukopenia</ListItem>
+              <ListItem>Rabies</ListItem>
               The following vaccine is optional but always recommended for cats
               that freely roam outdoors or in are in homes where new cats are
               often brought in:
-              <li>Feline Leukemia</li>
-            </Text>
-
+              <ListItem>Feline Leukemia</ListItem>
+            </UnorderedList>
             {/* <Link
               variant='DarkOutline'
               position='absolute'

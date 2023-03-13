@@ -4,7 +4,7 @@ import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 export default function BeforeAppointment(props) {
   return (
     <SectionFlexContainer headertext='Before Your Appointment' {...props}>
-      <ImageHeaderTextBlock src='/images/heart-outline.svg' headertext='Health'>
+      <ImageHeaderTextBlock src='/images/hq/heart.webp' headertext='Health'>
         <Text>
           Please notify the staff at The Spay Clinic during admission of any new
           or ongoing concerns that you may have about your pet’s health. All
@@ -14,7 +14,7 @@ export default function BeforeAppointment(props) {
         </Text>
       </ImageHeaderTextBlock>
       <ImageHeaderTextBlock
-        src='/images/syringe-outline.svg'
+        src='/images/hq/syringe.webp'
         headertext='Vaccinations'>
         <Text>
           Although vaccinations are not mandatory for their day stay, we here at

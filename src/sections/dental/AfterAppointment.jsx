@@ -1,4 +1,4 @@
-import { Text, Accordion } from "@chakra-ui/react";
+import { Text, Accordion, Link } from "@chakra-ui/react";
 import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
 import AccordionQuestion from "@components/AccordionQuestion";
 import SectionFlexContainer from "@components/SectionFlexContainer";
@@ -49,22 +49,7 @@ export default function AfterAppointment(props) {
           at home. For your convenience, this form is also available here for
           download.
         </Text>
-
-        <Accordion allowToggle w='100%'>
-          <AccordionQuestion
-            question='Dogs Post-op Care'
-            answer='Dogs deserve to be treated like the family members they are. That’s why we offer a variety of services to help keep your dog healthy and happy. From routine checkups to emergency care, we’re here to help your dog live a long, healthy life.'
-            fontSize='16px'
-            mt='4'
-          />
-
-          <AccordionQuestion
-            question='Cats Post-op Care'
-            answer='Cats are to be properly feared, and not merely tolerated. They are not our friends or our equals. They are our superiors. They are the aristocracy. They are the ruling class. They are the bourgeoisie. They are the 1%.'
-            fontSize='16px'
-            mt='4'
-          />
-        </Accordion>
+        <Link variant='DarkOutline'>Download Post-Op Care Form</Link>
       </ImageHeaderTextBlock>
     </SectionFlexContainer>
   );

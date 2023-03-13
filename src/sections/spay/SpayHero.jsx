@@ -9,7 +9,7 @@ export default function SpayHero(props) {
       linkto='/'
       {...props}>
       <Text>
-        The Original Spay Clinic has been providing affordable priced spays and
+        Northern Lights Animal Hospital has been providing affordable priced spays and
         neuters for dogs and cats throughout the Edmonton and surrounding areas
         for over 35 years. Our ongoing mission is, and always has been, to
         provide the community with professional and affordable spaying and

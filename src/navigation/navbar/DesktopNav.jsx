@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Flex, HStack, VStack, Center } from "@chakra-ui/react";
+import { Flex, HStack, VStack, Center, Box } from "@chakra-ui/react";
 import ChakraLink from "@components/ChakraLink";
 import PageRoutes from "@navigation/PageRoutes";
 import { useTheme } from "@chakra-ui/react";
@@ -10,6 +10,7 @@ import Spay from "@pages/Spay";
 import Dental from "@pages/Dental";
 import Health from "@pages/Health";
 import Contact from "@pages/Contact";
+import LogoBanner from "@components/LogoBanner";
 
 import FacebookLink from "@components/FacebookLink";
 import InstagramLink from "@components/InstagramLink";
@@ -27,18 +28,35 @@ export default function DesktopNav(props) {
 
   const [scrollDown, setScrollDown] = useState(false);
   const [scrollUp, setScrollUp] = useState(false);
+  const [currentScrollPosition, setCurrentScrollPosition] = useState(0);
+  const [previousScrollPosition, setPreviousScrollPosition] = useState(0);
   const [shrinkNavbar, setShrinkNavbar] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScrollDown(window.scrollY > 0);
-    });
-  }, []);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setCurrentScrollPosition(position);
+    setPreviousScrollPosition(currentScrollPosition);
+    if (currentScrollPosition > previousScrollPosition) {
+      setScrollDown(true);
+      setScrollUp(false);
+      setShrinkNavbar(true);
+    } else {
+      setScrollDown(false);
+      setScrollUp(true);
+      setShrinkNavbar(false);
+    }
+  };
+
+  const checkScroll = () => {
+    window.requestAnimationFrame(handleScroll);
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScrollUp(window.scrollY < 0);
-    });
-  }, []);
+    window.addEventListener("scroll", checkScroll);
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, [currentScrollPosition]);
 
   return (
     <Flex
@@ -49,22 +67,24 @@ export default function DesktopNav(props) {
       alignItems='center'
       w='100vw'
       maxW='100%'
-      // h='80px'
-      bg={scrollDown ? "light" : scrollUp ? "primary" : "light"}
+      bg={colors.light}
       color={colors.dark}
-      h={scrollDown ? "40px" : scrollUp ? "80px" : "80px"}
+      h={shrinkNavbar ? "40px" : scrollUp ? "80px" : "80px"}
       transition='all 0.2s ease-in-out'
       position='sticky'
       top='0'
       zIndex='11'
       px='16'
       {...props}>
-      <Logo
-        w='200px'
-        h='100%'
-        opacity={scrollDown ? "0" : scrollUp ? "1" : "1"}
-        transition='all 0.2s ease-in-out'
-      />
+      <HStack>
+        <Logo
+          w='80px'
+          position='relative'
+          transition='all 0.2s ease-in-out'
+          top={shrinkNavbar ? "-80px" : scrollUp ? "0px" : "0px"}
+        />
+        <LogoBanner w='100px' h='40px' transition='all 0.2s ease-in-out' />
+      </HStack>
 
       <Flex justifyContent={"center"} alignItems='center' h='100%' gap='12'>
         {routes.map((route, index) => (
@@ -77,11 +97,11 @@ export default function DesktopNav(props) {
           />
         ))}
       </Flex>
-
+      {/* 
       <Flex gap='4'>
         <FacebookLink fontSize='36px' />
         <InstagramLink fontSize='36px' />
-      </Flex>
+      </Flex> */}
     </Flex>
   );
 }

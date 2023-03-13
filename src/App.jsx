@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "@navigation/Navbar";
 import Footer from "@navigation/Footer";
 import PageRoutes from "@navigation/PageRoutes";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import { useTheme } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <>
       <Navbar />
       <PageRoutes isMobile={isMobile} />
+
       <Footer bg='light' color='dark' />
     </>
   );

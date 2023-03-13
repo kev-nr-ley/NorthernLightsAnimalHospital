@@ -21,8 +21,8 @@ export default function Testimonials(props) {
   return (
     <SectionFlexContainer
       headertext='What our clients say about us'
-      linktext='Read More Testimonials'
-      linkto='/contact'
+      // linktext='Read More Testimonials'
+      // linkto='/contact'
       bg='primaryOpacity95'
       color='light'
       // h='100%'

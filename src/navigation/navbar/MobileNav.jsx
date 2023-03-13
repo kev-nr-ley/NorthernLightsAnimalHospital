@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Flex, HStack, VStack, Center, Button } from "@chakra-ui/react";
+import { Flex, HStack, VStack, Center, Button, Box } from "@chakra-ui/react";
 import ChakraLink from "@components/ChakraLink";
 import PageRoutes from "@navigation/PageRoutes";
 import { useTheme } from "@chakra-ui/react";
@@ -14,6 +14,8 @@ import Contact from "@pages/Contact";
 import FacebookLink from "@components/FacebookLink";
 import InstagramLink from "@components/InstagramLink";
 import Logo from "@components/Logo";
+import LogoBanner from "@components/LogoBanner";
+
 export default function MobileNav(props) {
   const { colors } = useTheme();
   const routes = [
@@ -26,6 +28,15 @@ export default function MobileNav(props) {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollDown, setScrollDown] = useState(false);
+  const [scrollUp, setScrollUp] = useState(false);
+  const [currentScrollPosition, setCurrentScrollPosition] = useState(0);
+
+  const [currentYPosition, setCurrentYPosition] = useState(0);
+
+
+  const [shrinkNavbar, setShrinkNavbar] = useState(false);
+
   const toggle = () => setIsOpen(!isOpen);
   const handleNavClick = () => {
     toggle();
@@ -70,37 +81,56 @@ export default function MobileNav(props) {
     </svg>
   );
 
+
+
+
+
+    
   return (
     <>
-      <Button
-        onClick={handleNavClick}
+      <Flex
         position='fixed'
         top='0'
         right='0'
         zIndex='12'
-        m='4'
-        color='orange.500'
-        transition='all 0.2s ease-in-out'
-        bg='transparent'
-        boxSizing='border-box'
-        border='2px solid transparent'
-        _hover={{ bg: "transparent", border: "2px" }}
-        _focus={{ border: "2px" }}
-        // _active={{ border: "2px" }}
-        _focusVisible={{ border: "2px" }}
-        aria-label='Navigation Menu'>
-        {isOpen ? xSvg : menuSvg}
-      </Button>
+        bg='#ffffff50'
+        w='100vw'
+        h={scrollDown ? "0px" : scrollUp ? "80px" : "80px"}
+        justifyContent='space-between'
+        alignItems='center'
+        px='1rem'
+        py='0.25rem'
+        transition='all 0.2s ease-in-out'>
+        <Logo
+          h='60px'
+          w='60px'
+          display={scrollDown ? "none" : scrollUp ? "block" : "block"}
+        />
+        <Button
+          right='0'
+          onClick={handleNavClick}
+          display={scrollDown ? "none" : scrollUp ? "block" : "block"}
+          zIndex='12'
+          color='orange.500'
+          transition='all 0.2s ease-in-out'
+          bg='transparent'
+          boxSizing='border-box'
+          border='2px solid transparent'
+          _hover={{ bg: "transparent", border: "2px" }}
+          _focus={{ border: "2px" }}
+          _focusVisible={{ border: "2px" }}
+          aria-label='Navigation Menu'>
+          {isOpen ? xSvg : menuSvg}
+        </Button>
+      </Flex>
 
       <Flex
         className='desktop-nav'
         as='nav'
-        // justifyContent={'space-between'}
         flexDirection='column'
-        // alignItems={"center"}
-        justifyContent={"center"}
-        bg='light'
-        color='dark'
+        justifyContent={"space-between"}
+        // bg='light'
+        // color='dark'
         h='100vh'
         w={isOpen ? "80vw" : "0vw"}
         maxW='500px'
@@ -114,8 +144,12 @@ export default function MobileNav(props) {
         zIndex='11'
         px='5vw'
         py='5vh'
+        bg='purple.100'
         {...props}>
-        {/* <Logo w='300px' transition='all 0.2s ease-in-out' /> */}
+        <Flex alignSelf='flex-start'>
+          <Logo w='100px' transition='all 0.2s ease-in-out' />
+          <LogoBanner w='100px' transition='all 0.2s ease-in-out' />
+        </Flex>
 
         <Flex
           flexDirection='column'
@@ -135,8 +169,8 @@ export default function MobileNav(props) {
         </Flex>
 
         <Flex justifyContent={"space-evenly"} w='100%' py='5vh'>
-          <FacebookLink fontSize='52px' />
-          <InstagramLink fontSize='52px' />
+          {/* <FacebookLink fontSize='52px' />
+          <InstagramLink fontSize='52px' /> */}
         </Flex>
       </Flex>
     </>

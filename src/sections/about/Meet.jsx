@@ -2,40 +2,36 @@ import { Box, Text } from "@chakra-ui/react";
 
 import { useTheme } from "@chakra-ui/react";
 import StaffCard from "@components/StaffCard";
-// import { staff } from "@assets/data/staff";
 import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function Meet(props) {
   const { colors } = useTheme();
 
   const staff = [
     {
-      name: "Dr. Charles West",
+      name: "Dr. Tom Goulding",
       title: "dr",
-      image: "/images/charles-west.webp",
+      image: "/images/tom.webp",
       description: [
-        "Dr. West is the owner of the Spay Clinic and the Senior Clinician among two other doctors. He graduated with distinction from the Western College of Veterinary Medicine at the University of Saskatchewan in 1981 and his professional interests include surger and reproductive medicine. He is actively involved with local pet rescue groups and was a participant of the PAL (Prevent Another Litter) Program in 2011, which was a joint program with the ABVMA and the Edmonton Humane Society.",
-        "His personal interests include travel and spending time with his furry family of 3 dogs and 2 cats. ",
+        "Introducing Dr. Tom Goulding, a Canadian veterinarian with over 10 years of experience in small animal care. He graduated with honors from the University of British Columbia and has expertise in surgery, internal medicine, preventive care, and animal behavior. ",
+        "Dr. Goulding is dedicated to providing personalized and comprehensive care to all patients, with a focus on ensuring their health and happiness.",
       ],
     },
     {
-      name: "Dr. Amanda McMillan",
+      name: "Dr. Amelia Pollschuk",
       title: "dr",
-      image: "/images/amanda-mcmillan.webp",
+      image: "/images/amelia.webp",
       description: [
-        "Dr. Amanda McMillan was born and raised in Winnipeg, Manitoba. She first started working as a Veterinary Assistant in a small animal practice back in 2010 while completing her Bachelor of Science at The University of Winnipeg.",
-        "Once graduating undergrad, she ventured abroad to receive her Doctorate of Veterinary Medicine from the AVMA accredited St. George’s University in Grenada, West Indies. She received diverse experiences with all types of animals including exotics and she was able to complete her final clinical year of Veterinary Medicine at The Western College of Veterinary Medicine. As a recent graduate and Edmonton resident, she is continuing her veterinary career with us here at The Spay Clinic. ",
-        "Dr. Amanda McMillan is excited to meet you and all your furry family members, she is committed to your animal’s health and well-being.",
+        "Meet Dr. Amelia Polischuk, a skilled veterinarian with over a decade of experience in providing exceptional care to animals. Dr. Polischuk received her veterinary degree from the University of Toronto and has developed expertise in a wide range of specialties, including surgery, internal medicine, and preventive care.",
       ],
     },
 
     {
-      name: "Dr. Ellen Lagore",
+      name: "Dr. Samantha Wood",
       title: "dr",
-      image: "/images/ellen-lagore.webp",
+      image: "/images/samantha.webp",
       description: [
-        "Dr. Ellen Lagore is the newest member of the team, and she has loved animals for as long as she can remember. Her favourite book growing up was “Which Dog For Me?”, an in-depth guidebook to dog breeds. Sadly her parents never actually let her have a dog, but that never stopped her from dreaming!",
-        "Before finding her passion for veterinary medicine, Ellen earned a degree in Photography from Alberta University of the Arts. Since then she has traveled for school and training to the Caribbean, Saskatchewan, Ecuador, and Nicaragua. She earned her DVM in 2019 from St. Matthew’s University, Cayman Islands.",
-        "Since becoming a member of the team, Ellen has moved to downtown Edmonton with her two precious rescue chihuahuas, Sprinkles, and Beans, and she is so excited to meet you and your animals!",
+        "Introducing Dr. Samantha Wood, a compassionate and experienced veterinarian with a passion for providing top-quality care to animals. Dr. Wood received her veterinary degree from the University of Guelph and has been practicing for over a decade.",
+        "She has expertise in a wide range of veterinary specialties, including surgery, dentistry, and emergency medicine.",
       ],
     },
   ];
@@ -56,23 +52,33 @@ export default function Meet(props) {
       headertext={greeting()}
       alignheader='flex-start'
       {...props}>
-      <StaffCard
-        image={staff[0].image}
-        name={staff[0].name}
-        description={staff[0].description}
-      />
-      <StaffCard
-        image={staff[1].image}
-        name={staff[1].name}
-        description={staff[1].description}
-        top={['0', '0', '8vh']}
-      />
-      <StaffCard
-        image={staff[2].image}
-        name={staff[2].name}
-        description={staff[2].description}
-        top={['0', '0', '-4vh']}
-      />
+      <StaffCard w='80vw' image={"/images/tom.webp"} name={"Dr. Tom Goulding"}>
+        Introducing Dr. Tom Goulding, a Canadian veterinarian with over 10 years
+        of experience in small animal care. He graduated with honors from the
+        University of British Columbia and has expertise in surgery, internal
+        medicine, preventive care, and animal behavior.
+        <br />
+        Dr. Goulding is dedicated to providing personalized and comprehensive
+        care to all patients, with a focus on ensuring their health and
+        happiness.
+      </StaffCard>
+
+      <StaffCard image={"/images/amelia.webp"} name={"Dr. Amelia Polischuk"}>
+        Meet Dr. Amelia Polischuk, a skilled veterinarian with over a decade of
+        experience in providing exceptional care to animals. Dr. Polischuk
+        received her veterinary degree from the University of Toronto and has
+        developed expertise in a wide range of specialties, including surgery,
+        internal medicine, and preventive care.
+      </StaffCard>
+
+      <StaffCard image={"/images/samantha.webp"} name={"Dr. Samantha Wood"}>
+        Introducing Dr. Samantha Wood, a compassionate and experienced
+        veterinarian with a passion for providing top-quality care to animals.
+        Dr. Wood received her veterinary degree from the University of Guelph
+        and has been practicing for over a decade. She has expertise in a wide
+        range of veterinary specialties, including surgery, dentistry, and
+        emergency medicine.
+      </StaffCard>
     </SectionFlexContainer>
   );
 }

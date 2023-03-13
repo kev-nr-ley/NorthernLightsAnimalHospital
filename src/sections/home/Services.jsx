@@ -6,22 +6,23 @@ export default function Services(props) {
   return (
     <SectionFlexContainer headertext='Our services' {...props}>
       <ImageHeaderTextBlock
-        src='/images/clipboard.webp'
+        src='/images/hq/clipboard-color.webp'
         headertext='Spaying and Neutering'
         linktext='Learn More'
         linkto='/spay'
         linkvariant='DarkOutline'>
         <Text>
-          The Original Spay Clinic has been providing affordable priced spays
-          and neuters for dogs and cats throughout the Edmonton and surrounding
-          areas for over 35 years. Our ongoing mission is, and always has been,
-          to provide the community with professional and affordable spayig and
-          neutering service, using only the latest technology.'
+          Northern Lights Animal Hospital has been providing affordable priced
+          spays and neuters for dogs and cats throughout the Edmonton and
+          surrounding areas for over 35 years. Our ongoing mission is, and
+          always has been, to provide the community with professional and
+          affordable spayig and neutering service, using only the latest
+          technology.'
         </Text>
       </ImageHeaderTextBlock>
 
       <ImageHeaderTextBlock
-        src='/images/dogbrush.webp'
+        src='/images/hq/dog-toothbrush-color.webp'
         headertext='Dental Care'
         linktext='Learn More'
         linkto='/dental'
@@ -37,15 +38,15 @@ export default function Services(props) {
       </ImageHeaderTextBlock>
 
       <ImageHeaderTextBlock
-        src='/images/dogcat.webp'
+        src='/images/hq/pets.webp'
         headertext='Other Services'
         linktext='Learn More'
         linkto='/health'
         linkvariant='DarkOutline'>
         <Text>
-          At The Original Spay Clinic we offer a variety of services to care for
-          your pet, including annual checkups, vaccinations, general surgeries,
-          and dewclaw removal.
+          At Northern Lights Animal Hospital we offer a variety of services to
+          care for your pet, including annual checkups, vaccinations, general
+          surgeries, and dewclaw removal.
         </Text>
       </ImageHeaderTextBlock>
     </SectionFlexContainer>
