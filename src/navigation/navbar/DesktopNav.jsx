@@ -20,7 +20,7 @@ export default function DesktopNav(props) {
   const routes = [
     { path: "/", linktext: "Home", element: <Home /> },
     { path: "/About", linktext: "About", element: <About /> },
-    { path: "/Spay", linktext: "Spay", element: <Spay /> },
+    { path: "/Spay", linktext: "Spay & Neuter", element: <Spay /> },
     { path: "/Dental", linktext: "Dental", element: <Dental /> },
     { path: "/Health", linktext: "Health", element: <Health /> },
     { path: "/Contact", linktext: "Contact", element: <Contact /> },

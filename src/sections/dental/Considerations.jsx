@@ -13,7 +13,8 @@ export default function Considerations(props) {
         justifyContent='flex-start'
         headertext='Extractions'
         bg='white'
-        h={["auto", "auto", "auto", "740px"]}
+        // h={["auto", "auto", "auto", "740px"]}
+        h='auto'
         w={["100%", "100%", "100%", "300px"]}
         maxW='400px'
         borderRadius='30px'
@@ -40,7 +41,8 @@ export default function Considerations(props) {
         imagewidth='77px'
         imageheight='77px'
         bg='white'
-        h={["auto", "auto", "auto", "740px"]}
+          // h={["auto", "auto", "auto", "740px"]}
+          h='auto'
         w={["100%", "100%", "100%", "300px"]}
         maxW='400px'
         borderRadius='30px'
@@ -64,7 +66,8 @@ export default function Considerations(props) {
         imagewidth='131px'
         imageheight='77px'
         bg='white'
-        h={["auto", "auto", "auto", "740px"]}
+           // h={["auto", "auto", "auto", "740px"]}
+           h='auto'
         w={["100%", "100%", "100%", "300px"]}
         maxW='400px'
         borderRadius='30px'

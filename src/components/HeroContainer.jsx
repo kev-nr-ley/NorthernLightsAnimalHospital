@@ -1,4 +1,6 @@
 import { Flex, Box, Heading, Link } from "@chakra-ui/react";
+
+import ChakraLink from "@components/ChakraLink";
 export default function HeroContainer(props) {
   return (
     <Flex
@@ -35,15 +37,23 @@ export default function HeroContainer(props) {
         </Box>
 
         {props.linktext ? (
-          <Link
-          my='8'
-            variant='LightOutline'
+          <ChakraLink
+            mt='8'
+            linktext={props.linktext}
             to={props.linkto}
+            variant='LightOutline'
             w={["100%", "auto", "auto"]}
-            textAlign='center'>
-            {props.linktext}
-          </Link>
-        ) : null}
+            textAlign='center'
+          />
+        ) : // <Link
+        // my='8'
+        //   variant='LightOutline'
+        //   to={props.linkto}
+        //   w={["100%", "auto", "auto"]}
+        //   textAlign='center'>
+        //   {props.linktext}
+        // </Link>
+        null}
       </Flex>
     </Flex>
   );

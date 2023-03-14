@@ -5,7 +5,7 @@ export default function SpayHero(props) {
   return (
     <HeroContainer
       heading='Spaying and neutering your pets '
-      linktext='Make an Appointemnt'
+      linktext='Make an Appointment'
       linkto='/'
       {...props}>
       <Text>

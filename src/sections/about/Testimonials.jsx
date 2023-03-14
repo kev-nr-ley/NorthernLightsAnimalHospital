@@ -11,6 +11,7 @@ export default function Testimonials(props) {
         review={testimonial.review}
         name={testimonial.name}
         maxW='360px'
+        textAlign='center'
         minW='280px'
         px={["0", "0", "2", "4"]}
         my={["2", "2", "4", "8"]}

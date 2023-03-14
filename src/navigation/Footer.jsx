@@ -17,6 +17,8 @@ export default function Footer(props) {
         "repeat(4, 1fr)",
         "repeat(4, 1fr)",
       ]}
+      alignItems='center'
+      justifyItems='center'
       gap='5vw'
       color='dark'
       zIndex='4'
@@ -36,8 +38,8 @@ export default function Footer(props) {
       <ScrollToTopButton
         position='absolute'
         zIndex='99'
-        top='2rem'
-        right='0rem'
+        bottom='4rem'
+        right='2rem'
         w='4rem'
         h='4rem'
         // left='50%'

@@ -7,6 +7,7 @@ export default function InfotainmentSystem(props) {
       flexDirection='column'
       justifyContent={"flex-start"}
       w='100%'
+      maxW='320px'
       zIndex='4'
       mb='4'
       {...props}>
