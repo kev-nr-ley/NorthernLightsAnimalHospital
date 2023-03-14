@@ -12,7 +12,6 @@ import Health from "@pages/Health";
 import Contact from "@pages/Contact";
 
 import Logo from "@components/Logo";
-
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -85,18 +84,24 @@ export default function MobileNav(props) {
         px='1rem'
         py='0.25rem'
         transition='all 0.2s ease-in-out'>
-        <Logo
+        <LogoAndBanner
           h='60px'
-          w='60px'
+          w='140px'
           ml='2rem'
           transition='all .4s ease-in-out'
-          _hover={{ transform: "rotate(180deg)" }}
+          // _hover={{ transform: "rotate(180deg)" }}
           display={scrollDown ? "none" : scrollUp ? "block" : "block"}
+          // display='block'
         />
+
+
         <Button
-          right='0'
+          right='1rem'
+          top='1rem'
+          position='absolute'
           onClick={handleNavClick}
-          display={scrollDown ? "none" : scrollUp ? "block" : "block"}
+          // display={scrollDown ? "none" : scrollUp ? "block" : "block"}
+          display='block'
           zIndex='12'
           color={isOpen ? "red.200" : "blue.200"}
           transition='all 0.15s ease-in-out'

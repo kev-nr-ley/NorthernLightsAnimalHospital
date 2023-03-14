@@ -1,17 +1,20 @@
 import React from "react";
 import { Text, Flex, Link, Heading } from "@chakra-ui/react";
+import ChakraLink from "../../components/ChakraLink";
 export default function SiteNavigation(props) {
   return (
     <Flex flexDirection={"column"} w='100%' zIndex='4' {...props}>
       <Heading variant='bodyHeading' mt='0'>
         Site Navigation
       </Heading>
-      <Link to='/'>Home</Link>
-      <Link to='/about'>About</Link>
-      <Link to='/spay'>Spay & Neuter</Link>
-      <Link to='/dental'>Dental</Link>
-      <Link to='/health'>Other Services</Link>
-      <Link to='/contact'>Contact Us</Link>
+      <ChakraLink linktext='Home' to='/' />
+      <ChakraLink linktext='About' to='/about' />
+      <ChakraLink linktext='Spay & Neuter' to='/spay' />
+      <ChakraLink linktext='Dental Care' to='/dental' />
+      <ChakraLink linktext='Health' to='/health' />
+      <ChakraLink linktext='Contact' to='/contact' />
+
+        
     </Flex>
   );
 }

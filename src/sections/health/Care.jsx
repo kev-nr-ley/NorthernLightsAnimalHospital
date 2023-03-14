@@ -2,6 +2,7 @@ import {
   Flex,
   Text,
   Link,
+  VStack,
   Accordion,
   ListItem,
   UnorderedList,
@@ -45,7 +46,7 @@ export default function Considerations(props) {
         bg='light'
         color='dark'
         heading='Vaccinations'
-        src='/images/hq/syringe-color.webp'>
+        src='/images/hq/vaccine.webp'>
         <Text>
           Younger pets are at a much higher risk for certain diseases, therefore
           following your advised vaccination protocol is of the utmost
@@ -59,16 +60,14 @@ export default function Considerations(props) {
 
         <Accordion
           allowToggle
-          w='100%'
-          minW={["300px", "400px", "400px", "460px"]}
-          maxW='800px'
+          w={["300px", "100%", "100%", "600px"]}
           display='flex'
           flexDirection='column'
           my='2'
           gap='2'>
           <AccordionQuestion
             // borderRadius='60px'
-            question='Available Vaccinations for Dogs'>
+            question='Vaccinations for Dogs'>
             <Text listStylePosition={"inside"}>
               Certain vaccine protocols may be recommended depending on your
               dog’s type of lifestyle; factors that will be considered is
@@ -104,7 +103,7 @@ export default function Considerations(props) {
 
           <AccordionQuestion
             // borderRadius='60px'
-            question='Available Vaccinations for Cats'
+            question='Vaccinations for Cats'
             listStylePosition={"inside"}>
             <Text>
               Vaccination protocols for your cat can change dramatically

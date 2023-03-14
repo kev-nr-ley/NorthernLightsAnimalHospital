@@ -16,7 +16,8 @@ export default function Parasite(props) {
         src='/images/hq/leech-bw.webp'
         headertext='Deworming'
         imagewidth='140px'
-        imageheight='140px'>
+        imageheight='140px'
+        alignItems='left'>
         <Text>
           Parasites are organisms that feed on or within animals. Fleas, ticks
           and lice are the most well known offenders, but there are many other
@@ -24,8 +25,7 @@ export default function Parasite(props) {
           range from minimal irritation to potential fatality if left untreated.
           No matter how careful you are, your pet is still at risk of
           contracting unwanted parasites.
-        </Text>
-        <Text>
+          <br /> <br />
           The first step of parasite prevention is to appropriately deworm your
           puppies and kittens in early life, this is because young animals can
           acquire parasites from their mother before birth or even through her
@@ -37,9 +37,10 @@ export default function Parasite(props) {
         src='/images/hq/dog-vaccine-bw.webp'
         headertext='External'
         imagewidth='140px'
-        imageheight='140px'>
+        imageheight='140px'
+        alignItems='left'>
         <Box>
-          <Text>
+          <Text mb='1rem'>
             Recognizing external parasites is not always as easy as visualizing
             the parasite. Sometimes they are too small to be catch of glimpse
             of, this is when your animal can give you clues that sometimes just
@@ -59,9 +60,10 @@ export default function Parasite(props) {
         src='/images/hq/germs-bw.webp'
         headertext='Internal'
         imagewidth='140px'
-        imageheight='140px'>
+        imageheight='140px'
+        alignItems='left'>
         <Box>
-          <Text>
+          <Text mb='1rem'>
             Unfortunately, internal parasites can only be noticed in two ways,
             either through clinical signs or by seeing your animal’s feces
             having unwanted wiggling guests within. Clinical signs may include:

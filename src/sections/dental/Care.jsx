@@ -29,21 +29,14 @@ export default function Considerations(props) {
           this at a younger age usually makes it easier to make it a regular
           habit between you and your animal. Getting used to brushing may take
           several attempts.
-        </Text>
-        <Text>
+          <br />
+          <br />
           It is best to start gradually by using just your finger and
           appropriate animal enzymatic tooth paste before moving right to a
           toothbrush. Never use human toothpaste as fluoride just like in
           humans, is not good for them if swallowed. There are many different
           types of animal toothbrushes available but even simply a child size
           super soft bristle toothbrush is sufficient.
-        </Text>
-        <Text>
-          When brushing your pet’s teeth do so gently and mainly focus on the
-          outside of the teeth as well as getting right to the back of the
-          mouth. Always give your animal lots of praise and treats for each
-          gradual step as it helps reinforce teeth brushing as a positive
-          experience which will allow it to continue in the future.
         </Text>
       </ImageTextPill>
 
@@ -75,9 +68,8 @@ export default function Considerations(props) {
           of approval from the Veterinary Oral Health Council (VOHC), this means
           these treats meet strict VOHC testing guidelines for controlling
           plaque and tartar.
-        </Text>
-
-        <Text>
+          <br />
+          <br />
           Always be careful giving antlers to your dogs, not only can they cause
           serious intestinal issues but they can also cause unwanted fractures
           of your dog’s teeth which can lead tooth infections and possible

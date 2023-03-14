@@ -78,10 +78,10 @@ export default function DesktopNav(props) {
       {...props}>
       <HStack>
         <Logo
-          w='80px'
+          w='60px'
           position='relative'
           transition='all 0.2s ease-in-out'
-          top={shrinkNavbar ? "-80px" : scrollUp ? "0px" : "0px"}
+          top={shrinkNavbar ? "-60px" : scrollUp ? "0px" : "0px"}
         />
         <LogoBanner w='100px' h='40px' transition='all 0.2s ease-in-out' />
       </HStack>

@@ -19,6 +19,7 @@ export default function Considerations(props) {
         borderRadius='30px'
         px={["8", "8", "4"]}
         py='12'
+        textAlign='center'
         boxShadow='0px 4px 13px 0px rgba(0,0,0,0.25)'>
         <Text>
           Dental extractions may also be discussed with you if certain teeth are
@@ -45,6 +46,7 @@ export default function Considerations(props) {
         borderRadius='30px'
         px={["8", "8", "4"]}
         py='12'
+        textAlign='center'
         boxShadow='0px 4px 13px 0px rgba(0,0,0,0.25)'>
         <Text>
           During your consultation, pre-procedural antibiotics will be discussed
@@ -66,8 +68,9 @@ export default function Considerations(props) {
         w={["100%", "100%", "100%", "300px"]}
         maxW='400px'
         borderRadius='30px'
-        px={["12", "12", "8"]}
+        px={["8", "8", "4"]}
         py='12'
+        textAlign='center'
         boxShadow='0px 4px 13px 0px rgba(0,0,0,0.25)'>
         <Text>
           Once you book an appointment for your pet to have a dental procedure

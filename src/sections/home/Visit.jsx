@@ -33,7 +33,7 @@ export default function Visit(props) {
         />
       </Flex>
 
-      <Box>
+      {/* <Box>
         <Link to='https://goo.gl/maps/pxunArNe2swWTJs46' target='_blank'>
           <ChakraImage
             src='/images/map.webp'
@@ -46,7 +46,7 @@ export default function Visit(props) {
           />
         </Link>
       </Box>
-      
+       */}
     </SectionFlexContainer>
   );
 }

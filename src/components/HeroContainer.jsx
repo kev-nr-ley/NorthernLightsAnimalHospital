@@ -34,9 +34,9 @@ export default function HeroContainer(props) {
           {props.children}
         </Box>
 
-        {props.linkktext ? (
+        {props.linktext ? (
           <Link
-            mt={["2", "4", "8"]}
+          my='8'
             variant='LightOutline'
             to={props.linkto}
             w={["100%", "auto", "auto"]}

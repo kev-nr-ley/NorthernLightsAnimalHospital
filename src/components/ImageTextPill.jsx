@@ -5,32 +5,30 @@ export default function ImageTextPill(props) {
   return (
     <Flex
       flexDirection={["column", "column", "column", "row"]}
-      alignItems='flex-start'
-      justifyContent='flex-start'
+      alignItems='center'
+      justifyContent='center'
       w={props.w || ["100%", "100%", "100%", "100%"]}
       h='fit-content'
+      gap='2rem'
       borderRadius='50px'
-      pr={["8", "8", "8", "16"]}
-      pl={["8", "8", "8", "0"]}
-      py={["8", "8", "8", "8"]}
+      p='2rem'
       position='relative'
-      boxShadow='0px 4px 13px 0px #00000025'
+      boxShadow='0px 4px 10px 0px #00000040'
       {...props}>
       {props.src ? (
         <ChakraImage
           src={props.src}
-          w={["200px", "200px", "200px", "200px"]}
-          h={["200px", "200px", "200px", "200px"]}
+          w={["150px", "150px", "150px", "150px"]}
+          h={["150px", "150px", "150px", "150px"]}
+          py='0rem'
           alignSelf='center'
           overflow='visible'
           objectFit='contain'
-          mx={["0", "0", "0", "16"]}
-          my={["8", "8", "8", "0"]}
         />
       ) : null}
 
       {/* Section heading */}
-      <Box w='100%'>
+      <Box w='100%' px='1rem' py='1rem'>
         <Heading borderBottomColor={props.color} variant='bodyHeading'>
           {props.heading}
         </Heading>

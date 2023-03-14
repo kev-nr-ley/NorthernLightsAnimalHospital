@@ -24,16 +24,16 @@ export default function Faq(props) {
       alignheader='flex-start'
       {...props}>
       <Image
-        w={["100vw", "100vw", "600px", "500px"]}
-        src='/images/hq/faq.webp'
+        w={["100vw", "100vw", "440px", "600px"]}
+        src='/images/hq/dental-faq.webp'
         borderRadius='30px'
       />
 
       <Accordion
         allowToggle
         w='100%'
-        minW={["300px", "400px", "400px", "460px"]}
-        maxW='800px'
+        minW={["300px", "400px", "440px", "600px"]}
+        maxW='600px'
         display='flex'
         flexDirection='column'
         gap='2'>

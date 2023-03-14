@@ -12,7 +12,7 @@ export default function SectionFlexContainer(props) {
       minW='320px'
       maxW='100%'
       position='relative'
-      px={["8", "12", "15vw", "15vw"]} //affects section heading
+      px={["8", "12", "5vw", "5vw"]} //affects section heading
       py={["16", "20", "20", "20"]}
       {...props}>
       {props.headertext ? (
@@ -59,7 +59,7 @@ export default function SectionFlexContainer(props) {
           // alignSelf='flex-end'
           linktext={props.linktext}
           alignSelf={
-            props.alignlink ? props.alignlink : ["center", "center", "flex-end"]
+            props.alignlink ? props.alignlink : ["center", "center", "center"]
           }
           variant={props.linkvariant ? props.linkvariant : "LightOutline"}
           to={props.linkto}>

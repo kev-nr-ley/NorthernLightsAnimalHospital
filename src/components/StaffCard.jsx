@@ -41,7 +41,7 @@ export default function StaffCard(props) {
         px='1rem'
         alignItems='left'>
         <Heading variant='bodyHeading'>{props.name}</Heading>
-        <Text>{props.children} poop</Text>
+        <Text>{props.children}</Text>
       </Flex>
     </Flex>
   );

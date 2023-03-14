@@ -6,8 +6,27 @@ import { HiClock, HiOutlineClock } from "react-icons/hi";
 export default function Hours(props) {
   return (
     <InfotainmentSystem headertext='Hours' icon={<HiOutlineClock />} {...props}>
-      Monday - Friday: 8:00am - 5:00pm <br />
-      Saturday: 9:00am - 1:00pm <br />
+      <Flex justifyContent={"space-between"}>
+        <span>
+          {" "}
+          <strong> Mon- Fri:</strong>
+        </span>
+        <span>8:00am - 5:00pm</span>
+      </Flex>
+      <Flex justifyContent={"space-between"}>
+        <span>
+          {" "}
+          <strong>Saturday:</strong>
+        </span>
+        <span>9:00am - 1:00pm</span>
+      </Flex>
+      <Flex justifyContent={"space-between"}>
+        <span>
+          {" "}
+          <strong> Sunday:</strong>
+        </span>
+        <span>Closed</span>
+      </Flex>
     </InfotainmentSystem>
   );
 }

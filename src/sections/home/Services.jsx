@@ -10,7 +10,8 @@ export default function Services(props) {
         headertext='Spaying and Neutering'
         linktext='Learn More'
         linkto='/spay'
-        linkvariant='DarkOutline'>
+        linkvariant='DarkOutline'
+        alignItems='left'>
         <Text>
           Northern Lights Animal Hospital has been providing affordable priced
           spays and neuters for dogs and cats throughout the Edmonton and
@@ -26,7 +27,8 @@ export default function Services(props) {
         headertext='Dental Care'
         linktext='Learn More'
         linkto='/dental'
-        linkvariant='DarkOutline'>
+        linkvariant='DarkOutline'
+        alignItems='left'>
         <Text>
           The most effective way to clean your pet’s teeth and remove all dental
           disease that may have accumulated is through a professional cleaning.
@@ -42,7 +44,8 @@ export default function Services(props) {
         headertext='Other Services'
         linktext='Learn More'
         linkto='/health'
-        linkvariant='DarkOutline'>
+        linkvariant='DarkOutline'
+        alignItems='left'>
         <Text>
           At Northern Lights Animal Hospital we offer a variety of services to
           care for your pet, including annual checkups, vaccinations, general

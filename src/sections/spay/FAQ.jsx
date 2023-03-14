@@ -23,13 +23,17 @@ export default function Faq(props) {
       flexWrap='wrap'
       alignheader='flex-start'
       {...props}>
-      <Image w={["100vw", "100vw", "600px",'500px']} borderRadius='30px' src='/images/hq/faq.webp' />
+      <Image
+        w={["100vw", "100vw", "440px", "600px"]}
+        borderRadius='30px'
+        src='/images/hq/faq.webp'
+      />
 
       <Accordion
         allowToggle
         w='100%'
-        minW={['300px', '400px', '400px', '460px']}
-        maxW='800px'
+        minW={["300px", "400px", "440px", "600px"]}
+        maxW='600px'
         display='flex'
         flexDirection='column'
         gap='2'>

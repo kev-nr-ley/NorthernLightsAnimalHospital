@@ -40,7 +40,6 @@ export default function About(props) {
           alt={member.name}
           w='200px'
           h='200px'
-          
           objectFit='cover'
         />
 
@@ -67,7 +66,6 @@ export default function About(props) {
       headertext={greeting()}
       subtext='We are a group of highly trained, experienced animal lovers who are devoted to giving our patients the best care possible.'
       alignheader='left'
-  
       linktext='Meet Our Team'
       linkto='/about'
       linkvariant='DarkOutline'

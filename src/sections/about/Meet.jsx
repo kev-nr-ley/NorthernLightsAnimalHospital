@@ -52,18 +52,26 @@ export default function Meet(props) {
       headertext={greeting()}
       alignheader='flex-start'
       {...props}>
-      <StaffCard w='80vw' image={"/images/tom.webp"} name={"Dr. Tom Goulding"}>
+
+
+      <StaffCard
+        image={"/images/tom.webp"}
+        w={["100%", "60vw"]}
+        name={"Dr. Tom Goulding"}>
         Introducing Dr. Tom Goulding, a Canadian veterinarian with over 10 years
         of experience in small animal care. He graduated with honors from the
         University of British Columbia and has expertise in surgery, internal
         medicine, preventive care, and animal behavior.
-        <br />
+        {/* <br /> */}
         Dr. Goulding is dedicated to providing personalized and comprehensive
         care to all patients, with a focus on ensuring their health and
         happiness.
       </StaffCard>
 
-      <StaffCard image={"/images/amelia.webp"} name={"Dr. Amelia Polischuk"}>
+      <StaffCard
+        image={"/images/amelia.webp"}
+        w={["100%", "60vw"]}
+        name={"Dr. Amelia Polischuk"}>
         Meet Dr. Amelia Polischuk, a skilled veterinarian with over a decade of
         experience in providing exceptional care to animals. Dr. Polischuk
         received her veterinary degree from the University of Toronto and has
@@ -71,7 +79,10 @@ export default function Meet(props) {
         internal medicine, and preventive care.
       </StaffCard>
 
-      <StaffCard image={"/images/samantha.webp"} name={"Dr. Samantha Wood"}>
+      <StaffCard
+        image={"/images/samantha.webp"}
+        w={["100%", "60vw"]}
+        name={"Dr. Samantha Wood"}>
         Introducing Dr. Samantha Wood, a compassionate and experienced
         veterinarian with a passion for providing top-quality care to animals.
         Dr. Wood received her veterinary degree from the University of Guelph

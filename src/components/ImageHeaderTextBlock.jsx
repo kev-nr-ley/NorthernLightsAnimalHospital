@@ -22,11 +22,11 @@ export default function ImageHeaderTextBlock(props) {
       {props.src ? (
         <ChakraImage
           src={props.src}
-          w={props.imagewidth || ["100px"]}
-          h={props.imageheight || ["100px"]}
+          w={props.imagewidth || ["120px"]}
+          h={props.imageheight || ["120px"]}
           alignSelf={props.alignimage ? props.alignimage : "flex-start"}
           overflow='visible'
-          objectFit='fill'
+          objectFit='contain'
         />
       ) : null}
 
@@ -61,15 +61,14 @@ export default function ImageHeaderTextBlock(props) {
       <Box>{props.children}</Box>
       {props.linktext ? (
         <ChakraLink
-            to={props.linkto}
-            href={props.linkto}
-            variant={props.linkvariant}
-            alignSelf={props.alignlink ? props.alignlink : "flex-start"}
-            mt='8'
-            >
+          to={props.linkto}
+          href={props.linkto}
+          variant={props.linkvariant}
+          alignSelf={props.alignlink ? props.alignlink : "flex-start"}
+          mt='8'>
           {props.linktext}
 
-{/* 
+          {/* 
           // as={RouterLink}
           // mt='8'
           // href={props.linkto}

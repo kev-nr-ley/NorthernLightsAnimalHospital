@@ -10,7 +10,10 @@ export default function BeforeAppointment(props) {
       linktext='Book Now'
       linkto='/contact'
       {...props}>
-      <ImageHeaderTextBlock src='/images/clipboard.webp' headertext='Health'>
+      <ImageHeaderTextBlock
+        src='/images/hq/clipboard-color.webp'
+        headertext='Health'
+        alignItems='left'>
         <Text>
           Please notify the staff at The Spay Clinic during admission of any new
           or ongoing concerns that you may have about your pet’s health. All
@@ -21,8 +24,9 @@ export default function BeforeAppointment(props) {
       </ImageHeaderTextBlock>
 
       <ImageHeaderTextBlock
-        src='/images/vaccination.webp'
-        headertext='Vaccinations'>
+        src='/images/hq/vaccine.webp'
+        headertext='Vaccinations'
+        alignItems='left'>
         <Text>
           Although vaccinations are not mandatory for their day stay, we here at
           The Spay Clinic highly recommend that your pet’s vaccination status be
@@ -33,8 +37,9 @@ export default function BeforeAppointment(props) {
         </Text>
       </ImageHeaderTextBlock>
       <ImageHeaderTextBlock
-        src='/images/dogtracking.webp'
-        headertext='Identification'>
+        src='/images/hq/dog-tracking-color.webp'
+        headertext='Identification'
+        alignItems='left'>
         <Text>
           Forms of identification are important to consider during this elective
           procedure as there is always a possibility of your pet becoming lost.
