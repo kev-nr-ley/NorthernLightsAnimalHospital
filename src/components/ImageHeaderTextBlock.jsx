@@ -1,10 +1,12 @@
 import React from "react";
-
+import { Route } from "react-router-dom";
 import { Box, Image, Heading, Flex, Link } from "@chakra-ui/react";
+import ChakraLink from "./ChakraLink";
 import ChakraImage from "./ChakraImage";
 export default function ImageHeaderTextBlock(props) {
   return (
     <Flex
+      className='ImageHeaderTextBlock'
       justifyContent={"center"}
       alignItems={["center", "center"]}
       flexDirection='column'
@@ -58,13 +60,23 @@ export default function ImageHeaderTextBlock(props) {
 
       <Box>{props.children}</Box>
       {props.linktext ? (
-        <Link
-          mt='8'
-          to={props.linkto}
-          variant={props.linkvariant}
-          alignSelf={props.alignlink ? props.alignlink : "flex-start"}>
+        <ChakraLink
+            to={props.linkto}
+            href={props.linkto}
+            variant={props.linkvariant}
+            alignSelf={props.alignlink ? props.alignlink : "flex-start"}
+            mt='8'
+            >
           {props.linktext}
-        </Link>
+
+{/* 
+          // as={RouterLink}
+          // mt='8'
+          // href={props.linkto}
+          // variant={props.linkvariant}
+          // alignSelf={props.alignlink ? props.alignlink : "flex-start"}>
+          // {props.linktext} */}
+        </ChakraLink>
       ) : null}
     </Flex>
   );

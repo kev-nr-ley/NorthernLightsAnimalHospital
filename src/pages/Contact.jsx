@@ -9,7 +9,7 @@ export default function Contact(props) {
   return (
     <Page {...props}>
       <Parallax
-        bgImage={"/images/about-1.webp"}
+        bgImage={"/images/hq/about-1.webp"}
         strength={300}
         bgImageStyle={{
           objectFit: "cover",

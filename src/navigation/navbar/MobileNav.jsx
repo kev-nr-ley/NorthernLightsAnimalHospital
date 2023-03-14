@@ -11,13 +11,9 @@ import Dental from "@pages/Dental";
 import Health from "@pages/Health";
 import Contact from "@pages/Contact";
 
-import FacebookLink from "@components/FacebookLink";
-import InstagramLink from "@components/InstagramLink";
 import Logo from "@components/Logo";
-import LogoBanner from "@components/LogoBanner";
 
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { useDisclosure } from "@chakra-ui/react";
 import { AiOutlineClose } from "react-icons/ai";
 
 import LogoAndBanner from "@components/LogoAndBanner";
@@ -53,11 +49,6 @@ export default function MobileNav(props) {
       setShrinkNavbar(false);
     }
   };
-
-
- 
-
-
 
   const checkScroll = () => {
     window.requestAnimationFrame(handleScroll);
@@ -98,7 +89,7 @@ export default function MobileNav(props) {
           h='60px'
           w='60px'
           ml='2rem'
-          transition = 'all .4s ease-in-out'
+          transition='all .4s ease-in-out'
           _hover={{ transform: "rotate(180deg)" }}
           display={scrollDown ? "none" : scrollUp ? "block" : "block"}
         />
@@ -116,8 +107,7 @@ export default function MobileNav(props) {
           border='2px solid transparent'
           aria-label='Navigation Menu'
           variant='LightOutline'
-          _hover={{ color: "orange.300", transform: "scale(1.2)" }}
-         >
+          _hover={{ color: "orange.300", transform: "scale(1.2)" }}>
           {isOpen ? (
             <AiOutlineClose fontSize='3rem' />
           ) : (

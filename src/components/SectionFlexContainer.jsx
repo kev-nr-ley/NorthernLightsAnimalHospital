@@ -1,9 +1,10 @@
 import { Flex, Heading, Text, Link } from "@chakra-ui/react";
-
+import ChakraLink from "./ChakraLink";
 import { useTheme } from "@chakra-ui/react";
 export default function SectionFlexContainer(props) {
   return (
     <Flex
+    className='SectionFlexContainer'
       flexDirection='column'
       alignItems={props.alignItems || "flex-start"}
       justifyContent='center'
@@ -53,14 +54,16 @@ export default function SectionFlexContainer(props) {
       ) : null}
 
       {props.linktext && (
-        <Link
+        <ChakraLink
           // mt='12'
           // alignSelf='flex-end'
-          alignSelf={props.alignlink ? props.alignlink : ['center', 'center', 'flex-end' ] }
+          linktext={props.linktext}
+          alignSelf={
+            props.alignlink ? props.alignlink : ["center", "center", "flex-end"]
+          }
           variant={props.linkvariant ? props.linkvariant : "LightOutline"}
           to={props.linkto}>
-          {props.linktext}
-        </Link>
+        </ChakraLink>
       )}
     </Flex>
   );
