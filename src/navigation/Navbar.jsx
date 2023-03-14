@@ -20,13 +20,5 @@ export default function Navbar(props) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return (
-    <>
-      {isMobile ? (
-        <MobileNav  {...props} />
-      ) : (
-        <DesktopNav {...props} />
-      )}
-    </>
-  );
+  return <>{isMobile ? <MobileNav {...props} /> : <DesktopNav {...props} />}</>;
 }

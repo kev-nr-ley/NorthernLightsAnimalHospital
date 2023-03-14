@@ -16,6 +16,11 @@ import InstagramLink from "@components/InstagramLink";
 import Logo from "@components/Logo";
 import LogoBanner from "@components/LogoBanner";
 
+import { HamburgerIcon } from "@chakra-ui/icons";
+import { useDisclosure } from "@chakra-ui/react";
+import { AiOutlineClose } from "react-icons/ai";
+
+import LogoAndBanner from "@components/LogoAndBanner";
 export default function MobileNav(props) {
   const { colors } = useTheme();
   const routes = [
@@ -31,11 +36,39 @@ export default function MobileNav(props) {
   const [scrollDown, setScrollDown] = useState(false);
   const [scrollUp, setScrollUp] = useState(false);
   const [currentScrollPosition, setCurrentScrollPosition] = useState(0);
-
-  const [currentYPosition, setCurrentYPosition] = useState(0);
-
-
+  const [previousScrollPosition, setPreviousScrollPosition] = useState(0);
   const [shrinkNavbar, setShrinkNavbar] = useState(false);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setCurrentScrollPosition(position);
+    setPreviousScrollPosition(currentScrollPosition);
+    if (currentScrollPosition > previousScrollPosition) {
+      setScrollDown(true);
+      setScrollUp(false);
+      setShrinkNavbar(true);
+    } else {
+      setScrollDown(false);
+      setScrollUp(true);
+      setShrinkNavbar(false);
+    }
+  };
+
+
+ 
+
+
+
+  const checkScroll = () => {
+    window.requestAnimationFrame(handleScroll);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScroll);
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, [currentScrollPosition]);
 
   const toggle = () => setIsOpen(!isOpen);
   const handleNavClick = () => {
@@ -43,49 +76,10 @@ export default function MobileNav(props) {
   };
   const handleLinkClick = () => {
     setIsOpen(false);
+
     console.log("link clicked");
   };
 
-  const xSvg = (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='48'
-      height='48'
-      viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      className='feather feather-x'>
-      <line x1='18' y1='6' x2='6' y2='18'></line>
-      <line x1='6' y1='6' x2='18' y2='18'></line>
-    </svg>
-  );
-
-  const menuSvg = (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='48'
-      height='48'
-      viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      className='feather feather-menu'>
-      <line x1='3' y1='12' x2='21' y2='12'></line>
-      <line x1='3' y1='6' x2='21' y2='6'></line>
-      <line x1='3' y1='18' x2='21' y2='18'></line>
-    </svg>
-  );
-
-
-
-
-
-    
   return (
     <>
       <Flex
@@ -93,7 +87,6 @@ export default function MobileNav(props) {
         top='0'
         right='0'
         zIndex='12'
-        bg='#ffffff50'
         w='100vw'
         h={scrollDown ? "0px" : scrollUp ? "80px" : "80px"}
         justifyContent='space-between'
@@ -104,6 +97,9 @@ export default function MobileNav(props) {
         <Logo
           h='60px'
           w='60px'
+          ml='2rem'
+          transition = 'all .4s ease-in-out'
+          _hover={{ transform: "rotate(180deg)" }}
           display={scrollDown ? "none" : scrollUp ? "block" : "block"}
         />
         <Button
@@ -111,16 +107,22 @@ export default function MobileNav(props) {
           onClick={handleNavClick}
           display={scrollDown ? "none" : scrollUp ? "block" : "block"}
           zIndex='12'
-          color='orange.500'
-          transition='all 0.2s ease-in-out'
+          color={isOpen ? "red.200" : "blue.200"}
+          transition='all 0.15s ease-in-out'
           bg='transparent'
+          // bg='primary'
+
           boxSizing='border-box'
           border='2px solid transparent'
-          _hover={{ bg: "transparent", border: "2px" }}
-          _focus={{ border: "2px" }}
-          _focusVisible={{ border: "2px" }}
-          aria-label='Navigation Menu'>
-          {isOpen ? xSvg : menuSvg}
+          aria-label='Navigation Menu'
+          variant='LightOutline'
+          _hover={{ color: "orange.300", transform: "scale(1.2)" }}
+         >
+          {isOpen ? (
+            <AiOutlineClose fontSize='3rem' />
+          ) : (
+            <HamburgerIcon fontSize='3rem' />
+          )}
         </Button>
       </Flex>
 
@@ -129,11 +131,11 @@ export default function MobileNav(props) {
         as='nav'
         flexDirection='column'
         justifyContent={"space-between"}
-        // bg='light'
+        bg={colors.background}
         // color='dark'
         h='100vh'
         w={isOpen ? "80vw" : "0vw"}
-        maxW='500px'
+        maxW='800px'
         userSelect={isOpen ? "auto" : "none"}
         // display={isOpen ? "flex" : "none"}
         overflow='hidden'
@@ -144,11 +146,14 @@ export default function MobileNav(props) {
         zIndex='11'
         px='5vw'
         py='5vh'
-        bg='purple.100'
         {...props}>
         <Flex alignSelf='flex-start'>
-          <Logo w='100px' transition='all 0.2s ease-in-out' />
-          <LogoBanner w='100px' transition='all 0.2s ease-in-out' />
+          <LogoAndBanner
+            minW='200px'
+            maxW='400px'
+            w='80%'
+            transition='all 0.2s ease-in-out'
+          />
         </Flex>
 
         <Flex
