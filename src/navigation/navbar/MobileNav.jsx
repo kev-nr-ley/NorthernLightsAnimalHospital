@@ -21,9 +21,56 @@ export default function MobileNav(props) {
   const routes = [
     { path: "/", linktext: "Home", element: <Home /> },
     { path: "/About", linktext: "About", element: <About /> },
-    { path: "/Spay", linktext: "Spay & Neuter", element: <Spay /> },
-    { path: "/Dental", linktext: "Dental", element: <Dental /> },
-    { path: "/Health", linktext: "Health", element: <Health /> },
+    {
+      path: "/Spay",
+      linktext: "Spay & Neuter",
+      element: <Spay />,
+      sublinks: [
+        { path: "/Spay#SpayFAQs", linktext: "FAQs", element: <Spay /> },
+        {
+          path: "/Spay#SpayBeforeAppointment",
+          linktext: "Before Your Appointment",
+          element: <Spay />,
+        },
+        {
+          path: "/Spay#SpayAfterAppointment",
+          linktext: "After Your Appointment",
+          element: <Spay />,
+        },
+      ],
+    },
+    {
+      path: "/Dental",
+      linktext: "Dental",
+      element: <Dental />,
+      sublinks: [
+        { path: "/Dental#FAQs", linktext: "FAQs", element: <Dental /> },
+        {
+          path: "/Dental#BeforeAppointment",
+          linktext: "Before Your Appointment",
+          element: <Dental />,
+        },
+        {
+          path: "/Dental#AfterAppointment",
+          linktext: "After Your Appointment",
+          element: <Dental />,
+        },
+      ],
+    },
+
+    {
+      path: "/Health",
+      linktext: "Health",
+      element: <Health />,
+      sublinks: [
+        { path: "/Health#Care", linktext: "Health Exams", element: <Health /> },
+        {
+          path: "/Health#Parasite",
+          linktext: "Common Parasites",
+          element: <Health />,
+        },
+      ],
+    },
     { path: "/Contact", linktext: "Contact", element: <Contact /> },
   ];
 
@@ -47,6 +94,60 @@ export default function MobileNav(props) {
       setScrollUp(true);
       setShrinkNavbar(false);
     }
+  };
+
+  const mapRoutesAndSublinks = (routes) => {
+    return routes.map((route) => {
+      if (route.sublinks) {
+        return (
+          <Box key={route.linktext}>
+            <ChakraLink
+              to={route.path}
+              color='dark'
+              fontSize='1.5rem'
+              fontWeight='bold'
+              onClick={handleLinkClick}>
+              {route.linktext}
+            </ChakraLink>
+            <VStack
+              display={isOpen ? "flex" : "none"}
+              flexDirection='column'
+              alignItems='flex-start'
+              justifyContent='flex-start'
+              w='100%'
+              p='0.5rem'
+              bg='light'
+              color='dark'
+              fontSize='1.5rem'
+              fontWeight='bold'>
+              {route.sublinks.map((sublink) => {
+                return (
+                  <ChakraLink
+                    to={sublink.path}
+                    color='dark'
+                    fontSize='1rem'
+                    fontWeight='bold'
+                    onClick={handleLinkClick}>
+                    {sublink.linktext}
+                  </ChakraLink>
+                );
+              })}
+            </VStack>
+          </Box>
+        );
+      } else {
+        return (
+          <ChakraLink
+            to={route.path}
+            color='dark'
+            fontSize='1.5rem'
+            fontWeight='bold'
+            onClick={handleLinkClick}>
+            {route.linktext}
+          </ChakraLink>
+        );
+      }
+    });
   };
 
   const checkScroll = () => {
@@ -78,13 +179,14 @@ export default function MobileNav(props) {
         right='0'
         zIndex='12'
         w='100vw'
-        h={scrollDown ? "0px" : scrollUp ? "80px" : "80px"}
+        // h={scrollDown ? "0px" : scrollUp ? "80px" : "80px"}
+        h='80px'
         justifyContent='space-between'
         alignItems='center'
         px='1rem'
         py='0.25rem'
         transition='all 0.2s ease-in-out'>
-        <LogoAndBanner
+        {/* <LogoAndBanner
           h='60px'
           w='140px'
           ml='2rem'
@@ -92,8 +194,7 @@ export default function MobileNav(props) {
           // _hover={{ transform: "rotate(180deg)" }}
           display={scrollDown ? "none" : scrollUp ? "block" : "block"}
           // display='block'
-        />
-
+        /> */}
 
         <Button
           right='1rem'
@@ -122,25 +223,26 @@ export default function MobileNav(props) {
       </Flex>
 
       <Flex
-        className='desktop-nav'
+        className='mobile-nav'
         as='nav'
         flexDirection='column'
-        justifyContent={"space-between"}
-        bg={colors.background}
+        justifyContent={"center"}
+        bg={colors.light}
+        boxShadow='8px 0px 8px 8px rgba(0,0,0,0.2)'
+        borderRadius='0 0 0 30px'
         // color='dark'
-        h='100vh'
-        w={isOpen ? "80vw" : "0vw"}
-        maxW='800px'
+        h='80vh'
+        maxH='100%'
+        w={isOpen ? "auto" : "0vw"}
         userSelect={isOpen ? "auto" : "none"}
-        // display={isOpen ? "flex" : "none"}
         overflow='hidden'
         transition='all 0.5s ease-in-out'
         position='fixed'
         top='0'
-        right={isOpen ? "0" : "-100vw"}
+        // right='0'
+        right={isOpen ? "0" : "-50vw"}
         zIndex='11'
         px='5vw'
-        py='5vh'
         {...props}>
         <Flex alignSelf='flex-start'>
           <LogoAndBanner
@@ -156,23 +258,23 @@ export default function MobileNav(props) {
           justifyContent={"center"}
           gap='12'
           py='5vh'>
-          {routes.map((route, index) => (
+          {mapRoutesAndSublinks(routes)}
+        </Flex>
+      </Flex>
+    </>
+  );
+}
+
+// THIS WORKS
+{
+  /* {routes.map((route, index) => (
             <ChakraLink
               key={index}
-              variant='navLink'
+              variant='navUnderline'
               to={route.path}
               linktext={route.linktext}
               color={props.color}
               onClick={handleLinkClick}
             />
-          ))}
-        </Flex>
-
-        <Flex justifyContent={"space-evenly"} w='100%' py='5vh'>
-          {/* <FacebookLink fontSize='52px' />
-          <InstagramLink fontSize='52px' /> */}
-        </Flex>
-      </Flex>
-    </>
-  );
+    ))} */
 }

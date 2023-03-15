@@ -5,6 +5,7 @@ import SectionFlexContainer from "@components/SectionFlexContainer";
 export default function BeforeAppointment(props) {
   return (
     <SectionFlexContainer
+      id='SpayBeforeAppointment'
       headertext='Before booking your appointment'
       alignheader='flex-start'
       linktext='Book Now'

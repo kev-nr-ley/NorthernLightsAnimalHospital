@@ -4,7 +4,7 @@ import { useTheme } from "@chakra-ui/react";
 export default function SectionFlexContainer(props) {
   return (
     <Flex
-    className='SectionFlexContainer'
+      className='SectionFlexContainer'
       flexDirection='column'
       alignItems={props.alignItems || "flex-start"}
       justifyContent='center'
@@ -25,7 +25,7 @@ export default function SectionFlexContainer(props) {
         </Heading>
       ) : null}
 
-      {props.subtext ? <Text mt='2'>{props.subtext}</Text> : null}
+      {props.subtext ? <Text mt='2' w={props.subtextwidth}  >{props.subtext}</Text> : null}
 
       {props.children ? (
         <Flex
@@ -62,8 +62,7 @@ export default function SectionFlexContainer(props) {
             props.alignlink ? props.alignlink : ["center", "center", "center"]
           }
           variant={props.linkvariant ? props.linkvariant : "LightOutline"}
-          to={props.linkto}>
-        </ChakraLink>
+          to={props.linkto}></ChakraLink>
       )}
     </Flex>
   );

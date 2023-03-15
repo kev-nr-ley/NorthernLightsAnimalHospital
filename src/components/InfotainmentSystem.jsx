@@ -10,6 +10,7 @@ export default function InfotainmentSystem(props) {
       maxW='320px'
       zIndex='4'
       mb='4'
+      
       {...props}>
       <Flex gap='2' fontSize='24px'>
 

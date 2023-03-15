@@ -18,6 +18,7 @@ export default function Faq(props) {
 
   return (
     <SectionFlexContainer
+    id='SpayFAQs'
       headertext='Frequently Asked Questions'
       fliphorizontal='true'
       flexWrap='wrap'

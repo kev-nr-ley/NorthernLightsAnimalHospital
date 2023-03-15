@@ -6,6 +6,7 @@ import { DownloadIcon } from "@chakra-ui/icons";
 export default function AfterAppointment(props) {
   return (
     <SectionFlexContainer
+    id='SpayAfterAppointment'
       headertext='After Your Appointment'
       alignheader='flex-start'
       {...props}>
@@ -18,9 +19,7 @@ export default function AfterAppointment(props) {
           Our staff will be happy to discuss the following information with you
           at the time of booking and will remind you once more with a
           confirmation call about two days prior to your scheduled surgery date.
-        </Text>
-
-        <Text>
+          <br /> <br />
           Once you book an appointment for your pet to be spayed or neutered it
           is important to remember the fasting instructions the night before to
           prepare your animal for the next day. No food should be fed to your
@@ -40,8 +39,7 @@ export default function AfterAppointment(props) {
           at The Spay Clinic between 7:00AM – 8:00AM. For your pet’s comfort and
           well-being, please encourage them to go to the bathroom prior to
           bringing them into The Spay Clinic the day of their surgery.
-        </Text>
-        <Text>
+          <br /> <br />
           As all elective surgeries are “day surgeries”, there is no reason for
           your pet to have an over-night hospitalization with us here at The
           Spay Clinic. When your animal is ready to go home it is important to
@@ -56,12 +54,14 @@ export default function AfterAppointment(props) {
         </Text>
       </ImageHeaderTextBlock>
 
+
+
       <ImageHeaderTextBlock
         headercircle='3'
         headerbg='dark'
         headercolor='light'
         headertext='After the Procedure'>
-        <Text mb='8'>
+        <Text mb='2rem'>
           Our staff will discuss the post-operative care and management that
           your pet will require following their elective surgery. You will also
           be provided a document outlining what was discussed for your reference
@@ -69,24 +69,14 @@ export default function AfterAppointment(props) {
           download.
         </Text>
 
-        <Flex flexDirection='column' gap='2'>
-          <ChakraLink
-            href='https://spayclinic.ca/wp-content/uploads/2015/12/Homecare-Dogs.pdf'
-            variant='DarkOutline'
-            isExternal
-            w='100%'>
-            Dog Post-Op Care
-            <DownloadIcon ml='4' fontSize='1.5rem' />
-          </ChakraLink>
-          <ChakraLink
-            href='https://spayclinic.ca/wp-content/uploads/2015/12/Homecare-Cats.pdf'
-            variant='DarkOutline'
-            isExternal
-            w='100%'>
-            Cat Post-Op Care
-            <DownloadIcon ml='4' fontSize='1.5rem' />
-          </ChakraLink>
-        </Flex>
+        <ChakraLink
+          to='/public/files/spay-care.pdf'
+          target='_blank'
+          variant='DarkOutline'
+          isExternal>
+          Post-Op Care
+          <DownloadIcon ml='0.5rem' fontSize='1rem' />
+        </ChakraLink>
       </ImageHeaderTextBlock>
     </SectionFlexContainer>
   );

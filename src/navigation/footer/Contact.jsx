@@ -11,21 +11,21 @@ export default function Contact(props) {
     <InfotainmentSystem
       headertext='Contact'
       icon={<HiOutlinePhone />}
+
       {...props}>
-      <Text as='span' variant='bold' mr='1rem'>
-        Phone:
-      </Text>
-      867-745-8623
-      <br />
-      <Text as='span' variant='bold' mr='1rem'>
-        Fax:
-      </Text>
-      867-747-8225
-      {/* <Flex fontSize='32px' mt='2' gap='4'> */}
-      {/* <InstagramLink /> */}
-      {/* <FacebookLink /> */}
-      {/* </Flex>
-       */}
+      <Flex justifyContent={"space-between"}>
+        <span>
+          <strong>Phone: </strong>
+        </span>
+        <span>867-745-8623</span>
+      </Flex>
+      <Flex justifyContent={"space-between"}>
+        <span>
+          {" "}
+          <strong>Fax: </strong>
+        </span>
+        <span>867-747-8225</span>
+      </Flex>
     </InfotainmentSystem>
   );
 }

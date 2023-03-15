@@ -90,18 +90,13 @@ export default function DesktopNav(props) {
         {routes.map((route, index) => (
           <ChakraLink
             key={index}
-            variant='navLink'
+            variant='navUnderline'
             to={route.path}
             linktext={route.linktext}
             // h={scrollDown ? "40px" : scrollUp ? "80px" : "80px"}
           />
         ))}
       </Flex>
-      {/* 
-      <Flex gap='4'>
-        <FacebookLink fontSize='36px' />
-        <InstagramLink fontSize='36px' />
-      </Flex> */}
     </Flex>
   );
 }

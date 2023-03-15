@@ -15,7 +15,10 @@ export default function ContactForm(props) {
       color='dark'
       zIndex='2'
       position='relative'
-      subtext='Please complete the following form to request an appointment. Please also note that availability will vary depending on your request. Your appointment will be confirmed by phone by a member of our staff.'
+      // subtextwidth='800px'
+      subtext='Please complete the following form to request an appointment. Please
+      also note that availability will vary depending on your request. Your
+      appointment will be confirmed by phone by a member of our staff.'
       {...props}>
       {/* <Box
         bg='red'

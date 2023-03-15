@@ -17,8 +17,8 @@ export default function Footer(props) {
         "repeat(4, 1fr)",
         "repeat(4, 1fr)",
       ]}
-      alignItems='center'
-      justifyItems='center'
+      alignItems='top'
+      justifyItems='top'
       gap='5vw'
       color='dark'
       zIndex='4'
@@ -48,9 +48,9 @@ export default function Footer(props) {
         transform='translateX(-50%)'
       />
 
-      <Hours icondisplay='true' />
-      <Contact icondisplay='true' />
-      <Location icondisplay='true' />
+      <Hours icondisplay='true' maxW='16rem' />
+      <Contact icondisplay='true' maxW='16rem' />
+      <Location icondisplay='true' maxW='16rem' />
       <SiteNavigation />
     </Grid>
   );

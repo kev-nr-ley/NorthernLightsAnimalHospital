@@ -1,7 +1,8 @@
-import { Text, Accordion, Link } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import ImageHeaderTextBlock from "@components/ImageHeaderTextBlock";
-import AccordionQuestion from "@components/AccordionQuestion";
 import SectionFlexContainer from "@components/SectionFlexContainer";
+import ChakraLink from "@components/ChakraLink";
+import { DownloadIcon } from "@chakra-ui/icons";
 export default function AfterAppointment(props) {
   return (
     <SectionFlexContainer headertext='After Your Appointment' {...props}>
@@ -25,6 +26,7 @@ export default function AfterAppointment(props) {
           during your animal’s routine procedure.
         </Text>
       </ImageHeaderTextBlock>
+
       <ImageHeaderTextBlock
         headercircle='2'
         headercolor='light'
@@ -40,20 +42,28 @@ export default function AfterAppointment(props) {
           cats are discharged between 5:00PM – 6:00PM Monday through Friday.
         </Text>
       </ImageHeaderTextBlock>
+
       <ImageHeaderTextBlock
         headercircle='3'
         headercolor='light'
         headerbg='dark'
-        headertext='After the procedure'
-        linktext='Download Post-Op Care Form'
-        linkvariant='DarkOutline'>
-        <Text>
+        headertext='After the procedure'>
+        <Text mb='2rem'>
           Our staff will discuss the post-operative care and management that
           your pet will require following their dental procedure. You will also
           be provided a document outlining what was discussed for your reference
           at home. For your convenience, this form is also available here for
           download.
         </Text>
+
+        <ChakraLink
+          to='/public/files/dental-care.pdf'
+          target='_blank'
+          variant='DarkOutline'
+          isExternal>
+          After the procedure
+          <DownloadIcon ml='0.5rem' fontSize='1rem' />
+        </ChakraLink>
       </ImageHeaderTextBlock>
     </SectionFlexContainer>
   );

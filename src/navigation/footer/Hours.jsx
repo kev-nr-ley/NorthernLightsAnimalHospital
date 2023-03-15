@@ -5,8 +5,11 @@ import InfotainmentSystem from "@components/InfotainmentSystem";
 import { HiClock, HiOutlineClock } from "react-icons/hi";
 export default function Hours(props) {
   return (
-    <InfotainmentSystem headertext='Hours' icon={<HiOutlineClock />} {...props}>
-      <Flex justifyContent={"space-between"}>
+    <InfotainmentSystem headertext='Hours' icon={<HiOutlineClock />}
+  
+    {...props}>
+      <Flex justifyContent={"space-between"}
+      >
         <span>
           {" "}
           <strong> Mon- Fri:</strong>

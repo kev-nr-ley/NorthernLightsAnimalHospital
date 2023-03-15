@@ -9,7 +9,7 @@ import { LinkStyles as Link } from "./components/LinkStyles";
 import { TextStyles as Text } from "./components/TextStyles";
 import { BoxStyles as Box } from "./components/BoxStyles";
 import { ImageStyles as Image } from "./components/ImageStyles";
-import {InputStyles as Input} from "./components/InputStyles";
+import { InputStyles as Input } from "./components/InputStyles";
 
 export const theme = extendTheme({
   styles: {
@@ -31,15 +31,24 @@ export const theme = extendTheme({
     },
   },
 
+  // https://coolors.co/gradient-palette
   colors: {
     primary: "#8A4000",
+    secondary: "#C5A000",
+
+    // using this for underlines on nav and default link hover
+    tertiary: "#FF7700",
+    darkOrange: "#dd4400",
+    //
+
+    quaternary: "#FFD700",
     primaryOpacity80: "#8A400080",
     primaryOpacity80: "rgba(138, 64, 0, 0.80)",
     primaryOpacity90: "rgba(138, 64, 0, 0.90)",
     primaryOpacity90: "rgba(138, 64, 0, 0.90)",
     primaryOpacity95: "rgba(138, 64, 0, 0.95)",
     primaryOpacity99: "rgba(138, 64, 0, 0.99)",
-    star : "#FFD700",
+    star: "#FFD700",
     background: "#ffe1c6",
     light: "#F8F8F8",
     dark: "#292A29",
@@ -94,6 +103,6 @@ export const theme = extendTheme({
     Text,
     Box,
     Image,
-    Input
+    Input,
   },
 });

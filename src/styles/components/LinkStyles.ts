@@ -8,10 +8,9 @@ export const LinkStyles: ComponentStyleConfig = {
     textDecoration: "none",
     w: "fit-content",
 
-
     _hover: {
       textDecoration: "none",
-      color: "primary",
+      color: "darkOrange",
     },
   },
   // styles for different sizes ("sm", "md", "lg")
@@ -46,6 +45,27 @@ export const LinkStyles: ComponentStyleConfig = {
         border: "1px solid #f8f8f8",
         bg: "light",
         color: "dark",
+      },
+    },
+
+    navUnderline: {
+      color: "dark",
+      fontWeight: "700",
+      fontSize: "20px",
+      _after: {
+        content: '""',
+        display: "block",
+        width: "0",
+        height: "2px",
+        bg: "dark",
+        transition: "width .3s",
+      },
+      _hover: {
+        color: "dark",
+        _after: {
+          width: "100%",
+          bg:"tertiary"
+        },
       },
     },
 

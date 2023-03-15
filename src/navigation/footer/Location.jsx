@@ -8,7 +8,12 @@ export default function Location(props) {
       headertext='Visit'
       icon={<HiOutlineLocationMarker />}
       {...props}>
-      23 Metropolit Lane <br /> Whitehorse, YT Y2T 0X9, Canada
+      <span>
+        <strong>Northern Lights Animal Hospital</strong>
+      </span>
+      <br />
+      
+      23 Metropolit Lane <br /> Whitehorse, YT <br /> Y2T 0X9
       {props.showlink ? (
         <Link as={Box} my='2' variant='solid'>
           Open Maps

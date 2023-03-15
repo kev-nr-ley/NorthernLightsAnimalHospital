@@ -5,12 +5,12 @@ export default function Logo(props) {
   return (
     <Center {...props}>
       <ChakraLink to='/'>
-      <Image
-        w='100%'
-        src='images/northernlights-logo-banner.webp'
-        alt='North Lights Animal Hospital Banner'
-        objectFit='cover'
-      />
+        <Image
+          w='100%'
+          src='images/northernlights-logo-banner.webp'
+          alt='North Lights Animal Hospital Banner'
+          objectFit='cover'
+        />
       </ChakraLink>
     </Center>
   );
