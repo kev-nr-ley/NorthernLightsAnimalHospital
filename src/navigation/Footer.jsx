@@ -13,8 +13,8 @@ export default function Footer(props) {
     <Grid
       templateColumns={[
         "repeat(1, 1fr)",
-        "repeat(1, 1fr)",
-        "repeat(4, 1fr)",
+        "repeat(2, 1fr)",
+        "repeat(2, 1fr)",
         "repeat(4, 1fr)",
       ]}
       alignItems='top'
@@ -26,14 +26,6 @@ export default function Footer(props) {
       px='5vw'
       position='relative'
       {...props}>
-      {/* <ChakraImage
-      alignSelf='center'
-        // minW='200px'
-        w='200px'
-        h='auto'
-        src='/images/Logo.webp'
-        objectFit='cover'
-      /> */}
 
       <ScrollToTopButton
         position='fixed'
@@ -43,12 +35,11 @@ export default function Footer(props) {
         w='4rem'
         h='4rem'
         fontSize='2rem'
-      
 
         // transform='translateX(-50%)'
       />
 
-      <Hours icondisplay='true' headerdisplay='true' maxW='16rem' />
+      <Hours icondisplay='true' headerdisplay='true'  maxW='16rem' />
       <Contact icondisplay='true' headerdisplay='true' maxW='16rem' />
       <Location icondisplay='true' headerdisplay='true' maxW='16rem' />
       <SiteNavigation headerdisplay='true' />

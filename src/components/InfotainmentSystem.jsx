@@ -20,7 +20,9 @@ export default function InfotainmentSystem(props) {
           </Heading>
         ) : null}
       </Flex>
-      <Box mt='1'>{props.children}</Box>
+      <Flex flexDirection='column' mt='1' whiteSpace={"nowrap"}>
+        {props.children}
+      </Flex>
     </Flex>
   );
 }
