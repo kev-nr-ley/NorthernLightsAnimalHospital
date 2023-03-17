@@ -21,9 +21,9 @@ export default function ContactHero(props) {
       <Heading variant='sectionHeading' mb='4'>
         Get in touch
       </Heading>
-      <ContactUs icondisplay={true} h='fit-content' />
-      <Hours icondisplay={true} h='fit-content' />
-      <Location icondisplay={true}  />
+      <ContactUs icondisplay={true} headerdisplay='true' h='fit-content' />
+      <Hours icondisplay={true} headerdisplay='true' h='fit-content' />
+      <Location icondisplay={true} headerdisplay='true' />
     </HeroContainer>
   );
 }
