@@ -36,16 +36,16 @@ export default function Footer(props) {
       /> */}
 
       <ScrollToTopButton
-        position='absolute'
+        position='fixed'
         zIndex='99'
         bottom='4rem'
         right='2rem'
         w='4rem'
         h='4rem'
-        // left='50%'
-        border='4px'
         fontSize='2rem'
-        transform='translateX(-50%)'
+      
+
+        // transform='translateX(-50%)'
       />
 
       <Hours icondisplay='true' headerdisplay='true' maxW='16rem' />
