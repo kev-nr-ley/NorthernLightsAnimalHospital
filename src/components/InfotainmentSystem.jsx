@@ -10,18 +10,15 @@ export default function InfotainmentSystem(props) {
       maxW='320px'
       zIndex='4'
       mb='4'
-      
       {...props}>
       <Flex gap='2' fontSize='24px'>
+        {props.icondisplay ? <Box fontSize='24px'>{props.icon}</Box> : null}
 
-        {props.icondisplay ? (
-          <Box fontSize='24px'>{props.icon}</Box>
+        {props.headerdisplay ? (
+          <Heading variant='bodyHeading' mt='0'>
+            {props.headertext}
+          </Heading>
         ) : null}
-        
-
-        <Heading variant='bodyHeading' mt='0'>
-          {props.headertext}
-        </Heading>
       </Flex>
       <Box mt='1'>{props.children}</Box>
     </Flex>

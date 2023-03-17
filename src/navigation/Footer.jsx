@@ -48,10 +48,10 @@ export default function Footer(props) {
         transform='translateX(-50%)'
       />
 
-      <Hours icondisplay='true' maxW='16rem' />
-      <Contact icondisplay='true' maxW='16rem' />
-      <Location icondisplay='true' maxW='16rem' />
-      <SiteNavigation />
+      <Hours icondisplay='true' headerdisplay='true' maxW='16rem' />
+      <Contact icondisplay='true' headerdisplay='true' maxW='16rem' />
+      <Location icondisplay='true' headerdisplay='true' maxW='16rem' />
+      <SiteNavigation headerdisplay='true' />
     </Grid>
   );
 }

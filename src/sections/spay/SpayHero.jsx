@@ -7,7 +7,7 @@ export default function SpayHero(props) {
     id='SpayHero'
       heading='Spaying and neutering your pets '
       linktext='Make an Appointment'
-      linkto='/'
+      linkto='/contact'
       {...props}>
       <Text>
         Northern Lights Animal Hospital has been providing affordable priced spays and

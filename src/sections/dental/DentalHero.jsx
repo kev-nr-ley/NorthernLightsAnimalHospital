@@ -9,7 +9,7 @@ export default function DentalHero(props) {
     <HeroContainer
       heading='Dental Care For Pets'
       linktext='Book A Free Consult '
-      linkto='/'
+      linkto='/contact'
       {...props}>
       <Text>
         The most effective way to clean your pet’s teeth and remove all dental

@@ -7,7 +7,7 @@ export default function Hero(props) {
     <HeroContainer
       heading='Health Exams & Vaccinations'
       linktext='Make an Appointment'
-      linkto='/'
+      linkto='/contact'
       {...props}>
       <Text>
         Taking your new pet to a veterinarian when you first get them is highly
