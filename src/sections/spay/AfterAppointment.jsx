@@ -70,7 +70,7 @@ export default function AfterAppointment(props) {
         </Text>
 
         <ChakraLink
-          to='/public/files/spay-care.pdf'
+          to='/assets/files/spay-care.pdf'
           target='_blank'
           variant='DarkOutline'
           isExternal>
