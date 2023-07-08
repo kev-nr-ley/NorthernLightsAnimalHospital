@@ -25,38 +25,49 @@ export default function DesktopNav(props) {
     { path: "/Health", linktext: "Health", element: <Health /> },
     { path: "/Contact", linktext: "Contact", element: <Contact /> },
   ];
-
-  const [scrollDown, setScrollDown] = useState(false);
-  const [scrollUp, setScrollUp] = useState(false);
-  const [currentScrollPosition, setCurrentScrollPosition] = useState(0);
-  const [previousScrollPosition, setPreviousScrollPosition] = useState(0);
-  const [shrinkNavbar, setShrinkNavbar] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   const handleScroll = () => {
-    const position = window.pageYOffset;
-    setCurrentScrollPosition(position);
-    setPreviousScrollPosition(currentScrollPosition);
-    if (currentScrollPosition > previousScrollPosition) {
-      setScrollDown(true);
-      setScrollUp(false);
-      setShrinkNavbar(true);
-    } else {
-      setScrollDown(false);
-      setScrollUp(true);
-      setShrinkNavbar(false);
-    }
-  };
-
-  const checkScroll = () => {
-    window.requestAnimationFrame(handleScroll);
+    const currentScrollPos = window.pageYOffset;
+    setVisible(prevScrollPos > currentScrollPos);
+    setPrevScrollPos(currentScrollPos);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", checkScroll);
-    return () => {
-      window.removeEventListener("scroll", checkScroll);
-    };
-  }, [currentScrollPosition]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);
+  // --------------------------------------------
+
+  // Menu Drawer and Buttons Only ---------------------------------------
+  const btnRef = React.useRef();
+  const [currentPath, setCurrentPath] = useState("/");
+  const [cuurentLink, setCurrentLink] = useState({});
+  const [currentSublinks, setCurrentSublinks] = useState({});
+  const [showSublinks, setShowSublinks] = useState(false);
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    setCurrentPath(path);
+    const link = routes.find((route) => route.path === path);
+    setCurrentLink(link);
+    setCurrentSublinks(link.sublinks);
+  }, []);
+
+  const handleLinkOnMouseEnter = (link) => {
+    setCurrentLink(link);
+    setCurrentSublinks(link.sublinks);
+    link.sublinks ? setShowSublinks(true) : setShowSublinks(false);
+  };
+
+  const handleLinkOnMouseLeave = () => {
+    const link = routes.find((route) => route.path === currentPath);
+    setCurrentLink(link);
+    setCurrentSublinks(link.sublinks);
+    link.sublinks ? setShowSublinks(true) : setShowSublinks(false);
+  };
+  // -------------------------------------------------------------------
 
   return (
     <Flex
@@ -69,7 +80,7 @@ export default function DesktopNav(props) {
       maxW='100%'
       bg={colors.light}
       color={colors.dark}
-      h={shrinkNavbar ? "40px" : scrollUp ? "80px" : "80px"}
+      h={visible ? "40px" : "80px"}
       transition='all 0.2s ease-in-out'
       position='sticky'
       top='0'
@@ -81,12 +92,20 @@ export default function DesktopNav(props) {
           w='60px'
           position='relative'
           transition='all 0.2s ease-in-out'
-          top={shrinkNavbar ? "-80px" : scrollUp ? "0px" : "0px"}
+          top={visible ? "-80px" : "0px"}
         />
-        <LogoBanner w='100px' h='40px' transition='all 0.2s ease-in-out' />
+        <LogoBanner
+          w='100px'
+          h='40px'
+          transition='all 0.2s ease-in-out'
+        />
       </HStack>
 
-      <Flex justifyContent={"center"} alignItems='center' h='100%' gap='12'>
+      <Flex
+        justifyContent={"center"}
+        alignItems='center'
+        h='100%'
+        gap='12'>
         {routes.map((route, index) => (
           <ChakraLink
             key={index}
